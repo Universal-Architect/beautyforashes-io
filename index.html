@@ -3,545 +3,149 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Free Executive Planner | Pastor Raymond O. Anderson — FaithVision Leadership</title>
-<meta name="description" content="Download the free Turnaround Leader's Executive Planner from 3x nationally awarded author, Pulitzer Prize contender, and $120M+ business strategist Pastor Raymond O. Anderson.">
-<meta name="keywords" content="executive planner, business turnaround, faith-based leadership, nonprofit consultant, Raymond Anderson, FaithVision Leadership">
-<meta property="og:title" content="Free Executive Planner — FaithVision Leadership">
-<meta property="og:description" content="The exact strategic framework used to rebuild failing organizations into multimillion-dollar operations. Free download from Pastor Raymond O. Anderson.">
-<meta property="og:url" content="https://beautyforashes.io">
+<title>Beauty for Ashes | FaithVision Leadership</title>
+<meta name="description" content="FaithVision Leadership provides confidential strategy, restoration, and advisory counsel for leaders, ministries, entrepreneurs, and builders.">
+<meta property="og:title" content="Beauty for Ashes — FaithVision Leadership">
+<meta property="og:description" content="Confidential strategic counsel for leaders, founders, ministries, families, and builders ready to restore order, clarify the assignment, and move with disciplined conviction.">
+<meta property="og:url" content="https://beautyforashes.io/">
+<meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{
+    --gold:#C9A84C;--gold2:#E8C97A;--gold3:#8A6E32;
+    --ink:#0D0C0A;--ink2:#1A1915;--ink3:#252420;
+    --fg:#F5F0E8;--fg2:#DDD5C4;--muted:#9A9080;
+    --serif:'Cormorant Garamond',Georgia,serif;--sans:'Jost',sans-serif;
+    --max:1100px;
+  }
+  html{scroll-behavior:smooth}
+  body{background:var(--ink);color:var(--fg);font-family:var(--sans);font-weight:300;line-height:1.7;overflow-x:hidden}
 
-  :root {
-    --gold: #C9A84C;
-    --gold-light: #E8C97A;
-    --gold-dim: #8A6E32;
-    --ink: #0D0C0A;
-    --ink-2: #1A1915;
-    --ink-3: #252420;
-    --parchment: #F5F0E8;
-    --parchment-dim: #DDD5C4;
-    --text-muted: #9A9080;
-    --serif: 'Cormorant Garamond', Georgia, serif;
-    --sans: 'Jost', sans-serif;
-  }
+  /* NAV */
+  nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(13,12,10,.95);backdrop-filter:blur(12px);border-bottom:.5px solid rgba(201,168,76,.2);padding:1.2rem 2.5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+  .nav-brand{font-family:var(--serif);font-size:1.1rem;color:var(--gold);text-decoration:none;font-weight:400;letter-spacing:.04em;white-space:nowrap}
+  .nav-links{display:flex;gap:.2rem;list-style:none;flex-wrap:wrap;justify-content:flex-end}
+  .nav-links a{color:var(--fg2);text-decoration:none;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;padding:.4rem .75rem;border:.5px solid transparent;transition:color .2s,border-color .2s}
+  .nav-links a:hover{color:var(--gold);border-color:rgba(201,168,76,.3)}
+  .nav-cta{background:var(--gold)!important;color:var(--ink)!important;border-color:var(--gold)!important;font-weight:500!important}
+  .nav-cta:hover{background:var(--gold2)!important}
+  @media(max-width:800px){.nav-links{display:none}}
 
-  html { scroll-behavior: smooth; }
+  /* HERO */
+  .hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:9rem 2.5rem 5rem;position:relative;overflow:hidden}
+  .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 70% 40%,rgba(201,168,76,.07) 0%,transparent 70%),radial-gradient(ellipse 40% 60% at 20% 80%,rgba(201,168,76,.04) 0%,transparent 60%);pointer-events:none}
+  .hero-inner{max-width:800px;margin:0 auto;width:100%}
+  .eyebrow{font-size:.7rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:1.4rem;display:flex;align-items:center;gap:.75rem}
+  .eyebrow::before{content:'';display:block;width:2rem;height:.5px;background:var(--gold)}
+  .hero h1{font-family:var(--serif);font-size:clamp(3.5rem,8vw,7rem);font-weight:300;line-height:1.0;color:var(--fg);margin-bottom:1.5rem}
+  .hero h1 em{font-style:italic;color:var(--gold)}
+  .hero-copy{font-size:1.05rem;color:var(--fg2);max-width:620px;line-height:1.85;margin-bottom:2.5rem}
+  .hero-actions{display:flex;flex-wrap:wrap;gap:1rem}
 
-  body {
-    background: var(--ink);
-    color: var(--parchment);
-    font-family: var(--sans);
-    font-weight: 300;
-    line-height: 1.7;
-    overflow-x: hidden;
-  }
+  /* BUTTONS */
+  .btn-primary{display:inline-block;background:var(--gold);color:var(--ink);font-family:var(--sans);font-size:.78rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;padding:.95rem 2.2rem;text-decoration:none;transition:background .2s}
+  .btn-primary:hover{background:var(--gold2)}
+  .btn-ghost{display:inline-block;background:transparent;color:var(--gold);border:.5px solid var(--gold3);font-family:var(--sans);font-size:.78rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;padding:.95rem 2.2rem;text-decoration:none;transition:background .2s}
+  .btn-ghost:hover{background:rgba(201,168,76,.08)}
 
-  /* ── NAV ── */
-  nav {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-    padding: 1.2rem 2.5rem;
-    display: flex; justify-content: space-between; align-items: center;
-    background: rgba(13,12,10,0.85);
-    backdrop-filter: blur(12px);
-    border-bottom: 0.5px solid rgba(201,168,76,0.2);
-  }
-  .nav-logo {
-    font-family: var(--serif);
-    font-size: 1.1rem;
-    font-weight: 400;
-    color: var(--gold);
-    letter-spacing: 0.04em;
-    text-decoration: none;
-  }
-  .nav-cta {
-    font-family: var(--sans);
-    font-size: 0.75rem;
-    font-weight: 500;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--ink);
-    background: var(--gold);
-    padding: 0.6rem 1.4rem;
-    text-decoration: none;
-    transition: background 0.2s;
-  }
-  .nav-cta:hover { background: var(--gold-light); }
+  /* CREDENTIAL BAR */
+  .cred-bar{background:var(--ink2);border-top:.5px solid rgba(201,168,76,.15);border-bottom:.5px solid rgba(201,168,76,.15);padding:1.2rem 2.5rem}
+  .cred-inner{max-width:var(--max);margin:0 auto;display:flex;flex-wrap:wrap;justify-content:center;gap:1rem 3rem}
+  .cred-item{font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);display:flex;align-items:center;gap:.5rem}
+  .cred-item::before{content:'✦';color:var(--gold);font-size:.55rem}
 
-  /* ── HERO ── */
-  .hero {
-    min-height: 100vh;
-    display: flex; flex-direction: column; justify-content: center;
-    padding: 8rem 2.5rem 5rem;
-    position: relative;
-    overflow: hidden;
-  }
-  .hero::before {
-    content: '';
-    position: absolute; inset: 0;
-    background:
-      radial-gradient(ellipse 60% 50% at 70% 40%, rgba(201,168,76,0.07) 0%, transparent 70%),
-      radial-gradient(ellipse 40% 60% at 20% 80%, rgba(201,168,76,0.04) 0%, transparent 60%);
-    pointer-events: none;
-  }
-  .hero-grid {
-    max-width: 1100px; margin: 0 auto; width: 100%;
-    display: grid; grid-template-columns: 1fr 420px; gap: 5rem; align-items: center;
-  }
-  .hero-eyebrow {
-    font-family: var(--sans);
-    font-size: 0.7rem; font-weight: 500;
-    letter-spacing: 0.18em; text-transform: uppercase;
-    color: var(--gold);
-    margin-bottom: 1.5rem;
-    display: flex; align-items: center; gap: 0.75rem;
-  }
-  .hero-eyebrow::before {
-    content: '';
-    display: block; width: 2rem; height: 0.5px;
-    background: var(--gold);
-  }
-  .hero h1 {
-    font-family: var(--serif);
-    font-size: clamp(2.8rem, 5vw, 4.2rem);
-    font-weight: 300;
-    line-height: 1.15;
-    color: var(--parchment);
-    margin-bottom: 1rem;
-  }
-  .hero h1 em {
-    font-style: italic;
-    color: var(--gold);
-  }
-  .hero-sub {
-    font-size: 1rem; color: var(--text-muted);
-    max-width: 480px; margin-bottom: 2.5rem;
-    line-height: 1.8;
-  }
-  .hero-credentials {
-    display: flex; flex-direction: column; gap: 0.5rem;
-    margin-bottom: 2.5rem;
-  }
-  .cred-item {
-    display: flex; align-items: center; gap: 0.75rem;
-    font-size: 0.82rem; color: var(--parchment-dim);
-    letter-spacing: 0.02em;
-  }
-  .cred-item::before {
-    content: '✦';
-    color: var(--gold); font-size: 0.6rem;
-    flex-shrink: 0;
-  }
+  /* SECTIONS */
+  .section{padding:6rem 2.5rem;max-width:var(--max);margin:0 auto}
+  .section-alt{background:var(--ink2);border-top:.5px solid rgba(201,168,76,.12);border-bottom:.5px solid rgba(201,168,76,.12);padding:6rem 2.5rem}
+  .section-inner{max-width:var(--max);margin:0 auto}
+  .section-eyebrow{font-size:.7rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;display:flex;align-items:center;gap:.75rem}
+  .section-eyebrow::before{content:'';display:block;width:2rem;height:.5px;background:var(--gold)}
+  .section-heading{font-family:var(--serif);font-size:clamp(2rem,3.5vw,3rem);font-weight:300;line-height:1.15;color:var(--fg);margin-bottom:.75rem}
+  .section-heading em{font-style:italic;color:var(--gold)}
+  .section-sub{font-size:.95rem;color:var(--muted);max-width:580px;line-height:1.8;margin-bottom:3rem}
 
-  /* ── FORM CARD ── */
-  .form-card {
-    background: var(--ink-2);
-    border: 0.5px solid rgba(201,168,76,0.35);
-    padding: 2.5rem 2rem;
-    position: relative;
-  }
-  .form-card::before {
-    content: '';
-    position: absolute; top: 0; left: 0; right: 0;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, var(--gold), transparent);
-  }
-  .form-title {
-    font-family: var(--serif);
-    font-size: 1.6rem; font-weight: 400;
-    color: var(--parchment);
-    margin-bottom: 0.4rem;
-    line-height: 1.3;
-  }
-  .form-sub {
-    font-size: 0.8rem; color: var(--text-muted);
-    margin-bottom: 1.8rem; line-height: 1.6;
-  }
-  .form-group { margin-bottom: 1rem; }
-  .form-group label {
-    display: block;
-    font-size: 0.7rem; font-weight: 500;
-    letter-spacing: 0.1em; text-transform: uppercase;
-    color: var(--text-muted);
-    margin-bottom: 0.4rem;
-  }
-  .form-group input, .form-group select {
-    width: 100%;
-    background: rgba(255,255,255,0.04);
-    border: 0.5px solid rgba(201,168,76,0.25);
-    color: var(--parchment);
-    font-family: var(--sans);
-    font-size: 0.9rem;
-    font-weight: 300;
-    padding: 0.75rem 1rem;
-    outline: none;
-    transition: border-color 0.2s;
-    appearance: none;
-  }
-  .form-group input::placeholder { color: var(--text-muted); }
-  .form-group input:focus, .form-group select:focus {
-    border-color: var(--gold);
-    background: rgba(201,168,76,0.04);
-  }
-  .form-group select option { background: var(--ink-2); }
-  .form-submit {
-    width: 100%;
-    background: var(--gold);
-    color: var(--ink);
-    border: none;
-    font-family: var(--sans);
-    font-size: 0.8rem; font-weight: 500;
-    letter-spacing: 0.14em; text-transform: uppercase;
-    padding: 1rem;
-    cursor: pointer;
-    transition: background 0.2s, transform 0.1s;
-    margin-top: 0.5rem;
-  }
-  .form-submit:hover { background: var(--gold-light); }
-  .form-submit:active { transform: scale(0.99); }
-  .form-privacy {
-    font-size: 0.7rem; color: var(--text-muted);
-    text-align: center; margin-top: 0.9rem;
-    line-height: 1.5;
-  }
+  /* SPLIT */
+  .split{display:grid;grid-template-columns:1fr 1.1fr;gap:5rem;align-items:start}
+  .statement{position:sticky;top:8rem;border-left:2px solid var(--gold);padding:2rem 0 2rem 2rem}
+  .statement h2{font-family:var(--serif);font-size:clamp(1.7rem,3vw,2.4rem);font-weight:300;line-height:1.2;color:var(--fg);margin-bottom:1rem}
+  .statement h2 em{font-style:italic;color:var(--gold)}
+  .statement p{font-size:.9rem;color:var(--muted);line-height:1.8}
 
-  /* ── DIVIDER ── */
-  .divider {
-    max-width: 1100px; margin: 0 auto;
-    border: none; border-top: 0.5px solid rgba(201,168,76,0.15);
-  }
+  /* SERVICE LIST */
+  .service-list{display:grid;gap:1.5px;background:rgba(201,168,76,.12);border:.5px solid rgba(201,168,76,.15)}
+  .service-item{background:var(--ink);padding:2rem 1.8rem;transition:background .2s}
+  .service-item:hover{background:var(--ink2)}
+  .service-item h3{font-family:var(--serif);font-size:1.15rem;font-weight:400;color:var(--gold);margin-bottom:.5rem}
+  .service-item p{font-size:.85rem;color:var(--muted);line-height:1.75}
 
-  /* ── PROOF BAR ── */
-  .proof-bar {
-    background: var(--ink-2);
-    border-top: 0.5px solid rgba(201,168,76,0.15);
-    border-bottom: 0.5px solid rgba(201,168,76,0.15);
-    padding: 3rem 2.5rem;
-  }
-  .proof-inner {
-    max-width: 1100px; margin: 0 auto;
-    display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;
-  }
-  @media (max-width: 700px) { .proof-inner { grid-template-columns: repeat(2, 1fr); } }
-  .proof-stat { text-align: center; }
-  .proof-num {
-    font-family: var(--serif);
-    font-size: 2.6rem; font-weight: 300;
-    color: var(--gold);
-    display: block; line-height: 1;
-    margin-bottom: 0.5rem;
-  }
-  .proof-label {
-    font-size: 0.75rem; color: var(--text-muted);
-    letter-spacing: 0.05em; line-height: 1.5;
-  }
+  /* 3-COL CARDS */
+  .card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5px;background:rgba(201,168,76,.12);border:.5px solid rgba(201,168,76,.15)}
+  .card{background:var(--ink);padding:2.2rem 2rem;transition:background .2s}
+  .card:hover{background:var(--ink2)}
+  .card-label{font-size:.66rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;display:block}
+  .card h3{font-family:var(--serif);font-size:1.25rem;font-weight:400;color:var(--fg);margin-bottom:.6rem;line-height:1.25}
+  .card p{font-size:.83rem;color:var(--muted);line-height:1.75}
 
-  /* ── WHAT'S INSIDE ── */
-  .inside-section {
-    padding: 6rem 2.5rem;
-    max-width: 1100px; margin: 0 auto;
-  }
-  .section-eyebrow {
-    font-size: 0.7rem; font-weight: 500;
-    letter-spacing: 0.18em; text-transform: uppercase;
-    color: var(--gold);
-    margin-bottom: 1rem;
-    display: flex; align-items: center; gap: 0.75rem;
-  }
-  .section-eyebrow::before {
-    content: '';
-    display: block; width: 2rem; height: 0.5px;
-    background: var(--gold);
-  }
-  .section-heading {
-    font-family: var(--serif);
-    font-size: clamp(2rem, 3.5vw, 3rem);
-    font-weight: 300; line-height: 1.2;
-    color: var(--parchment);
-    margin-bottom: 0.75rem;
-  }
-  .section-heading em { font-style: italic; color: var(--gold); }
-  .section-sub {
-    font-size: 0.95rem; color: var(--text-muted);
-    max-width: 540px; margin-bottom: 3.5rem; line-height: 1.8;
-  }
-  .inside-grid {
-    display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5px;
-    background: rgba(201,168,76,0.15);
-    border: 0.5px solid rgba(201,168,76,0.15);
-  }
-  .inside-item {
-    background: var(--ink);
-    padding: 2rem 1.8rem;
-    transition: background 0.2s;
-  }
-  .inside-item:hover { background: var(--ink-2); }
-  .inside-num {
-    font-family: var(--serif);
-    font-size: 2.5rem; font-weight: 300;
-    color: rgba(201,168,76,0.25);
-    display: block; margin-bottom: 1rem; line-height: 1;
-  }
-  .inside-item h3 {
-    font-family: var(--serif);
-    font-size: 1.15rem; font-weight: 400;
-    color: var(--parchment);
-    margin-bottom: 0.6rem; line-height: 1.3;
-  }
-  .inside-item p {
-    font-size: 0.82rem; color: var(--text-muted);
-    line-height: 1.7;
-  }
+  /* PRICING */
+  .pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5px;background:rgba(201,168,76,.12);border:.5px solid rgba(201,168,76,.15);margin-bottom:2rem}
+  .pricing-card{background:var(--ink);padding:2.5rem 2rem;display:flex;flex-direction:column}
+  .pricing-card.featured{background:var(--ink2);border-left:2px solid var(--gold)}
+  .pricing-label{font-size:.66rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:.6rem;display:block}
+  .pricing-card h3{font-family:var(--serif);font-size:1.4rem;font-weight:300;color:var(--fg);margin-bottom:.5rem;line-height:1.2}
+  .pricing-price{font-family:var(--serif);font-size:2rem;font-weight:300;color:var(--gold);margin:1rem 0 .3rem;line-height:1}
+  .pricing-period{font-size:.72rem;color:var(--muted);margin-bottom:1.5rem;letter-spacing:.04em}
+  .feature-list{list-style:none;flex:1}
+  .feature-list li{font-size:.82rem;color:var(--fg2);padding:.5rem 0;border-bottom:.5px solid rgba(201,168,76,.1);display:flex;gap:.75rem;line-height:1.5}
+  .feature-list li:last-child{border-bottom:none}
+  .feature-list li::before{content:'✦';color:var(--gold);font-size:.55rem;flex-shrink:0;margin-top:5px}
+  .pricing-note{font-size:.82rem;color:var(--muted);line-height:1.7;border-top:.5px solid rgba(201,168,76,.15);padding-top:1.5rem;max-width:680px}
 
-  /* ── STORY ── */
-  .story-section {
-    padding: 6rem 2.5rem;
-    background: var(--ink-2);
-    border-top: 0.5px solid rgba(201,168,76,0.15);
-    border-bottom: 0.5px solid rgba(201,168,76,0.15);
-  }
-  .story-inner {
-    max-width: 1100px; margin: 0 auto;
-    display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: start;
-  }
-  .story-text p {
-    font-size: 0.95rem; color: var(--parchment-dim);
-    line-height: 1.9; margin-bottom: 1.2rem;
-  }
-  .story-text p:first-of-type {
-    font-family: var(--serif);
-    font-size: 1.25rem; font-weight: 400;
-    color: var(--parchment); font-style: italic;
-    line-height: 1.7;
-  }
-  .story-quote {
-    border-left: 2px solid var(--gold);
-    padding: 1.5rem 1.5rem 1.5rem 2rem;
-    margin: 2rem 0;
-  }
-  .story-quote blockquote {
-    font-family: var(--serif);
-    font-size: 1.1rem; font-weight: 300; font-style: italic;
-    color: var(--parchment); line-height: 1.7;
-    margin-bottom: 0.75rem;
-  }
-  .story-quote cite {
-    font-size: 0.75rem; color: var(--gold);
-    letter-spacing: 0.08em; text-transform: uppercase;
-    font-style: normal;
-  }
-  .wins-list { list-style: none; }
-  .wins-list li {
-    display: flex; align-items: flex-start; gap: 1rem;
-    padding: 1.2rem 0;
-    border-bottom: 0.5px solid rgba(201,168,76,0.12);
-  }
-  .wins-list li:last-child { border-bottom: none; }
-  .win-amount {
-    font-family: var(--serif);
-    font-size: 1.4rem; font-weight: 300;
-    color: var(--gold); min-width: 90px;
-    line-height: 1.2;
-  }
-  .win-desc {
-    font-size: 0.82rem; color: var(--text-muted);
-    line-height: 1.6; padding-top: 2px;
-  }
+  /* INTAKE */
+  .intake-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5px;background:rgba(201,168,76,.12);border:.5px solid rgba(201,168,76,.15);margin-bottom:1.5rem}
+  .intake-card{background:var(--ink);padding:2.2rem 2rem}
+  .intake-card h3{font-family:var(--serif);font-size:1.3rem;font-weight:400;color:var(--fg);margin-bottom:.6rem}
+  .intake-card p{font-size:.85rem;color:var(--muted);line-height:1.75;margin-bottom:1.5rem}
 
-  /* ── TESTIMONIAL ── */
-  .testimonial-section {
-    padding: 6rem 2.5rem;
-    text-align: center;
-  }
-  .testimonial-inner { max-width: 700px; margin: 0 auto; }
-  .testimonial-mark {
-    font-family: var(--serif);
-    font-size: 5rem; font-weight: 300;
-    color: var(--gold); opacity: 0.4;
-    line-height: 0.5; margin-bottom: 2rem;
-    display: block;
-  }
-  .testimonial-text {
-    font-family: var(--serif);
-    font-size: 1.5rem; font-weight: 300; font-style: italic;
-    color: var(--parchment); line-height: 1.6;
-    margin-bottom: 1.5rem;
-  }
-  .testimonial-attr {
-    font-size: 0.75rem; color: var(--gold);
-    letter-spacing: 0.1em; text-transform: uppercase;
-  }
+  /* PLANNER BAND */
+  .planner-band{background:var(--ink2);border:.5px solid rgba(201,168,76,.3);padding:2.8rem 2.5rem;display:grid;grid-template-columns:1fr auto;gap:2rem;align-items:center;position:relative}
+  .planner-band::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+  .planner-band h2{font-family:var(--serif);font-size:clamp(1.6rem,2.5vw,2.2rem);font-weight:300;color:var(--fg);margin-bottom:.5rem;line-height:1.2}
+  .planner-band p{font-size:.88rem;color:var(--muted);line-height:1.75}
 
-  /* ── BOOK ── */
-  .book-section {
-    padding: 5rem 2.5rem;
-    background: var(--ink-2);
-    border-top: 0.5px solid rgba(201,168,76,0.15);
-  }
-  .book-inner {
-    max-width: 1100px; margin: 0 auto;
-    display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center;
-  }
-  .book-cover {
-    background: var(--ink-3);
-    border: 0.5px solid rgba(201,168,76,0.3);
-    aspect-ratio: 3/4;
-    display: flex; flex-direction: column;
-    justify-content: center; align-items: center;
-    text-align: center; padding: 3rem;
-    position: relative; max-width: 320px;
-  }
-  .book-cover::before {
-    content: '';
-    position: absolute; inset: 8px;
-    border: 0.5px solid rgba(201,168,76,0.2);
-    pointer-events: none;
-  }
-  .book-cover-title {
-    font-family: var(--serif);
-    font-size: 1.8rem; font-weight: 300; font-style: italic;
-    color: var(--parchment); line-height: 1.25;
-    margin-bottom: 1rem;
-  }
-  .book-cover-divider {
-    width: 3rem; height: 0.5px;
-    background: var(--gold); margin: 1rem auto;
-  }
-  .book-cover-author {
-    font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase;
-    color: var(--gold);
-  }
-  .book-badges {
-    display: flex; flex-direction: column; gap: 0.5rem;
-    margin-top: 1.5rem;
-  }
-  .book-badge {
-    font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase;
-    color: var(--text-muted);
-    border: 0.5px solid rgba(201,168,76,0.2);
-    padding: 0.35rem 0.75rem; text-align: center;
-  }
-  .book-text h2 {
-    font-family: var(--serif);
-    font-size: 2.2rem; font-weight: 300; line-height: 1.2;
-    color: var(--parchment); margin-bottom: 1rem;
-  }
-  .book-text h2 em { font-style: italic; color: var(--gold); }
-  .book-text p {
-    font-size: 0.9rem; color: var(--text-muted);
-    line-height: 1.8; margin-bottom: 1rem;
-  }
-  .book-link {
-    display: inline-block;
-    font-size: 0.75rem; font-weight: 500;
-    letter-spacing: 0.12em; text-transform: uppercase;
-    color: var(--gold);
-    text-decoration: none;
-    border-bottom: 0.5px solid var(--gold-dim);
-    padding-bottom: 2px;
-    transition: color 0.2s, border-color 0.2s;
-  }
-  .book-link:hover { color: var(--gold-light); border-color: var(--gold-light); }
+  /* CONTACT */
+  .contact-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5px;background:rgba(201,168,76,.12);border:.5px solid rgba(201,168,76,.15);margin-bottom:2rem}
+  .contact-card{background:var(--ink);padding:2.2rem 2rem}
+  .contact-card h3{font-family:var(--serif);font-size:1.3rem;font-weight:400;color:var(--fg);margin-bottom:.5rem}
+  .contact-card p{font-size:.85rem;color:var(--muted);line-height:1.75;margin-bottom:1rem}
+  .contact-link{color:var(--gold);font-size:.88rem;font-weight:500;text-decoration:none;word-break:break-word}
+  .contact-link:hover{color:var(--gold2)}
 
-  /* ── BOTTOM CTA ── */
-  .bottom-cta {
-    padding: 7rem 2.5rem;
-    text-align: center; position: relative; overflow: hidden;
-  }
-  .bottom-cta::before {
-    content: '';
-    position: absolute; inset: 0;
-    background: radial-gradient(ellipse 60% 80% at 50% 50%, rgba(201,168,76,0.06) 0%, transparent 70%);
-    pointer-events: none;
-  }
-  .bottom-cta h2 {
-    font-family: var(--serif);
-    font-size: clamp(2rem, 4vw, 3.2rem);
-    font-weight: 300; line-height: 1.2;
-    color: var(--parchment); margin-bottom: 1rem;
-  }
-  .bottom-cta h2 em { font-style: italic; color: var(--gold); }
-  .bottom-cta p {
-    font-size: 0.95rem; color: var(--text-muted);
-    max-width: 480px; margin: 0 auto 2.5rem; line-height: 1.8;
-  }
-  .cta-btn-large {
-    display: inline-block;
-    background: var(--gold);
-    color: var(--ink);
-    font-family: var(--sans);
-    font-size: 0.8rem; font-weight: 500;
-    letter-spacing: 0.14em; text-transform: uppercase;
-    padding: 1.1rem 3rem;
-    text-decoration: none;
-    transition: background 0.2s;
-  }
-  .cta-btn-large:hover { background: var(--gold-light); }
-  .cta-secondary {
-    display: block; margin-top: 1.2rem;
-    font-size: 0.8rem; color: var(--text-muted);
-    text-decoration: none;
-    transition: color 0.2s;
-  }
-  .cta-secondary:hover { color: var(--parchment); }
+  /* FOOTER */
+  footer{background:var(--ink2);border-top:.5px solid rgba(201,168,76,.12);padding:2rem 2.5rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+  .footer-copy{font-size:.75rem;color:var(--muted)}
+  .footer-links{display:flex;gap:1.5rem;flex-wrap:wrap}
+  .footer-links a{font-size:.75rem;color:var(--muted);text-decoration:none;transition:color .2s}
+  .footer-links a:hover{color:var(--gold)}
 
-  /* ── FOOTER ── */
-  footer {
-    background: var(--ink-3);
-    border-top: 0.5px solid rgba(201,168,76,0.15);
-    padding: 2.5rem;
-    text-align: center;
-  }
-  footer p { font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.4rem; }
-  footer a { color: var(--gold); text-decoration: none; }
-  footer a:hover { color: var(--gold-light); }
+  /* REVEAL */
+  .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+  .reveal.visible{opacity:1;transform:none}
 
-  /* ── SUCCESS STATE ── */
-  .success-state {
-    display: none;
-    text-align: center; padding: 2rem 0;
+  /* RESPONSIVE */
+  @media(max-width:900px){
+    .split{grid-template-columns:1fr;gap:2.5rem}
+    .statement{position:static}
+    .card-grid,.pricing-grid{grid-template-columns:1fr}
+    .intake-grid,.contact-grid{grid-template-columns:1fr}
+    .planner-band{grid-template-columns:1fr}
   }
-  .success-state .check {
-    font-size: 2.5rem; color: var(--gold);
-    margin-bottom: 1rem; display: block;
-  }
-  .success-state h3 {
-    font-family: var(--serif);
-    font-size: 1.5rem; font-weight: 300;
-    color: var(--parchment); margin-bottom: 0.5rem;
-  }
-  .success-state p {
-    font-size: 0.82rem; color: var(--text-muted); line-height: 1.6;
-  }
-
-  /* ── ANIMATIONS ── */
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to   { opacity: 1; transform: translateY(0); }
-  }
-  .fade-up { animation: fadeUp 0.8s ease both; }
-  .delay-1 { animation-delay: 0.15s; }
-  .delay-2 { animation-delay: 0.3s; }
-  .delay-3 { animation-delay: 0.45s; }
-  .delay-4 { animation-delay: 0.6s; }
-
-  /* ── RESPONSIVE ── */
-  @media (max-width: 900px) {
-    .hero-grid { grid-template-columns: 1fr; gap: 3rem; }
-    .proof-inner { grid-template-columns: repeat(2, 1fr); }
-    .inside-grid { grid-template-columns: 1fr; }
-    .story-inner { grid-template-columns: 1fr; gap: 3rem; }
-    .book-inner { grid-template-columns: 1fr; gap: 3rem; }
-    .book-cover { max-width: 100%; }
-  }
-  @media (max-width: 600px) {
-    nav { padding: 1rem 1.5rem; }
-    .hero { padding: 6rem 1.5rem 3rem; }
-    .proof-bar, .inside-section, .story-section, .testimonial-section,
-    .book-section, .bottom-cta { padding-left: 1.5rem; padding-right: 1.5rem; }
-    .proof-inner { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+  @media(max-width:600px){
+    nav{padding:1rem 1.5rem}
+    .hero{padding:7rem 1.5rem 3.5rem}
+    .section{padding:4rem 1.5rem}
+    .section-alt{padding:4rem 1.5rem}
   }
 </style>
 </head>
@@ -549,283 +153,259 @@
 
 <!-- NAV -->
 <nav>
-  <a href="https://beautyforashes.io" class="nav-logo">FaithVision Leadership</a>
-  <a href="#planner" class="nav-cta">Get Free Planner</a>
+  <a class="nav-brand" href="index.html">FaithVision Leadership</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#work">Advisory</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#pricing">Pricing</a></li>
+    <li><a href="#intake">Intake</a></li>
+    <li><a href="https://beautyforashes.creator-spring.com" target="_blank" rel="noopener">Store</a></li>
+    <li><a href="planner.html">Free Planner</a></li>
+    <li><a href="case-studies.html">Case Studies</a></li>
+    <li><a href="signup.html#contact" class="nav-cta">Book a Call</a></li>
+  </ul>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-grid">
-    <div>
-      <p class="hero-eyebrow fade-up">Free Resource — Executive Planner</p>
-      <h1 class="fade-up delay-1">
-        The Framework That Turns <em>Ruins Into</em> Empires
-      </h1>
-      <p class="hero-sub fade-up delay-2">
-        Download the same strategic planner used to rebuild bankrupt organizations into multimillion-dollar operations — free from Pastor Raymond O. Anderson, 3× nationally awarded author and $120M+ turnaround strategist.
-      </p>
-      <div class="hero-credentials fade-up delay-3">
-        <div class="cred-item">3× Nationally Awarded Author · 2010 Pulitzer Prize Contender</div>
-        <div class="cred-item">$120M+ in real estate development and bridge financing facilitated</div>
-        <div class="cred-item">Washington Park Association: $0 → $5.5M reconstruction funds</div>
-        <div class="cred-item">New England Housing Ministries: insolvency → $7.5M cash in 24 months</div>
-        <div class="cred-item">PrePaid Legal: 500 → 10,000 monthly subscribers in 3.5 years</div>
-        <div class="cred-item">800,000+ households reached via self-built Tri-State broadcast — signal amplified 7× by station demand</div>
-        <div class="cred-item">Original art collection: market-appraised at $150,000–$500,000/piece today — 40+ years provenance, adversity narrative, three media, complete collection</div>
-      </div>
-    </div>
-
-    <!-- FORM -->
-    <div class="form-card fade-up delay-4" id="planner">
-      <div id="form-content">
-        <h2 class="form-title">Get Your Free Executive Planner</h2>
-        <p class="form-sub">Instant access. No spam. Unsubscribe anytime.</p>
-        <form id="plannerForm" onsubmit="handleSubmit(event)">
-          <div class="form-group">
-            <label for="fname">First Name</label>
-            <input type="text" id="fname" name="fname" placeholder="Your first name" required>
-          </div>
-          <div class="form-group">
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" placeholder="your@email.com" required>
-          </div>
-          <div class="form-group">
-            <label for="role">I am a…</label>
-            <select id="role" name="role" required>
-              <option value="" disabled selected>Select your situation</option>
-              <option value="business-owner">Business owner / entrepreneur</option>
-              <option value="nonprofit">Nonprofit or ministry leader</option>
-              <option value="individual">Individual monetizing my gifts</option>
-              <option value="executive">Corporate executive</option>
-              <option value="pastor">Pastor / faith leader</option>
-              <option value="other">Other</option>
-            </select>
-          </div>
-          <button type="submit" class="form-submit">Send Me the Free Planner →</button>
-          <p class="form-privacy">🔒 Your information is private and never sold or shared.</p>
-        </form>
-      </div>
-      <div class="success-state" id="form-success">
-        <span class="check">✦</span>
-        <h3>You're in — check your inbox.</h3>
-        <p>Your Executive Planner is on its way. While you wait, explore a free discovery call below.</p>
-      </div>
+  <div class="hero-inner">
+    <p class="eyebrow">FaithVision Leadership Consulting</p>
+    <h1>Beauty<br>for <em>Ashes</em></h1>
+    <p class="hero-copy">
+      Confidential strategic counsel for leaders, founders, ministries, families, and builders ready to restore order, clarify the assignment, and move with disciplined conviction.
+    </p>
+    <div class="hero-actions">
+      <a class="btn-primary" href="signup.html#contact">Request Advisory Call</a>
+      <a class="btn-ghost" href="planner.html">Get Free Planner</a>
     </div>
   </div>
 </section>
 
-<!-- PROOF BAR -->
-<div class="proof-bar">
-  <div class="proof-inner">
-    <div class="proof-stat">
-      <span class="proof-num">$120M+</span>
-      <span class="proof-label">Bridge, mezzanine &amp; gap financing facilitated over 15 years</span>
-    </div>
-    <div class="proof-stat">
-      <span class="proof-num">40+</span>
-      <span class="proof-label">Years of executive leadership across 5 industries</span>
-    </div>
-    <div class="proof-stat">
-      <span class="proof-num">20×</span>
-      <span class="proof-label">Client growth achieved at PrePaid Legal in 42 months</span>
-    </div>
-    <div class="proof-stat">
-      <span class="proof-num">3×</span>
-      <span class="proof-label">Nationally awarded Borders Book of the Month author</span>
-    </div>
-    <div class="proof-stat">
-      <span class="proof-num">800K+</span>
-      <span class="proof-label">Households reached by faith &amp; business broadcast across NY, MA &amp; CT — signal amplified 7× by station demand</span>
-    </div>
-    <div class="proof-stat">
-      <span class="proof-num">Age 9–13</span>
-      <span class="proof-label">Self-sold original art collection, $150,000–$500,000/piece on today's secondary market — built entirely under adversity</span>
-    </div>
+<!-- CREDENTIAL BAR -->
+<div class="cred-bar">
+  <div class="cred-inner">
+    <span class="cred-item">$120M+ Facilitated</span>
+    <span class="cred-item">3× National Book Award</span>
+    <span class="cred-item">2010 Pulitzer Prize Contender</span>
+    <span class="cred-item">800,000+ Households Reached</span>
+    <span class="cred-item">40+ Years Executive Leadership</span>
   </div>
 </div>
 
-<!-- WHAT'S INSIDE -->
-<section>
-  <div class="inside-section">
-    <p class="section-eyebrow">Inside the planner</p>
-    <h2 class="section-heading">Six Frameworks. <em>Proven in the Field.</em></h2>
-    <p class="section-sub">These aren't theories from a classroom. Every framework inside this planner was forged from real turnaround work in distressed communities, struggling nonprofits, and stagnant businesses.</p>
-    <div class="inside-grid">
-      <div class="inside-item">
-        <span class="inside-num">01</span>
-        <h3>The Hidden Asset Audit</h3>
-        <p>A step-by-step inventory system to uncover overlooked value in any organization — the same method used to identify $5.5M in reconstruction potential at Washington Park Association.</p>
+<!-- ABOUT -->
+<section id="about" class="section-alt">
+  <div class="section-inner reveal">
+    <div class="split">
+      <div class="statement">
+        <h2>Built for leaders who need more than <em>inspiration.</em></h2>
+        <p>
+          Beauty for Ashes is the public home of FaithVision Leadership — a confidential advisory and speaking platform for leaders, families, ministries, nonprofits, and businesses facing real decisions.
+        </p>
       </div>
-      <div class="inside-item">
-        <span class="inside-num">02</span>
-        <h3>The 90-Day Solvency Sprint</h3>
-        <p>A time-bound action framework for leaders who need results fast. Maps cash flow priorities, stakeholder communication, and quick-win funding moves in sequence.</p>
-      </div>
-      <div class="inside-item">
-        <span class="inside-num">03</span>
-        <h3>Gift-to-Business Blueprint</h3>
-        <p>A personal inventory tool that helps individuals identify their unique God-given gifts and reverse-engineer them into a scalable, income-producing business model.</p>
-      </div>
-      <div class="inside-item">
-        <span class="inside-num">04</span>
-        <h3>Faith-Driven Leadership Weekly Planner</h3>
-        <p>Daily and weekly pages that integrate scriptural focus, strategic priorities, and accountability rhythms — for leaders who operate from conviction, not just strategy.</p>
-      </div>
-      <div class="inside-item">
-        <span class="inside-num">05</span>
-        <h3>Subscriber &amp; Revenue Growth Map</h3>
-        <p>The exact growth tracking framework used to scale PrePaid Legal from 500 to 10,000 monthly subscribers — adaptable for any subscription or membership business.</p>
-      </div>
-      <div class="inside-item">
-        <span class="inside-num">06</span>
-        <h3>Funder &amp; Lender Targeting Matrix</h3>
-        <p>A decision matrix for identifying the right grants, lenders, and bridge financing sources for your specific organization type, stage, and geographic market.</p>
+      <div class="service-list">
+        <div class="service-item">
+          <h3>What We See</h3>
+          <p>Many leaders are not short on calling. They are short on structure, governance, capital readiness, trusted counsel, and disciplined execution.</p>
+        </div>
+        <div class="service-item">
+          <h3>How We Help</h3>
+          <p>We diagnose constraints, clarify the assignment, organize priorities, and shape a practical path that respects both faith and operational reality.</p>
+        </div>
+        <div class="service-item">
+          <h3>Who We Serve</h3>
+          <p>Founders, executives, pastors, ministry leaders, families, nonprofits, and builders who need strategic counsel with spiritual weight and practical discipline.</p>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- STORY -->
-<section class="story-section">
-  <div class="story-inner">
-    <div class="story-text">
-      <p>The story did not begin in a boardroom. It began in adversity — and it began early.</p>
-
-      <p>Between the ages of 9 and 13, from 1979 to 1983, Raymond O. Anderson created an entire original collection of works in acrylic, oil, and pencil — and sold every piece himself, commanding $250 to $500 per painting — pieces that carry a secondary market appraisal of <strong style="color:var(--gold);">$150,000 to $500,000 each today</strong>, driven by four decades of provenance, three media, the rarity of a complete collection, and the documented life story behind every canvas. He did not have a gallery. He did not have an agent. He built the market from nothing, at an age when most children were playing, not selling. What makes this more remarkable: it was accomplished under conditions of severe ostracization and ongoing mental and physical abuse by family members. That collection — created under that pressure, sold on those terms — was the first act of an entrepreneur who would go on to move $120 million.</p>
-
-      <p>Years later, Pastor Anderson and his wife Denise took that same drive into the broadcast arena. What began as a locally televised program reaching 5,000 weekly viewers out of Bridgeport, Connecticut, grew into a broadcast reaching more than 800,000 households across New York, Massachusetts, and Connecticut. The programming blended teaching, motivation, self-improvement, spiritual inspiration, and business strategy into a mastermind format unlike anything else on the air at the time. Demand was so high that the station's owners were compelled to push the signal ratio seven times stronger — not by strategy, but by necessity. Viewers were calling the station directly, asking to be reached. That is not an audience. That is a movement.</p>
-
-      <p>Four decades ago, Pastor Raymond O. Anderson walked into rooms that others had already walked out of — and walked out with results no one believed were possible.</p>
-      <p>In Bridgeport, Connecticut — ranked among the most crime-ridden cities in America in 1999 — he took Washington Park Association from complete insolvency and raised $5.5 million in reconstruction funds for 13 residential homes in a neighborhood the world had written off.</p>
-      <p>He didn't stop there. New England Housing Ministries was drowning. Within 24 months, he rebuilt it from nothing to $7.5 million cash on hand — then leveraged that foundation into $120 million in bridge, mezzanine, and gap loans over 15 years.</p>
-      <div class="story-quote">
-        <blockquote>"Inspiring, uplifting — a much needed book for today. A Must Read."</blockquote>
-        <cite>— Diane Defonce, Borders Books, Fairfield, CT</cite>
-      </div>
-      <p>His autobiography, <em>I Have Seen the Living God</em>, has been awarded three times as a Borders Book of the Month and was a 2010 Pulitzer Prize contender. It is the story behind the strategy — a face-to-face encounter with God that became the foundation for everything that followed.</p>
+<!-- ADVISORY WORK -->
+<section id="work" class="section">
+  <p class="section-eyebrow reveal">Advisory Work</p>
+  <h2 class="section-heading reveal">Confidential counsel for decisions that carry <em>weight.</em></h2>
+  <p class="section-sub reveal">This is the official FaithVision Leadership front door for consulting, speaking, and strategic advisory work. The planner and digital product experience live separately at beautyforashes.pro.</p>
+  <div class="card-grid reveal">
+    <div class="card">
+      <span class="card-label">Strategy</span>
+      <h3>Clarity for leaders under pressure.</h3>
+      <p>Define priorities, diagnose constraints, align resources, and turn broad vision into an executable path.</p>
     </div>
-    <div>
-      <p class="section-eyebrow" style="margin-bottom:1.5rem;">The track record</p>
-      <ul class="wins-list">
-        <li>
-          <span class="win-amount">800K+</span>
-          <span class="win-desc">Households reached across NY, MA &amp; CT by a locally launched broadcast that began at 5,000 weekly viewers in Bridgeport — demand so strong the station owners amplified the signal 7× to meet it</span>
-        </li>
-        <li>
-          <span class="win-amount">Age 9–13</span>
-          <span class="win-desc">Self-marketed and sold an entire original art collection in acrylic, oil, and pencil — $250–$500 per piece (1979–1983), equivalent to $150,000–$500,000 per piece on today's secondary market — accomplished under severe family adversity</span>
-        </li>
-        <li>
-          <span class="win-amount">$5.5M</span>
-          <span class="win-desc">Washington Park Association, Bridgeport CT — raised from insolvency for 13 residential home reconstructions in one of America's toughest neighborhoods</span>
-        </li>
-        <li>
-          <span class="win-amount">$7.5M</span>
-          <span class="win-desc">New England Housing Ministries — cash on hand rebuilt in 24 months from complete insolvency</span>
-        </li>
-        <li>
-          <span class="win-amount">$120M</span>
-          <span class="win-desc">Bridge, mezzanine, and gap loans facilitated over 15 years for housing and community development projects</span>
-        </li>
-        <li>
-          <span class="win-amount">20×</span>
-          <span class="win-desc">PrePaid Legal — subscription growth from 500 to 10,000 monthly clients in 3.5 years</span>
-        </li>
-        <li>
-          <span class="win-amount">40+</span>
-          <span class="win-desc">Years spanning orthopedic healthcare leadership, real estate development, nonprofit revitalization, and faith-based consulting</span>
-        </li>
+    <div class="card">
+      <span class="card-label">Speaking</span>
+      <h3>Words shaped for conviction and movement.</h3>
+      <p>Keynotes, teaching, leadership sessions, and faith-centered communication for audiences that need direction and hope.</p>
+    </div>
+    <div class="card">
+      <span class="card-label">Transformation</span>
+      <h3>Restore what pressure has scattered.</h3>
+      <p>Rebuild from the inside out: identity, order, financial clarity, disciplined action, and renewed momentum.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="section-alt">
+  <div class="section-inner reveal">
+    <div class="split">
+      <div class="statement">
+        <h2>The full picture <em>matters.</em></h2>
+        <p>FaithVision works where spiritual conviction meets practical leadership: planning, governance, capital readiness, communication, decision-making, and disciplined execution.</p>
+      </div>
+      <div class="service-list">
+        <div class="service-item">
+          <h3>Corporate and Enterprise Strategy</h3>
+          <p>Strategic planning, organizational clarity, governance review, financial diagnosis, and decision support for leaders with complex responsibilities.</p>
+        </div>
+        <div class="service-item">
+          <h3>Individual and Nonprofit Advisory</h3>
+          <p>Personal leadership assessment, ministry direction, asset awareness, nonprofit readiness, and focused counsel for the next assignment.</p>
+        </div>
+        <div class="service-item">
+          <h3>Inspirational Speaking and Teaching</h3>
+          <p>Faith-centered talks, workshops, and leadership sessions built around restoration, purpose, discipline, and action.</p>
+        </div>
+        <div class="service-item">
+          <h3>Media and Message Development</h3>
+          <p>Support shaping talks, video themes, audio teaching, book concepts, and recurring content into a clear body of work.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing" class="section">
+  <p class="section-eyebrow reveal">Pricing</p>
+  <h2 class="section-heading reveal">Advisory tiers for different levels of <em>responsibility.</em></h2>
+  <p class="section-sub reveal">Consultation ranges for FaithVision Leadership services. These are not online checkout plans. Final scope is confirmed after intake and review.</p>
+  <div class="pricing-grid reveal">
+    <div class="pricing-card">
+      <span class="pricing-label">Individual</span>
+      <h3>Personal Advisory</h3>
+      <div class="pricing-price">$2,500 – $5,000</div>
+      <div class="pricing-period">Focused personal counsel</div>
+      <ul class="feature-list">
+        <li>Personal leadership assessment</li>
+        <li>Financial and calling diagnosis</li>
+        <li>Priority map and next-step counsel</li>
+        <li>Ideal for individuals and families</li>
+      </ul>
+    </div>
+    <div class="pricing-card featured">
+      <span class="pricing-label">Professional · Most Requested</span>
+      <h3>Strategic Advisory</h3>
+      <div class="pricing-price">$5,000 – $10,000</div>
+      <div class="pricing-period">Professional and ministry scope</div>
+      <ul class="feature-list">
+        <li>Strategy, message, and execution planning</li>
+        <li>Nonprofit or ministry advisory</li>
+        <li>Asset, income, and opportunity review</li>
+        <li>Best for builders preparing to move</li>
+      </ul>
+    </div>
+    <div class="pricing-card">
+      <span class="pricing-label">Corporate</span>
+      <h3>Enterprise Counsel</h3>
+      <div class="pricing-price">$10,000+</div>
+      <div class="pricing-period">Custom organization scope</div>
+      <ul class="feature-list">
+        <li>Corporate and enterprise strategy</li>
+        <li>Governance and stakeholder alignment</li>
+        <li>Funding and capital readiness review</li>
+        <li>Custom scope for larger engagements</li>
       </ul>
     </div>
   </div>
+  <p class="pricing-note">
+    All engagements begin with a complimentary 30-minute Client Harmonization Meeting.
+    <a href="signup.html#contact" style="color:var(--gold);text-decoration:none;margin-left:.4rem">Book yours →</a>
+  </p>
 </section>
 
-<!-- TESTIMONIAL -->
-<section class="testimonial-section">
-  <div class="testimonial-inner">
-    <span class="testimonial-mark">"</span>
-    <p class="testimonial-text">FaithVision Leadership transformed our nonprofit's future with clear, faith-driven strategies.</p>
-    <p class="testimonial-attr">— J. Lee, Nonprofit Leader</p>
-  </div>
-</section>
-
-<!-- BOOK -->
-<section class="book-section">
-  <div class="book-inner">
-    <div class="book-cover">
-      <p class="book-cover-title">I Have Seen<br>the Living God</p>
-      <div class="book-cover-divider"></div>
-      <p class="book-cover-author">Pastor Raymond O. Anderson</p>
-      <div class="book-badges">
-        <span class="book-badge">2010 Pulitzer Prize Contender</span>
-        <span class="book-badge">3× Borders Book of the Month</span>
-        <span class="book-badge">Nationally Awarded</span>
+<!-- INTAKE -->
+<section id="intake" class="section-alt">
+  <div class="section-inner">
+    <p class="section-eyebrow reveal">Intake</p>
+    <h2 class="section-heading reveal">Start with the right <em>assessment.</em></h2>
+    <p class="section-sub reveal">FaithVision uses separate intake paths for individual/nonprofit clients and corporate/enterprise clients. Download, complete, and return the PDF by email.</p>
+    <div class="intake-grid reveal">
+      <div class="intake-card">
+        <h3>Individual &amp; Nonprofit Intake</h3>
+        <p>For personal advisory, ministry direction, nonprofit readiness, family strategy, and leadership assessment.</p>
+        <a class="btn-ghost" href="FAITHVISION-INDIVIDUAL-INTAKE.pdf" target="_blank" rel="noopener">Open Individual Intake →</a>
+      </div>
+      <div class="intake-card">
+        <h3>Corporate &amp; Enterprise Intake</h3>
+        <p>For businesses, organizations, enterprise strategy, funding readiness, governance, and stakeholder review.</p>
+        <a class="btn-ghost" href="FAITHVISION-CORPORATE-INTAKE.pdf" target="_blank" rel="noopener">Open Corporate Intake →</a>
       </div>
     </div>
-    <div class="book-text">
-      <p class="section-eyebrow" style="margin-bottom:1rem;">The autobiography</p>
-      <h2>A Face-to-Face Meeting<br>with <em>the Living God</em></h2>
-      <p>This isn't a typical business book. It is a true account of a divine encounter that reshaped a man's understanding of purpose, leadership, and the power of faith-driven action.</p>
-      <p>Three-time Borders Book of the Month. 2010 Pulitzer Prize contender. Read by believers and atheists alike — because the transformation it describes transcends religion and speaks directly to the human hunger for meaning and results.</p>
-      <a href="https://beautyforashes.creator-spring.com" class="book-link" target="_blank" rel="noopener">Get Your Copy at the Store →</a>
-    </div>
   </div>
 </section>
 
-<!-- BOTTOM CTA -->
-<section class="bottom-cta">
-  <h2>Ready to Turn Your <em>Ashes Into Beauty?</em></h2>
-  <p>Download the free Executive Planner — then book a complimentary 20-minute discovery call to explore what a strategic engagement could unlock for your organization or vision.</p>
-  <a href="#planner" class="cta-btn-large">Get the Free Planner</a>
-  <a href="signup.html#contact" class="cta-secondary">Or explore consulting services →</a>
+<!-- PLANNER -->
+<section id="planner" class="section reveal">
+  <div class="planner-band">
+    <div>
+      <p class="eyebrow" style="margin-bottom:.75rem">Separate Platform</p>
+      <h2>Kingdom Strategy Executive Planner</h2>
+      <p>The full planner, digital product pages, and resources live at beautyforashes.pro. This site is the consulting and leadership gateway.</p>
+    </div>
+    <a class="btn-primary" href="https://beautyforashes.pro/" target="_blank" rel="noopener">Open .pro →</a>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section-alt">
+  <div class="section-inner">
+    <p class="section-eyebrow reveal">Correspondence</p>
+    <h2 class="section-heading reveal">Begin with the proper <em>channel.</em></h2>
+    <p class="section-sub reveal">Use the principal client response address for consultations and high-trust correspondence. Or book directly below.</p>
+    <div class="contact-grid reveal">
+      <div class="contact-card">
+        <h3>Principal Client Response</h3>
+        <p>Consulting, speaking, client work, and direct executive correspondence.</p>
+        <a class="contact-link" href="mailto:andersonraymond7@icloud.com?subject=FaithVision%20Leadership%20Inquiry">andersonraymond7@icloud.com</a>
+      </div>
+      <div class="contact-card">
+        <h3>General Intake</h3>
+        <p>General messages, intake routing, lower-tier inquiries, and broader correspondence.</p>
+        <a class="contact-link" href="mailto:pastorpaol@gmail.com?subject=General%20Inquiry">pastorpaol@gmail.com</a>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:2.5rem">
+      <a class="btn-primary" href="signup.html#contact">Book a Client Harmonization Meeting</a>
+      <p style="font-size:.78rem;color:var(--muted);margin-top:1rem">
+        30 minutes · Complimentary · With Pastor Raymond O. Anderson ·
+        <a href="tel:+260770647199" style="color:var(--gold);text-decoration:none">+260 770 64 7199</a>
+      </p>
+    </div>
+  </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <p><strong>FaithVision Leadership</strong> · Pastor Raymond O. Anderson</p>
-  <p>
-    <a href="https://beautyforashes.io">beautyforashes.io</a> &nbsp;·&nbsp;
-    <a href="mailto:pastorpaol@gmail.com">pastorpaol@gmail.com</a> &nbsp;·&nbsp;
+  <p class="footer-copy">© 2026 FaithVision Leadership. Beauty for Ashes.</p>
+  <div class="footer-links">
+    <a href="pricing.html">Services</a>
+    <a href="case-studies.html">Case Studies</a>
+    <a href="planner.html">Free Planner</a>
+    <a href="https://beautyforashes.creator-spring.com" target="_blank" rel="noopener">Store</a>
     <a href="https://www.youtube.com/@THEFAMILYBIBLESTUDYHOUR" target="_blank" rel="noopener">YouTube</a>
-  </p>
-  <p style="margin-top:1rem;">© 2026 FaithVision Leadership. All rights reserved.</p>
+    <a href="mailto:andersonraymond7@icloud.com">Email</a>
+  </div>
 </footer>
 
+<!-- SCROLL REVEAL -->
 <script>
-function handleSubmit(e) {
-  e.preventDefault();
-  document.getElementById('form-content').style.display = 'none';
-  document.getElementById('form-success').style.display = 'block';
-  // Replace this comment with your email service (Mailchimp, Beehiiv, ConvertKit, etc.)
-  // Example Beehiiv embed: post form data to your Beehiiv subscribe URL
-}
-
-// Smooth scroll for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(a => {
-  a.addEventListener('click', e => {
-    e.preventDefault();
-    const target = document.querySelector(a.getAttribute('href'));
-    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  });
-});
-
-// Intersection observer for scroll animations
+const revealEls = document.querySelectorAll('.reveal');
 const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.style.opacity = '1';
-      entry.target.style.transform = 'translateY(0)';
-    }
-  });
-}, { threshold: 0.1 });
-
-document.querySelectorAll('.inside-item, .proof-stat, .wins-list li').forEach(el => {
-  el.style.opacity = '0';
-  el.style.transform = 'translateY(16px)';
-  el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-  observer.observe(el);
-});
+  entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); observer.unobserve(e.target); }});
+},{threshold:0.08});
+revealEls.forEach(el => observer.observe(el));
 </script>
-<script src="/bot/faithvision-leadgen.js" defer></script>
+
 </body>
 </html>
