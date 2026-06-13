@@ -26,9 +26,6 @@
     border-bottom: 0.5px solid rgba(201,168,76,0.2);
   }
   .nav-logo { font-family: var(--serif); font-size: 1.1rem; font-weight: 400; color: var(--gold); text-decoration: none; }
-  .nav-actions { display: flex; align-items: center; gap: 1rem; }
-  .nav-link { font-family: var(--sans); font-size: 0.72rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); text-decoration: none; transition: color 0.2s; }
-  .nav-link:hover { color: var(--gold-light); }
   .nav-cta { font-family: var(--sans); font-size: 0.75rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink); background: var(--gold); padding: 0.6rem 1.4rem; text-decoration: none; transition: background 0.2s; }
   .nav-cta:hover { background: var(--gold-light); }
 
@@ -137,8 +134,6 @@
   }
   @media (max-width: 600px) {
     nav { padding: 1rem 1.5rem; }
-    .nav-actions { gap: 0.6rem; }
-    .nav-link, .nav-cta { font-size: 0.66rem; }
     .hero, .pricing-section, .speaking-section, .faq-section, .bottom-cta { padding-left: 1.5rem; padding-right: 1.5rem; }
   }
 </style>
@@ -146,13 +141,8 @@
 <body>
 
 <nav>
-  <a href="index.html" class="nav-logo">FaithVision Leadership</a>
-  <div class="nav-actions">
-    <a href="case-studies.html" class="nav-link">Results</a>
-    <a href="https://beautyforashes.creator-spring.com" target="_blank" rel="noopener" class="nav-link">Store</a>
-    <a href="https://beautyforashes.pro" class="nav-link">Planner</a>
-    <a href="signup.html#contact" class="nav-cta">Book a Call</a>
-  </div>
+  <a href="https://beautyforashes.io" class="nav-logo">FaithVision Leadership</a>
+  <a href="signup.html#contact" class="nav-cta">Book a Call</a>
 </nav>
 
 <!-- HERO -->
@@ -252,7 +242,7 @@
       </div>
       <div class="tier-action">
         <a href="signup.html#contact" class="tier-btn tier-btn-primary">Apply for This Engagement</a>
-        <a href="case-studies.html" class="tier-btn tier-btn-ghost">Learn More</a>
+        <a href="signup.html#contact" class="tier-btn tier-btn-ghost">Learn More</a>
         <p class="tier-note">Limited to 3 active engagements at a time. Discovery call required before acceptance.</p>
       </div>
     </div>
@@ -438,9 +428,10 @@
 
 <footer>
   <p><strong>FaithVision Leadership</strong> · Pastor Raymond O. Anderson</p>
-  <p><a href="index.html">beautyforashes.io</a> &nbsp;·&nbsp; <a href="signup.html#contact">Contact</a> &nbsp;·&nbsp; <a href="https://beautyforashes.creator-spring.com" target="_blank" rel="noopener">Store</a></p>
+  <p><a href="https://beautyforashes.io">beautyforashes.io</a> &nbsp;·&nbsp; <a href="mailto:pastorpaol@gmail.com">pastorpaol@gmail.com</a></p>
   <p style="margin-top:1rem;">© 2026 FaithVision Leadership. All rights reserved.</p>
 </footer>
 
+<script src="/bot/faithvision-leadgen.js" defer></script>
 </body>
 </html>
