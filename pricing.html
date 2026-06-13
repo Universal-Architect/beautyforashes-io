@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Consulting Services & Pricing | FaithVision Leadership — Pastor Raymond O. Anderson</title>
+<meta name="description" content="Consulting, coaching, and speaking engagements with Pastor Raymond O. Anderson — $120M+ turnaround strategist, 3× nationally awarded author, Pulitzer Prize contender.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --gold: #C9A84C; --gold-light: #E8C97A; --gold-dim: #8A6E32;
+    --ink: #0D0C0A; --ink-2: #1A1915; --ink-3: #252420;
+    --parchment: #F5F0E8; --parchment-dim: #DDD5C4; --text-muted: #9A9080;
+    --serif: 'Cormorant Garamond', Georgia, serif;
+    --sans: 'Jost', sans-serif;
+  }
+  html { scroll-behavior: smooth; }
+  body { background: var(--ink); color: var(--parchment); font-family: var(--sans); font-weight: 300; line-height: 1.7; overflow-x: hidden; }
+
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    padding: 1.2rem 2.5rem; display: flex; justify-content: space-between; align-items: center;
+    background: rgba(13,12,10,0.9); backdrop-filter: blur(12px);
+    border-bottom: 0.5px solid rgba(201,168,76,0.2);
+  }
+  .nav-logo { font-family: var(--serif); font-size: 1.1rem; font-weight: 400; color: var(--gold); text-decoration: none; }
+  .nav-actions { display: flex; align-items: center; gap: 1rem; }
+  .nav-link { font-family: var(--sans); font-size: 0.72rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); text-decoration: none; transition: color 0.2s; }
+  .nav-link:hover { color: var(--gold-light); }
+  .nav-cta { font-family: var(--sans); font-size: 0.75rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink); background: var(--gold); padding: 0.6rem 1.4rem; text-decoration: none; transition: background 0.2s; }
+  .nav-cta:hover { background: var(--gold-light); }
+
+  /* HERO */
+  .hero { padding: 9rem 2.5rem 5rem; text-align: center; max-width: 800px; margin: 0 auto; }
+  .eyebrow { font-size: 0.7rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.2rem; display: flex; align-items: center; justify-content: center; gap: 0.75rem; }
+  .eyebrow::before, .eyebrow::after { content: ''; display: block; width: 2rem; height: 0.5px; background: var(--gold); }
+  .hero h1 { font-family: var(--serif); font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 300; line-height: 1.15; color: var(--parchment); margin-bottom: 1rem; }
+  .hero h1 em { font-style: italic; color: var(--gold); }
+  .hero p { font-size: 1rem; color: var(--text-muted); line-height: 1.8; max-width: 580px; margin: 0 auto 1rem; }
+  .hero-note { font-size: 0.8rem; color: var(--text-muted); font-style: italic; }
+
+  /* MARKET CONTEXT */
+  .market-section { background: var(--ink-2); border-top: 0.5px solid rgba(201,168,76,0.15); border-bottom: 0.5px solid rgba(201,168,76,0.15); padding: 4rem 2.5rem; }
+  .market-inner { max-width: 1100px; margin: 0 auto; }
+  .market-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 2rem; }
+  .market-item { }
+  .market-item-label { font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.4rem; }
+  .market-item-name { font-family: var(--serif); font-size: 1.05rem; font-weight: 400; color: var(--parchment); margin-bottom: 0.3rem; }
+  .market-item-rate { font-size: 0.82rem; color: var(--gold); margin-bottom: 0.3rem; }
+  .market-item-note { font-size: 0.75rem; color: var(--text-muted); line-height: 1.5; }
+  .market-heading { font-family: var(--serif); font-size: 1.5rem; font-weight: 300; color: var(--parchment); margin-bottom: 0.5rem; }
+  .market-heading em { font-style: italic; color: var(--gold); }
+  .market-sub { font-size: 0.9rem; color: var(--text-muted); line-height: 1.7; max-width: 620px; }
+  .divider-line { border: none; border-top: 0.5px solid rgba(201,168,76,0.15); margin: 2rem 0; }
+
+  /* PRICING TIERS */
+  .pricing-section { padding: 6rem 2.5rem; max-width: 1100px; margin: 0 auto; }
+  .section-heading { font-family: var(--serif); font-size: clamp(1.8rem, 3vw, 2.5rem); font-weight: 300; color: var(--parchment); margin-bottom: 0.5rem; line-height: 1.2; }
+  .section-heading em { font-style: italic; color: var(--gold); }
+  .section-sub { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 3rem; line-height: 1.7; max-width: 560px; }
+  .section-eyebrow { font-size: 0.7rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.9rem; display: flex; align-items: center; gap: 0.75rem; }
+  .section-eyebrow::before { content: ''; display: block; width: 2rem; height: 0.5px; background: var(--gold); }
+
+  /* TIER CARDS */
+  .tier-stack { display: flex; flex-direction: column; gap: 1.5px; background: rgba(201,168,76,0.12); border: 0.5px solid rgba(201,168,76,0.15); margin-bottom: 5rem; }
+  .tier {
+    background: var(--ink); padding: 2.5rem 2.5rem;
+    display: grid; grid-template-columns: 280px 1fr 220px; gap: 3rem; align-items: start;
+    transition: background 0.2s;
+  }
+  .tier:hover { background: var(--ink-2); }
+  .tier.featured { background: var(--ink-2); border-left: 2px solid var(--gold); }
+  .tier-label { font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.4rem; }
+  .tier-name { font-family: var(--serif); font-size: 1.5rem; font-weight: 300; color: var(--parchment); margin-bottom: 0.25rem; line-height: 1.2; }
+  .tier-name em { font-style: italic; color: var(--gold); }
+  .tier-tagline { font-size: 0.8rem; color: var(--text-muted); line-height: 1.5; margin-top: 0.4rem; }
+  .tier-price { font-family: var(--serif); font-size: 2.2rem; font-weight: 300; color: var(--gold); line-height: 1; margin: 1rem 0 0.3rem; }
+  .tier-price-note { font-size: 0.75rem; color: var(--text-muted); }
+  .featured-badge { display: inline-block; font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink); background: var(--gold); padding: 0.2rem 0.6rem; margin-bottom: 0.75rem; }
+  .tier-desc { font-size: 0.85rem; color: var(--parchment-dim); line-height: 1.8; margin-bottom: 1rem; }
+  .tier-includes { font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.75rem; }
+  .tier-features { list-style: none; }
+  .tier-features li { font-size: 0.82rem; color: var(--parchment-dim); padding: 0.45rem 0; border-bottom: 0.5px solid rgba(201,168,76,0.08); display: flex; gap: 0.75rem; line-height: 1.5; }
+  .tier-features li:last-child { border-bottom: none; }
+  .tier-features li::before { content: '✦'; color: var(--gold); font-size: 0.55rem; flex-shrink: 0; margin-top: 5px; }
+  .tier-action { display: flex; flex-direction: column; gap: 0.75rem; justify-content: flex-start; padding-top: 0.5rem; }
+  .tier-btn { display: block; padding: 0.85rem 1.5rem; font-family: var(--sans); font-size: 0.72rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; text-align: center; transition: background 0.2s, color 0.2s; cursor: pointer; border: none; }
+  .tier-btn-primary { background: var(--gold); color: var(--ink); }
+  .tier-btn-primary:hover { background: var(--gold-light); }
+  .tier-btn-ghost { background: transparent; color: var(--gold); border: 0.5px solid var(--gold-dim); }
+  .tier-btn-ghost:hover { background: rgba(201,168,76,0.08); }
+  .tier-note { font-size: 0.72rem; color: var(--text-muted); text-align: center; line-height: 1.5; }
+
+  /* SPEAKING */
+  .speaking-section { background: var(--ink-2); border-top: 0.5px solid rgba(201,168,76,0.15); padding: 5rem 2.5rem; }
+  .speaking-inner { max-width: 1100px; margin: 0 auto; }
+  .speaking-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5px; background: rgba(201,168,76,0.12); border: 0.5px solid rgba(201,168,76,0.15); margin-top: 2.5rem; }
+  .speaking-item { background: var(--ink-2); padding: 2rem; transition: background 0.2s; }
+  .speaking-item:hover { background: var(--ink-3); }
+  .speaking-item h3 { font-family: var(--serif); font-size: 1.2rem; font-weight: 300; color: var(--parchment); margin-bottom: 0.4rem; }
+  .speaking-item h3 em { font-style: italic; color: var(--gold); }
+  .speaking-price { font-size: 1.1rem; font-family: var(--serif); color: var(--gold); margin-bottom: 0.6rem; }
+  .speaking-item p { font-size: 0.82rem; color: var(--text-muted); line-height: 1.7; }
+  .speaking-item ul { list-style: none; margin-top: 0.75rem; }
+  .speaking-item ul li { font-size: 0.78rem; color: var(--parchment-dim); padding: 0.3rem 0; display: flex; gap: 0.6rem; line-height: 1.4; }
+  .speaking-item ul li::before { content: '—'; color: var(--gold-dim); flex-shrink: 0; }
+
+  /* FAQ */
+  .faq-section { padding: 5rem 2.5rem; max-width: 800px; margin: 0 auto; }
+  .faq-item { border-bottom: 0.5px solid rgba(201,168,76,0.15); padding: 1.5rem 0; }
+  .faq-item:last-child { border-bottom: none; }
+  .faq-q { font-family: var(--serif); font-size: 1.1rem; font-weight: 400; color: var(--parchment); margin-bottom: 0.6rem; line-height: 1.3; }
+  .faq-a { font-size: 0.88rem; color: var(--text-muted); line-height: 1.8; }
+
+  /* CTA */
+  .bottom-cta { padding: 6rem 2.5rem; text-align: center; position: relative; overflow: hidden; }
+  .bottom-cta::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 60% 80% at 50% 50%, rgba(201,168,76,0.05) 0%, transparent 70%); pointer-events: none; }
+  .bottom-cta h2 { font-family: var(--serif); font-size: clamp(2rem, 4vw, 3rem); font-weight: 300; color: var(--parchment); margin-bottom: 1rem; line-height: 1.2; }
+  .bottom-cta h2 em { font-style: italic; color: var(--gold); }
+  .bottom-cta p { font-size: 0.95rem; color: var(--text-muted); max-width: 480px; margin: 0 auto 2.5rem; line-height: 1.8; }
+  .cta-row { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+  .cta-btn-large { display: inline-block; background: var(--gold); color: var(--ink); font-family: var(--sans); font-size: 0.8rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; padding: 1.1rem 2.5rem; text-decoration: none; transition: background 0.2s; }
+  .cta-btn-large:hover { background: var(--gold-light); }
+  .cta-btn-outline { background: transparent; color: var(--gold); border: 0.5px solid var(--gold-dim); }
+  .cta-btn-outline:hover { background: rgba(201,168,76,0.08); }
+
+  footer { background: var(--ink-3); border-top: 0.5px solid rgba(201,168,76,0.15); padding: 2.5rem; text-align: center; }
+  footer p { font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.4rem; }
+  footer a { color: var(--gold); text-decoration: none; }
+
+  @media (max-width: 1000px) {
+    .tier { grid-template-columns: 1fr; gap: 1.5rem; }
+    .market-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+    .speaking-grid { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 600px) {
+    nav { padding: 1rem 1.5rem; }
+    .nav-actions { gap: 0.6rem; }
+    .nav-link, .nav-cta { font-size: 0.66rem; }
+    .hero, .pricing-section, .speaking-section, .faq-section, .bottom-cta { padding-left: 1.5rem; padding-right: 1.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">FaithVision Leadership</a>
+  <div class="nav-actions">
+    <a href="case-studies.html" class="nav-link">Results</a>
+    <a href="https://beautyforashes.creator-spring.com" target="_blank" rel="noopener" class="nav-link">Store</a>
+    <a href="https://beautyforashes.pro" class="nav-link">Planner</a>
+    <a href="signup.html#contact" class="nav-cta">Book a Call</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <p class="eyebrow">Services & Investment</p>
+  <h1>Strategic Counsel at the <em>Highest Level</em></h1>
+  <p>Pastor Raymond O. Anderson brings 40+ years of executive-level results to a select number of consulting, coaching, and speaking engagements each year. The following represents the current menu of engagements and their associated investment levels.</p>
+  <p class="hero-note">All engagements begin with a complimentary 20-minute discovery conversation.</p>
+</header>
+
+<!-- MARKET CONTEXT -->
+<section class="market-section">
+  <div class="market-inner">
+    <h2 class="market-heading">How This Pricing <em>Compares</em> to the Market</h2>
+    <p class="market-sub">FaithVision Leadership pricing is calibrated against the market's most respected faith-meets-strategy operators — including Myron Golden ($40,000/hr private consulting, $200,000+ keynote), TD Jakes ($150,000/day), and top-tier turnaround specialists charging $10,000–$20,000/month in fractional retainers. Pastor Anderson's $120M+ institutional track record and 40+ years of documented results position him at the premium tier of this peer group.</p>
+    <hr class="divider-line">
+    <div class="market-grid">
+      <div class="market-item">
+        <div class="market-item-label">Faith-based business strategy · Comparable</div>
+        <div class="market-item-name">Myron Golden</div>
+        <div class="market-item-rate">$40,000 / hour · $200,000+ keynote</div>
+        <div class="market-item-note">Biblical business strategist, Inc. 5000, shared stages with TD Jakes, Tony Robbins &amp; Magic Johnson. Private consulting at $40K/hr. Speaking fees $200K+. Pastor Anderson brings comparable faith-meets-strategy depth with a proven $120M+ institutional track record Golden does not hold.</div>
+      </div>
+      <div class="market-item">
+        <div class="market-item-label">Executive keynote speaking · Comparable</div>
+        <div class="market-item-name">Market tier: Nationally awarded author + proven C-suite track record</div>
+        <div class="market-item-rate">$25,000 – $75,000 / keynote</div>
+        <div class="market-item-note">Industry data for 2025–2026: speakers with bestselling books, national awards, and documented C-suite results command $25K–$75K per keynote. TD Jakes: $150K/day honorarium. Top faith-and-business crossover speakers: $35K–$100K. Pastor Anderson is properly positioned at this tier.</div>
+      </div>
+      <div class="market-item">
+        <div class="market-item-label">Fractional executive / turnaround retainer · Comparable</div>
+        <div class="market-item-name">Market standard</div>
+        <div class="market-item-rate">$10,000 – $20,000 / month · Turnaround sprints $25,000 – $150,000</div>
+        <div class="market-item-note">Proven fractional COOs/strategists with documented turnaround results command $10K–$20K/month minimum. Nonprofit turnaround engagements from BoardSource and top independents: $25K–$150K per engagement. Executive coaching at C-suite level: $1,000+/hour.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING TIERS -->
+<section class="pricing-section">
+  <p class="section-eyebrow">Consulting & coaching</p>
+  <h2 class="section-heading">Choose Your <em>Engagement</em></h2>
+  <p class="section-sub">Every engagement is scoped to your specific situation. The tiers below represent starting investment levels — final scope and investment are confirmed during the discovery conversation.</p>
+
+  <div class="tier-stack">
+
+    <!-- TIER 1 -->
+    <div class="tier">
+      <div>
+        <div class="tier-label">Tier 01 · Entry</div>
+        <h3 class="tier-name">Gift Discovery <em>Intensive</em></h3>
+        <p class="tier-tagline">For individuals ready to identify and monetize their God-given gifts</p>
+        <div class="tier-price">$2,500</div>
+        <div class="tier-price-note">Single session · 90 minutes</div>
+      </div>
+      <div>
+        <p class="tier-desc">A deep-dive 90-minute session designed to surface, name, and map your unique gifts into a scalable business or career direction. You will leave with a written Gift-to-Business Blueprint — a personalized strategic document outlining your natural strengths, the business models best suited to them, the market positioning that aligns with your voice, and the three highest-leverage first moves to begin monetizing them.</p>
+        <div class="tier-includes">What's included</div>
+        <ul class="tier-features">
+          <li>Pre-session gift and background intake assessment</li>
+          <li>90-minute 1:1 video or in-person session with Pastor Anderson</li>
+          <li>Written Gift-to-Business Blueprint (delivered within 48 hours)</li>
+          <li>Three prioritized action steps with resource recommendations</li>
+          <li>30-day follow-up check-in via email</li>
+        </ul>
+      </div>
+      <div class="tier-action">
+        <a href="signup.html#contact" class="tier-btn tier-btn-primary">Book This Session</a>
+        <p class="tier-note">Response within 24 hours. Session typically scheduled within 1–2 weeks.</p>
+      </div>
+    </div>
+
+    <!-- TIER 2 -->
+    <div class="tier featured">
+      <div>
+        <span class="featured-badge">Most Requested</span>
+        <div class="tier-label">Tier 02 · Signature</div>
+        <h3 class="tier-name">90-Day <em>Turnaround Sprint</em></h3>
+        <p class="tier-tagline">For businesses, nonprofits, and ministries in distress or stagnation</p>
+        <div class="tier-price">$35,000 – $75,000</div>
+        <div class="tier-price-note">90-day engagement · scoped to organization size</div>
+      </div>
+      <div>
+        <p class="tier-desc">The core FaithVision engagement — a structured 90-day turnaround sprint built around the proven frameworks that rebuilt Washington Park Association, New England Housing Ministries, and PrePaid Legal. This is not consulting theater. It is a disciplined, documented, results-oriented process that produces a funded, actionable roadmap by day 90. Appropriate for organizations with $500K–$10M in annual budget or revenue.</p>
+        <div class="tier-includes">What's included</div>
+        <ul class="tier-features">
+          <li>Full Hidden Asset Audit of your organization (week 1–2)</li>
+          <li>Stakeholder and funding relationship mapping</li>
+          <li>Monthly 2-hour strategy sessions (3 total) with Pastor Anderson</li>
+          <li>Weekly written progress and accountability reports</li>
+          <li>Funder and lender identification with outreach strategy</li>
+          <li>People and gift alignment assessment for your leadership team</li>
+          <li>90-day Turnaround Roadmap document (investor/board-ready)</li>
+          <li>30-day post-engagement follow-up support</li>
+        </ul>
+      </div>
+      <div class="tier-action">
+        <a href="signup.html#contact" class="tier-btn tier-btn-primary">Apply for This Engagement</a>
+        <a href="case-studies.html" class="tier-btn tier-btn-ghost">Learn More</a>
+        <p class="tier-note">Limited to 3 active engagements at a time. Discovery call required before acceptance.</p>
+      </div>
+    </div>
+
+    <!-- TIER 3 -->
+    <div class="tier">
+      <div>
+        <div class="tier-label">Tier 03 · Ongoing</div>
+        <h3 class="tier-name">Fractional Strategist <em>Retainer</em></h3>
+        <p class="tier-tagline">For organizations in active growth that need ongoing senior strategic counsel</p>
+        <div class="tier-price">$10,000 – $18,000</div>
+        <div class="tier-price-note">Per month · minimum 3-month commitment</div>
+      </div>
+      <div>
+        <p class="tier-desc">Ongoing access to Pastor Anderson as your organization's senior strategic advisor — without the cost of a full-time executive hire. This engagement is designed for organizations that have completed an initial turnaround or growth push and need sustained leadership counsel, funding strategy support, and accountability at the executive level to maintain momentum and continue scaling.</p>
+        <div class="tier-includes">What's included</div>
+        <ul class="tier-features">
+          <li>Two 60-minute strategy sessions per month with Pastor Anderson</li>
+          <li>Unlimited email access between sessions (48-hour response)</li>
+          <li>Monthly AI-generated performance dashboard and review</li>
+          <li>Funding and funder relationship strategy — ongoing</li>
+          <li>Leadership team gift alignment reviews (quarterly)</li>
+          <li>Priority access to new frameworks and resource releases</li>
+          <li>Discounted speaking rates for your organization's events</li>
+        </ul>
+      </div>
+      <div class="tier-action">
+        <a href="signup.html#contact" class="tier-btn tier-btn-primary">Inquire About Retainer</a>
+        <p class="tier-note">Month 1 at the Turnaround Sprint rate for new retainer clients who haven't previously worked with FaithVision Leadership.</p>
+      </div>
+    </div>
+
+    <!-- TIER 4 -->
+    <div class="tier">
+      <div>
+        <div class="tier-label">Tier 04 · Scale</div>
+        <h3 class="tier-name">Enterprise <em>Transformation</em></h3>
+        <p class="tier-tagline">For large nonprofits, healthcare organizations, and real estate development entities</p>
+        <div class="tier-price">$150,000+</div>
+        <div class="tier-price-note">Custom scope · 6–18 month engagements</div>
+      </div>
+      <div>
+        <p class="tier-desc">For organizations managing $10M+ in assets, revenue, or development capital that require sustained, senior-level strategic leadership across multiple functional areas. This engagement draws on the full breadth of Pastor Anderson's experience in healthcare leadership, large-scale real estate development, nonprofit governance, and financial restructuring. Scope, deliverables, and investment are determined through a structured discovery process.</p>
+        <div class="tier-includes">What's included</div>
+        <ul class="tier-features">
+          <li>Comprehensive organizational and financial diagnostic</li>
+          <li>Custom engagement roadmap and governance structure</li>
+          <li>Weekly executive-level advisory sessions</li>
+          <li>Board presentation and stakeholder communication support</li>
+          <li>Direct representation in funder and lender meetings (where appropriate)</li>
+          <li>Full team gift and leadership alignment program</li>
+          <li>Custom framework development for your organization's specific context</li>
+        </ul>
+      </div>
+      <div class="tier-action">
+        <a href="signup.html#contact" class="tier-btn tier-btn-primary">Start the Conversation</a>
+        <p class="tier-note">Custom proposals delivered within 5 business days of discovery conversation.</p>
+      </div>
+    </div>
+
+    <!-- TIER 5 -->
+    <div class="tier">
+      <div>
+        <div class="tier-label">Tier 05 · Community</div>
+        <h3 class="tier-name">Gifts Mastermind <em>Group</em></h3>
+        <p class="tier-tagline">For motivated individuals who want peer community and ongoing access at scale</p>
+        <div class="tier-price">$1,500</div>
+        <div class="tier-price-note">Per month · cohort-based · limited enrollment</div>
+      </div>
+      <div>
+        <p class="tier-desc">A monthly group mastermind for 8–12 individuals who are actively working to identify and monetize their God-given gifts. Facilitated by Pastor Anderson, this cohort model creates peer accountability, shared learning, and direct access to the FaithVision frameworks at a fraction of the 1:1 investment. Each cohort runs for 6 months. New cohorts open twice per year.</p>
+        <div class="tier-includes">What's included</div>
+        <ul class="tier-features">
+          <li>Monthly 90-minute group session facilitated by Pastor Anderson</li>
+          <li>Access to all FaithVision framework worksheets and tools</li>
+          <li>Private community group with peer accountability</li>
+          <li>Monthly AI-curated resource and strategy drop</li>
+          <li>Guest expert sessions (quarterly)</li>
+          <li>Priority access to 1:1 session openings at member pricing</li>
+        </ul>
+      </div>
+      <div class="tier-action">
+        <a href="signup.html#contact" class="tier-btn tier-btn-primary">Join the Waitlist</a>
+        <p class="tier-note">Next cohort opens enrollment quarterly. Waitlist members are invited first.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- SPEAKING -->
+  <p class="section-eyebrow">Speaking engagements</p>
+  <h2 class="section-heading">Bring Pastor Anderson <em>to Your Stage</em></h2>
+  <p class="section-sub">A 3× nationally awarded author, 2010 Pulitzer Prize contender, and speaker whose testimony has moved audiences from corporate boardrooms to faith conferences to community organizing meetings.</p>
+</section>
+
+<section class="speaking-section">
+  <div class="speaking-inner">
+    <div class="speaking-grid">
+      <div class="speaking-item">
+        <h3>Keynote: <em>Beauty from Ashes</em></h3>
+        <div class="speaking-price">$25,000 – $75,000</div>
+        <p>The signature keynote. A live account of four decades of turnarounds — from Bridgeport's toughest streets to multimillion-dollar institutional transformations. Combines testimony, strategic insight, and faith-anchored leadership principles into a 45–60 minute message that leaves audiences equipped, not just inspired.</p>
+        <ul>
+          <li>Corporate conferences and leadership summits</li>
+          <li>Nonprofit galas and annual conferences</li>
+          <li>Church leadership and men's conferences</li>
+          <li>University commencements and business schools</li>
+        </ul>
+      </div>
+      <div class="speaking-item">
+        <h3>Workshop: <em>Gifts to Business</em></h3>
+        <div class="speaking-price">$15,000 – $35,000</div>
+        <p>A half-day or full-day interactive workshop that walks participants through the Gift-to-Business Blueprint process live. Ideal for church entrepreneurship programs, nonprofit leadership retreats, and corporate leadership development days. Maximum 40 participants for full engagement.</p>
+        <ul>
+          <li>Half-day: $15,000 (up to 25 participants)</li>
+          <li>Full day: $35,000 (up to 40 participants)</li>
+          <li>Materials and workbooks included</li>
+          <li>Virtual option available at 20% reduction</li>
+        </ul>
+      </div>
+      <div class="speaking-item">
+        <h3>Sermon / Ministry Engagement</h3>
+        <div class="speaking-price">$10,000 – $25,000 + honorarium</div>
+        <p>Sunday morning or special service message. Pastor Anderson preaches at the intersection of Scripture and strategic life transformation — equipping congregations to activate their gifts and rebuild what has been lost. Available for single services, weekend revivals, and conference chapel sessions.</p>
+        <ul>
+          <li>Sunday morning services</li>
+          <li>Conference chapel and plenary sessions</li>
+          <li>Men's and women's ministry special events</li>
+          <li>Faith-and-business crossover events</li>
+        </ul>
+      </div>
+      <div class="speaking-item">
+        <h3>Virtual / Podcast Appearance</h3>
+        <div class="speaking-price">$5,000 – $15,000</div>
+        <p>For podcasters, virtual summits, online conferences, and webinar series seeking a high-credibility guest with a compelling story and actionable insight. Typical format: 45–90 minutes. Topics available include nonprofit turnaround, gift monetization, faith-based leadership, and the story behind <em>I Have Seen the Living God</em>.</p>
+        <ul>
+          <li>Business, leadership, and faith podcasts</li>
+          <li>Virtual summits and online conferences</li>
+          <li>Webinar guest teaching</li>
+          <li>Media and press interviews (rates vary)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section">
+  <p class="section-eyebrow" style="justify-content: flex-start;">Common questions</p>
+  <h2 class="section-heading" style="margin-bottom:2.5rem;">What People <em>Ask First</em></h2>
+
+  <div class="faq-item">
+    <p class="faq-q">How do I know if I'm a fit for the 90-Day Turnaround Sprint?</p>
+    <p class="faq-a">The Sprint is designed for organizations that are functionally insolvent, stagnant, or structurally broken — not simply slow-growing. If your organization has exhausted conventional options, has leadership willing to make hard decisions, and has a mission worth saving, you are likely a fit. The discovery call is specifically designed to answer this question honestly.</p>
+  </div>
+  <div class="faq-item">
+    <p class="faq-q">Can individuals who aren't business owners benefit from the consulting?</p>
+    <p class="faq-a">Absolutely. The Gift Discovery Intensive and the Mastermind Group are specifically designed for individuals — including employees, ministry workers, creatives, and professionals — who want to identify and monetize their God-given gifts, whether through a side business, a career pivot, or a new ministry initiative.</p>
+  </div>
+  <div class="faq-item">
+    <p class="faq-q">Do you work with clients outside Connecticut and New England?</p>
+    <p class="faq-a">Yes. The majority of active engagements are conducted virtually or via a combination of virtual and in-person sessions. Pastor Anderson has worked with organizations and individuals across the United States and has engaged with leaders internationally, including in West Africa.</p>
+  </div>
+  <div class="faq-item">
+    <p class="faq-q">Is faith a requirement to work with FaithVision Leadership?</p>
+    <p class="faq-a">No. While faith is the foundation of Pastor Anderson's personal practice and worldview, the strategic frameworks and results they produce are available to any leader or organization willing to engage seriously with the process. The track record speaks for itself regardless of the client's faith background.</p>
+  </div>
+  <div class="faq-item">
+    <p class="faq-q">How quickly can an engagement begin?</p>
+    <p class="faq-a">Discovery calls are typically available within 3–5 business days of inquiry. Engagements can begin within 1–2 weeks of completing the discovery process and confirming scope. Availability is limited — Pastor Anderson maintains a small active client roster to ensure the quality of attention each engagement receives.</p>
+  </div>
+</section>
+
+<!-- BOTTOM CTA -->
+<section class="bottom-cta">
+  <h2>The First Conversation Is <em>Free</em></h2>
+  <p>Every engagement begins with an honest 20-minute discovery call. No sales pressure. Just a direct conversation about where you are, where you want to go, and whether FaithVision Leadership is the right fit to help you get there.</p>
+  <div class="cta-row">
+    <a href="signup.html#contact" class="cta-btn-large">Book Your Discovery Call</a>
+    <a href="https://beautyforashes.pro" class="cta-btn-large cta-btn-outline">Get Free Executive Planner</a>
+  </div>
+</section>
+
+<footer>
+  <p><strong>FaithVision Leadership</strong> · Pastor Raymond O. Anderson</p>
+  <p><a href="index.html">beautyforashes.io</a> &nbsp;·&nbsp; <a href="signup.html#contact">Contact</a> &nbsp;·&nbsp; <a href="https://beautyforashes.creator-spring.com" target="_blank" rel="noopener">Store</a></p>
+  <p style="margin-top:1rem;">© 2026 FaithVision Leadership. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

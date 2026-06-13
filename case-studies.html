@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Case Studies | FaithVision Leadership — Pastor Raymond O. Anderson</title>
+<meta name="description" content="Real turnaround results: Washington Park Association ($5.5M), New England Housing Ministries ($7.5M), PrePaid Legal (500 to 10,000 clients). Pastor Raymond O. Anderson's proven track record.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --gold: #C9A84C; --gold-light: #E8C97A; --gold-dim: #8A6E32;
+    --ink: #0D0C0A; --ink-2: #1A1915; --ink-3: #252420;
+    --parchment: #F5F0E8; --parchment-dim: #DDD5C4; --text-muted: #9A9080;
+    --serif: 'Cormorant Garamond', Georgia, serif;
+    --sans: 'Jost', sans-serif;
+  }
+  html { scroll-behavior: smooth; }
+  body { background: var(--ink); color: var(--parchment); font-family: var(--sans); font-weight: 300; line-height: 1.7; overflow-x: hidden; }
+
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    padding: 1.2rem 2.5rem; display: flex; justify-content: space-between; align-items: center;
+    background: rgba(13,12,10,0.9); backdrop-filter: blur(12px);
+    border-bottom: 0.5px solid rgba(201,168,76,0.2);
+  }
+  .nav-logo { font-family: var(--serif); font-size: 1.1rem; font-weight: 400; color: var(--gold); text-decoration: none; }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a { font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); text-decoration: none; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--gold); }
+
+  /* INDEX HERO */
+  .index-hero {
+    padding: 10rem 2.5rem 6rem; text-align: center;
+    max-width: 800px; margin: 0 auto;
+  }
+  .eyebrow {
+    font-size: 0.7rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 1.2rem;
+    display: flex; align-items: center; justify-content: center; gap: 0.75rem;
+  }
+  .eyebrow::before, .eyebrow::after { content: ''; display: block; width: 2rem; height: 0.5px; background: var(--gold); }
+  .index-hero h1 { font-family: var(--serif); font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 300; line-height: 1.15; color: var(--parchment); margin-bottom: 1rem; }
+  .index-hero h1 em { font-style: italic; color: var(--gold); }
+  .index-hero p { font-size: 1rem; color: var(--text-muted); line-height: 1.8; max-width: 560px; margin: 0 auto 3rem; }
+
+  /* CASE STUDY CARDS INDEX */
+  .cards-index {
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5px;
+    max-width: 1100px; margin: 0 auto 6rem; padding: 0 2.5rem;
+    background: rgba(201,168,76,0.15);
+    border: 0.5px solid rgba(201,168,76,0.15);
+  }
+  .index-card { background: var(--ink); padding: 2.5rem 2rem; transition: background 0.2s; text-decoration: none; display: block; }
+  .index-card:hover { background: var(--ink-2); }
+  .index-card-num { font-family: var(--serif); font-size: 3rem; font-weight: 300; color: rgba(201,168,76,0.2); display: block; line-height: 1; margin-bottom: 1rem; }
+  .index-card-amount { font-family: var(--serif); font-size: 2rem; font-weight: 300; color: var(--gold); display: block; margin-bottom: 0.4rem; }
+  .index-card-title { font-family: var(--serif); font-size: 1.1rem; font-weight: 400; color: var(--parchment); margin-bottom: 0.6rem; line-height: 1.3; }
+  .index-card-desc { font-size: 0.8rem; color: var(--text-muted); line-height: 1.6; }
+  .index-card-link { display: inline-block; margin-top: 1.2rem; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); }
+
+  /* CASE STUDY PAGE */
+  .cs-hero {
+    padding: 9rem 2.5rem 5rem;
+    border-bottom: 0.5px solid rgba(201,168,76,0.15);
+    position: relative; overflow: hidden;
+  }
+  .cs-hero::before {
+    content: ''; position: absolute; inset: 0;
+    background: radial-gradient(ellipse 50% 60% at 80% 30%, rgba(201,168,76,0.06) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .cs-hero-inner { max-width: 1100px; margin: 0 auto; }
+  .cs-tag { display: inline-block; font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink); background: var(--gold); padding: 0.3rem 0.8rem; margin-bottom: 1.5rem; }
+  .cs-hero h1 { font-family: var(--serif); font-size: clamp(2.2rem, 4vw, 3.5rem); font-weight: 300; line-height: 1.15; color: var(--parchment); margin-bottom: 0.75rem; max-width: 700px; }
+  .cs-hero h1 em { font-style: italic; color: var(--gold); }
+  .cs-hero-sub { font-size: 1rem; color: var(--text-muted); max-width: 560px; line-height: 1.8; }
+  .cs-meta-bar {
+    display: flex; gap: 3rem; margin-top: 2.5rem;
+    padding-top: 2rem; border-top: 0.5px solid rgba(201,168,76,0.15);
+  }
+  .cs-meta { }
+  .cs-meta-label { font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.3rem; }
+  .cs-meta-val { font-family: var(--serif); font-size: 1.4rem; font-weight: 300; color: var(--gold); }
+
+  /* CASE STUDY BODY */
+  .cs-body { max-width: 1100px; margin: 0 auto; padding: 5rem 2.5rem; }
+  .cs-body-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 5rem; align-items: start; }
+  .cs-prose p { font-size: 0.95rem; color: var(--parchment-dim); line-height: 1.9; margin-bottom: 1.4rem; }
+  .cs-prose p:first-child { font-family: var(--serif); font-size: 1.2rem; font-style: italic; color: var(--parchment); font-weight: 400; }
+  .cs-prose h3 { font-family: var(--serif); font-size: 1.5rem; font-weight: 300; color: var(--parchment); margin: 2.5rem 0 1rem; line-height: 1.3; }
+  .cs-prose h3 em { font-style: italic; color: var(--gold); }
+  .cs-prose blockquote {
+    border-left: 2px solid var(--gold); padding: 1.2rem 1.5rem 1.2rem 2rem;
+    margin: 2rem 0; background: var(--ink-2);
+  }
+  .cs-prose blockquote p { font-family: var(--serif); font-size: 1.1rem; font-style: italic; margin: 0 0 0.5rem; color: var(--parchment); }
+  .cs-prose blockquote cite { font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gold); font-style: normal; }
+
+  .cs-sidebar { position: sticky; top: 7rem; }
+  .result-card { background: var(--ink-2); border: 0.5px solid rgba(201,168,76,0.3); padding: 2rem; margin-bottom: 1.5rem; position: relative; }
+  .result-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, transparent, var(--gold), transparent); }
+  .result-card-label { font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.5rem; }
+  .result-card-num { font-family: var(--serif); font-size: 2.5rem; font-weight: 300; color: var(--gold); line-height: 1; margin-bottom: 0.5rem; }
+  .result-card-desc { font-size: 0.8rem; color: var(--text-muted); line-height: 1.6; }
+  .lesson-list { list-style: none; margin-top: 0.5rem; }
+  .lesson-list li { font-size: 0.82rem; color: var(--parchment-dim); padding: 0.6rem 0; border-bottom: 0.5px solid rgba(201,168,76,0.1); line-height: 1.5; display: flex; gap: 0.75rem; }
+  .lesson-list li::before { content: '✦'; color: var(--gold); font-size: 0.55rem; flex-shrink: 0; margin-top: 5px; }
+  .lesson-list li:last-child { border-bottom: none; }
+
+  .cs-divider { border: none; border-top: 0.5px solid rgba(201,168,76,0.15); margin: 0 2.5rem; }
+
+  /* NEXT CASE STUDY */
+  .next-cs { padding: 3rem 2.5rem; max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+  .next-cs-label { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.4rem; }
+  .next-cs-title { font-family: var(--serif); font-size: 1.2rem; font-weight: 300; color: var(--parchment); }
+  .next-cs-link { font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); text-decoration: none; transition: color 0.2s; }
+  .next-cs-link:hover { color: var(--gold-light); }
+
+  /* CTA STRIP */
+  .cta-strip { background: var(--ink-2); border-top: 0.5px solid rgba(201,168,76,0.15); border-bottom: 0.5px solid rgba(201,168,76,0.15); padding: 4rem 2.5rem; text-align: center; }
+  .cta-strip h2 { font-family: var(--serif); font-size: 2rem; font-weight: 300; color: var(--parchment); margin-bottom: 0.75rem; }
+  .cta-strip h2 em { font-style: italic; color: var(--gold); }
+  .cta-strip p { font-size: 0.9rem; color: var(--text-muted); max-width: 480px; margin: 0 auto 2rem; line-height: 1.8; }
+  .cta-btn { display: inline-block; background: var(--gold); color: var(--ink); font-family: var(--sans); font-size: 0.78rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.95rem 2.5rem; text-decoration: none; transition: background 0.2s; margin: 0 0.5rem; }
+  .cta-btn:hover { background: var(--gold-light); }
+  .cta-btn-ghost { background: transparent; color: var(--gold); border: 0.5px solid var(--gold-dim); }
+  .cta-btn-ghost:hover { background: rgba(201,168,76,0.08); }
+
+  footer { background: var(--ink-3); border-top: 0.5px solid rgba(201,168,76,0.15); padding: 2.5rem; text-align: center; }
+  footer p { font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.4rem; }
+  footer a { color: var(--gold); text-decoration: none; }
+
+  @media (max-width: 900px) {
+    .cards-index { grid-template-columns: 1fr; }
+    .cards-index { grid-template-columns: 1fr; }
+    .cs-body-grid { grid-template-columns: 1fr; }
+    .cs-sidebar { position: static; }
+    .cs-meta-bar { flex-wrap: wrap; gap: 1.5rem; }
+  }
+  @media (max-width: 600px) {
+    nav { padding: 1rem 1.5rem; }
+    .nav-links { display: none; }
+    .cs-hero, .cs-body, .cta-strip, .next-cs { padding-left: 1.5rem; padding-right: 1.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">FaithVision Leadership</a>
+  <ul class="nav-links">
+    <li><a href="index.html">About</a></li>
+    <li><a href="pricing.html">Services</a></li>
+    <li><a href="pricing.html">Speaking</a></li>
+    <li><a href="https://beautyforashes.creator-spring.com" target="_blank" rel="noopener">Store</a></li>
+    <li><a href="https://beautyforashes.pro">Free Planner</a></li>
+  </ul>
+</nav>
+
+<!-- INDEX -->
+<section class="index-hero">
+  <p class="eyebrow">Documented Results</p>
+  <h1>Five Decades. <em>Millions Created.</em></h1>
+  <p>These are not projections or possibilities. They are proven outcomes — achieved across five decades, from a 9-year-old artist selling original paintings against all odds, to multimillion-dollar institutional transformations, using the same faith-driven strategic frameworks now available to you.</p>
+</section>
+
+<div class="cards-index">
+  <a href="#case1" class="index-card">
+    <span class="index-card-num">01</span>
+    <span class="index-card-amount">$5.5M</span>
+    <h3 class="index-card-title">Washington Park Association</h3>
+    <p class="index-card-desc">From insolvency to $5.5 million in reconstruction funds for 13 homes in Bridgeport, Connecticut's toughest neighborhood.</p>
+    <span class="index-card-link">Read the story →</span>
+  </a>
+  <a href="#case2" class="index-card">
+    <span class="index-card-num">02</span>
+    <span class="index-card-amount">$7.5M + $120M</span>
+    <h3 class="index-card-title">New England Housing Ministries</h3>
+    <p class="index-card-desc">From bankruptcy to $7.5 million cash in 24 months — then $120 million in bridge and gap financing over 15 years.</p>
+    <span class="index-card-link">Read the story →</span>
+  </a>
+  <a href="#case3" class="index-card">
+    <span class="index-card-num">03</span>
+    <span class="index-card-amount">20× Growth</span>
+    <h3 class="index-card-title">PrePaid Legal Services</h3>
+    <p class="index-card-desc">From 500 monthly subscribers to 10,000 in 42 months — a 20× growth story powered by gift-based leadership strategy.</p>
+    <span class="index-card-link">Read the story →</span>
+  </a>
+  <a href="#case4" class="index-card">
+    <span class="index-card-num">04</span>
+    <span class="index-card-amount">800K+ Households</span>
+    <h3 class="index-card-title">Tri-State Broadcast &amp; Early Origins</h3>
+    <p class="index-card-desc">From a 5,000-viewer local broadcast to 800,000+ households — and the childhood story of an artist who built his first market at age 9.</p>
+    <span class="index-card-link">Read the story →</span>
+  </a>
+</div>
+
+<!-- ══════════════════════════════════════════════
+     CASE STUDY 1: WASHINGTON PARK
+     ══════════════════════════════════════════════ -->
+<article id="case1">
+  <section class="cs-hero">
+    <div class="cs-hero-inner">
+      <span class="cs-tag">Case Study 01 · Nonprofit Turnaround</span>
+      <h1>Washington Park Association:<br><em>Beauty from the Ashes</em> of Bridgeport</h1>
+      <p class="cs-hero-sub">How a community nonprofit in America's most crime-ridden neighborhood was pulled from complete insolvency and transformed into a $5.5 million reconstruction engine — one strategic decision at a time.</p>
+      <div class="cs-meta-bar">
+        <div class="cs-meta"><div class="cs-meta-label">Outcome</div><div class="cs-meta-val">$5.5 Million</div></div>
+        <div class="cs-meta"><div class="cs-meta-label">Deliverable</div><div class="cs-meta-val">13 Homes Rebuilt</div></div>
+        <div class="cs-meta"><div class="cs-meta-label">Location</div><div class="cs-meta-val">Bridgeport, CT</div></div>
+        <div class="cs-meta"><div class="cs-meta-label">Year</div><div class="cs-meta-val">1999</div></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="cs-body">
+    <div class="cs-body-grid">
+      <div class="cs-prose">
+        <p>In 1999, Bridgeport, Connecticut was not a place investors wanted to be. It was a place people were trying to leave.</p>
+
+        <p>Ranked among the most dangerous cities in the United States, the Washington Park neighborhood had watched its institutions crumble alongside its buildings. The Washington Park Association — a nonprofit created to serve this community — was itself on the verge of collapse. The organization had no operating funds, no active funding relationships, and no clear path forward. From the outside, it looked finished.</p>
+
+        <h3>The <em>Hidden Asset</em> Assessment</h3>
+
+        <p>Pastor Raymond O. Anderson did not walk into Washington Park with a pre-written playbook. He walked in with a question: what does this organization actually have that hasn't been counted yet?</p>
+
+        <p>That question — the core of what he now calls the Hidden Asset Audit — is the first move in every turnaround engagement. Most distressed organizations have been evaluated only on their liabilities. The assets that remain visible on the balance sheet have already been discounted by the time a turnaround specialist arrives. But there are always assets that aren't on the balance sheet: community relationships, land use rights, zoning advantages, historical designation potential, political goodwill, dormant grant eligibility, and untapped network capital.</p>
+
+        <p>At Washington Park, the audit revealed that the properties in question — 13 residential homes in a high-need neighborhood — qualified for federal and state reconstruction funding streams that no one had pursued. The community's poverty level, geographic designation, and historical disinvestment were, in strategic terms, leverage points. The very conditions that made Washington Park a difficult place to work made it a highly eligible target for targeted federal reconstruction dollars.</p>
+
+        <h3>Building the <em>Funding Architecture</em></h3>
+
+        <p>Identifying eligible funding is step one. Building a case that moves government and institutional funders to release it is a different skill entirely — one that requires understanding how bureaucratic decision-making works, what language funders respond to, and how to present a distressed community's story as an opportunity rather than a liability.</p>
+
+        <p>The strategy deployed at Washington Park combined grant applications at the federal and state level with community development relationships, local political engagement, and a clear, documented reconstruction plan for each of the 13 homes. Each application was built on a narrative of community restoration — not just housing units, but families, stability, and economic reactivation in a neighborhood the rest of the city had left behind.</p>
+
+        <blockquote>
+          <p>The conditions that made Washington Park hard to fund were the same conditions that, properly framed, made it impossible to deny.</p>
+          <cite>— Pastor Raymond O. Anderson</cite>
+        </blockquote>
+
+        <h3>The <em>Result</em></h3>
+
+        <p>From a position of complete insolvency, Washington Park Association secured $5.5 million in reconstruction funds. Thirteen residential homes were rebuilt. Thirteen families received stable housing in a neighborhood that had been written off by every conventional measure of viability.</p>
+
+        <p>The work at Washington Park was not just a financial turnaround. It was proof of a principle that has anchored every subsequent engagement: the organizations most in need are often the ones sitting on the most overlooked opportunity. The right eyes, the right framework, and the right strategy can unlock what no one else could see.</p>
+      </div>
+
+      <div class="cs-sidebar">
+        <div class="result-card">
+          <div class="result-card-label">Funds raised</div>
+          <div class="result-card-num">$5.5M</div>
+          <div class="result-card-desc">In reconstruction funding secured from federal and state sources for a community deemed insolvent and non-viable</div>
+        </div>
+        <div class="result-card">
+          <div class="result-card-label">Homes rebuilt</div>
+          <div class="result-card-num">13</div>
+          <div class="result-card-desc">Residential homes reconstructed in Bridgeport, CT's Washington Park neighborhood — one of America's highest-crime areas</div>
+        </div>
+        <div class="result-card">
+          <div class="result-card-label">Starting position</div>
+          <div class="result-card-num">$0</div>
+          <div class="result-card-desc">Complete insolvency. No operating funds. No active funding relationships. No clear path forward.</div>
+        </div>
+        <div class="result-card" style="background:transparent; border-color: rgba(201,168,76,0.15);">
+          <div class="result-card-label" style="margin-bottom:1rem;">Key lessons</div>
+          <ul class="lesson-list">
+            <li>Distress is a funding qualifier, not just a liability — if you know where to look</li>
+            <li>The Hidden Asset Audit always finds what the balance sheet missed</li>
+            <li>Community narrative, properly constructed, is a strategic asset</li>
+            <li>Federal and state funding streams reward specificity and documentation</li>
+            <li>Faith-driven persistence outlasts the bureaucratic attrition that stops most applicants</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+<hr class="cs-divider">
+
+<!-- ══════════════════════════════════════════════
+     CASE STUDY 2: NEW ENGLAND HOUSING MINISTRIES
+     ══════════════════════════════════════════════ -->
+<article id="case2">
+  <section class="cs-hero" style="background: var(--ink-2);">
+    <div class="cs-hero-inner">
+      <span class="cs-tag">Case Study 02 · Faith-Based Organization Turnaround</span>
+      <h1>New England Housing Ministries:<br>From <em>Zero to $120 Million</em></h1>
+      <p class="cs-hero-sub">A faith-based housing ministry on the brink of permanent closure was rebuilt to $7.5 million cash on hand in 24 months — and then leveraged into a $120 million lending platform over the next 15 years.</p>
+      <div class="cs-meta-bar">
+        <div class="cs-meta"><div class="cs-meta-label">Cash rebuilt</div><div class="cs-meta-val">$7.5 Million</div></div>
+        <div class="cs-meta"><div class="cs-meta-label">Timeline</div><div class="cs-meta-val">24 Months</div></div>
+        <div class="cs-meta"><div class="cs-meta-label">Long-term impact</div><div class="cs-meta-val">$120M in Loans</div></div>
+        <div class="cs-meta"><div class="cs-meta-label">Loan period</div><div class="cs-meta-val">15 Years</div></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="cs-body">
+    <div class="cs-body-grid">
+      <div class="cs-prose">
+        <p>New England Housing Ministries had a mission that mattered — and an organization that was failing to survive. By the time Pastor Raymond O. Anderson was brought in, the ministry was functionally insolvent: no cash reserves, no reliable revenue stream, and a leadership team that had run out of options.</p>
+
+        <p>What followed over the next 24 months was not a conventional financial recovery. It was a complete strategic reconstruction — of the organization's funding model, its community relationships, its lender credibility, and its internal operating systems.</p>
+
+        <h3>Diagnosing the <em>Real Problem</em></h3>
+
+        <p>Most organizations that present as financially insolvent are suffering from a structural problem, not merely a cash problem. New England Housing Ministries had the same condition: the organization's funding architecture — the mix of sources, relationships, and instruments it relied on — was built for survival, not sustainability. It generated just enough to keep operating in good years and collapsed in lean ones.</p>
+
+        <p>The diagnosis identified three critical structural gaps: no bridge financing relationships that could smooth cash flow between grant disbursements, no diversified revenue base that could operate independently of any single funder, and no documented impact narrative that would meet the standards of institutional lenders or government partners.</p>
+
+        <h3>The <em>24-Month</em> Rebuild</h3>
+
+        <p>The reconstruction strategy addressed all three gaps simultaneously. A new revenue diversification plan created income streams that didn't depend on the grant cycle. Relationships were built with mission-aligned lenders who understood faith-based housing organizations and the markets they served. And a rigorous documentation and reporting infrastructure was built — not because bureaucracy matters for its own sake, but because institutional capital follows institutional credibility.</p>
+
+        <p>The faith dimension was not peripheral to this strategy. It was central. Faith-based housing organizations carry a community trust premium that secular organizations cannot replicate. Lenders and government partners who have been disappointed by purely transactional relationships often find that faith-anchored organizations — when properly managed — deliver on their commitments at rates that make them preferred partners. That trust premium was built into the lender presentation strategy from the beginning.</p>
+
+        <blockquote>
+          <p>Institutional lenders don't fund balance sheets. They fund confidence. Our job was to give them every reason to be confident — and none to doubt.</p>
+          <cite>— Pastor Raymond O. Anderson</cite>
+        </blockquote>
+
+        <h3>$7.5 Million to <em>$120 Million</em></h3>
+
+        <p>Twenty-four months after beginning the engagement, New England Housing Ministries had $7.5 million cash on hand. That number was not an endpoint — it was a launching pad.</p>
+
+        <p>The cash position established institutional credibility with lenders, unlocking access to bridge financing, mezzanine lending, and gap loan instruments that had previously been inaccessible. Over the next 15 years, the ministry deployed $120 million in bridge, mezzanine, and gap loans — financing housing projects for families across New England that no conventional lender would have touched.</p>
+
+        <p>The turnaround at New England Housing Ministries is not just a story about a nonprofit that survived. It is a story about how the right strategic foundation transforms a struggling organization into a force multiplier for its community — compounding impact for a decade and a half beyond the initial intervention.</p>
+      </div>
+
+      <div class="cs-sidebar">
+        <div class="result-card">
+          <div class="result-card-label">Cash on hand — 24 months</div>
+          <div class="result-card-num">$7.5M</div>
+          <div class="result-card-desc">Rebuilt from complete insolvency in exactly 24 months through strategic revenue diversification and lender relationship development</div>
+        </div>
+        <div class="result-card">
+          <div class="result-card-label">15-year loan volume</div>
+          <div class="result-card-num">$120M</div>
+          <div class="result-card-desc">Bridge, mezzanine, and gap loans facilitated using the cash position as a credibility and leverage foundation</div>
+        </div>
+        <div class="result-card">
+          <div class="result-card-label">Starting position</div>
+          <div class="result-card-num">$0</div>
+          <div class="result-card-desc">Complete insolvency. No cash reserves. No institutional lender relationships. No documented impact infrastructure.</div>
+        </div>
+        <div class="result-card" style="background:transparent; border-color: rgba(201,168,76,0.15);">
+          <div class="result-card-label" style="margin-bottom:1rem;">Key lessons</div>
+          <ul class="lesson-list">
+            <li>Cash is a platform, not a destination — the real work begins once you have it</li>
+            <li>Faith organizations carry a trust premium that secular institutions cannot manufacture</li>
+            <li>Lender credibility is built through documentation and narrative, not just numbers</li>
+            <li>Revenue diversification must be structural, not opportunistic</li>
+            <li>A 24-month rebuild is achievable when the diagnostic is honest and the strategy is disciplined</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+<hr class="cs-divider">
+
+<!-- ══════════════════════════════════════════════
+     CASE STUDY 3: PREPAID LEGAL
+     ══════════════════════════════════════════════ -->
+<article id="case3">
+  <section class="cs-hero">
+    <div class="cs-hero-inner">
+      <span class="cs-tag">Case Study 03 · Subscription Growth · MLM Turnaround</span>
+      <h1>PrePaid Legal Services:<br>500 Clients to <em>10,000 in 42 Months</em></h1>
+      <p class="cs-hero-sub">A stagnant subscription base was multiplied 20 times in three and a half years — not through cold calling or conventional sales tactics, but through a gift-based leadership strategy that aligned each team member's natural strengths to the right role.</p>
+      <div class="cs-meta-bar">
+        <div class="cs-meta"><div class="cs-meta-label">Starting subscribers</div><div class="cs-meta-val">500</div></div>
+        <div class="cs-meta"><div class="cs-meta-label">Subscribers achieved</div><div class="cs-meta-val">10,000</div></div>
+        <div class="cs-meta"><div class="cs-meta-label">Growth multiple</div><div class="cs-meta-val">20×</div></div>
+        <div class="cs-meta"><div class="cs-meta-label">Timeline</div><div class="cs-meta-val">42 Months</div></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="cs-body">
+    <div class="cs-body-grid">
+      <div class="cs-prose">
+        <p>Five hundred monthly subscribers is not a failed business — it is a stalled one. And stalled businesses, in many ways, are harder to fix than failing ones. Failure creates urgency. Stagnation creates complacency.</p>
+
+        <p>When Pastor Raymond O. Anderson began working with the PrePaid Legal Services operation, the team had people, activity, and a marketable product. What it didn't have was alignment — between the people's gifts and their roles, between the team's energy and the activities that actually drove growth, and between leadership's vision and the systems needed to execute it at scale.</p>
+
+        <h3>The <em>Gift Alignment</em> Diagnosis</h3>
+
+        <p>The first step was not a sales system overhaul. It was a people audit. Every team member was assessed for their natural gifts — not their job title, not their tenure, not their previous sales numbers, but the underlying strengths and communication styles that God had built into them before any job description existed.</p>
+
+        <p>What the audit revealed was a classic misalignment pattern: the people best suited for prospecting were doing retention calls. The people best suited for relationship-building were spending their time on paperwork. The people best suited for training others were being deployed as individual contributors. The team's energy was real — it was just being applied in the wrong directions.</p>
+
+        <p>The gift-based realignment restructured roles not around job descriptions but around the actual gifting of each individual. It sounds simple. In practice, it requires the courage to tell someone that the role they've been in for two years is not the role they were built for — and the leadership skill to make that transition feel like promotion rather than demotion.</p>
+
+        <h3>Building a <em>Scalable</em> Growth System</h3>
+
+        <p>Alongside the people realignment, a systematic growth infrastructure was built: a referral network that rewarded existing subscribers for introductions, a community partnership strategy that positioned PrePaid Legal as a valuable resource for churches, civic organizations, and professional networks across the region, and a follow-up and retention system that dramatically reduced churn while improving lifetime client value.</p>
+
+        <p>The community partnership channel was particularly powerful — and entirely consistent with the broader FaithVision philosophy. Trusted community institutions, especially churches and faith organizations, carry referral weight that no paid advertising can replicate. A recommendation from a pastor or community leader converts at multiples of a cold contact. Building those relationships is slow work, but it compounds.</p>
+
+        <blockquote>
+          <p>You don't need more people. You need the right people doing the work they were actually made for. Everything else is noise.</p>
+          <cite>— Pastor Raymond O. Anderson</cite>
+        </blockquote>
+
+        <h3>500 to 10,000: <em>The Math Behind the Miracle</em></h3>
+
+        <p>Forty-two months after beginning the engagement, the subscriber base had grown from 500 to 10,000 — a 20× increase. Month-over-month growth was not explosive; it was consistent and compounding. The gift alignment created a team that performed sustainably rather than in bursts followed by burnout. The community partnerships created referral streams that required less active selling over time, not more. The retention improvements meant that every new subscriber added net growth rather than replacing a lost one.</p>
+
+        <p>The PrePaid Legal turnaround is the clearest demonstration of the gift-to-business principle in action at scale: when the right people are doing the work they were created for, ordinary organizations produce extraordinary results. The product didn't change. The market didn't change. The people didn't change. The alignment did.</p>
+      </div>
+
+      <div class="cs-sidebar">
+        <div class="result-card">
+          <div class="result-card-label">Subscriber growth</div>
+          <div class="result-card-num">20×</div>
+          <div class="result-card-desc">500 to 10,000 monthly subscribers in 42 months through gift-based team realignment and community partnership strategy</div>
+        </div>
+        <div class="result-card">
+          <div class="result-card-label">Monthly subscribers at close</div>
+          <div class="result-card-num">10,000</div>
+          <div class="result-card-desc">Sustained monthly subscribers achieved through compounding referral and retention systems — not one-time sales pushes</div>
+        </div>
+        <div class="result-card">
+          <div class="result-card-label">Core method</div>
+          <div class="result-card-num">Gift Audit</div>
+          <div class="result-card-desc">Team realignment based on natural gifting, not job titles — the first and most impactful intervention in the engagement</div>
+        </div>
+        <div class="result-card" style="background:transparent; border-color: rgba(201,168,76,0.15);">
+          <div class="result-card-label" style="margin-bottom:1rem;">Key lessons</div>
+          <ul class="lesson-list">
+            <li>Stagnation is a people-alignment problem more often than a market problem</li>
+            <li>Gift-based role design outperforms incentive-based sales management</li>
+            <li>Faith community referral networks generate the highest-conversion leads at lowest cost</li>
+            <li>Compounding growth requires retention as much as acquisition</li>
+            <li>Leadership courage to reassign people is a prerequisite for any real turnaround</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+<hr class="cs-divider">
+
+<!-- ══════════════════════════════════════════════
+     CASE STUDY 4: BROADCAST + ORIGINS
+     ══════════════════════════════════════════════ -->
+<article id="case4">
+  <section class="cs-hero" style="background: var(--ink-2);">
+    <div class="cs-hero-inner">
+      <span class="cs-tag">Case Study 04 · Media Growth · Early Origins</span>
+      <h1>From 5,000 Viewers to<br><em>800,000 Households</em> — and the Beginning</h1>
+      <p class="cs-hero-sub">How a locally broadcast faith-and-business program grew to reach over 800,000 households across three states — and the earlier story of a child entrepreneur who built his first market entirely on his own, under severe adversity.</p>
+      <div class="cs-meta-bar">
+        <div class="cs-meta"><div class="cs-meta-label">Starting viewers</div><div class="cs-meta-val">5,000 / week</div></div>
+        <div class="cs-meta"><div class="cs-meta-label">Peak reach</div><div class="cs-meta-val">800,000+ households</div></div>
+        <div class="cs-meta"><div class="cs-meta-label">Signal amplified</div><div class="cs-meta-val">7× by demand</div></div>
+        <div class="cs-meta"><div class="cs-meta-label">Art collection appraisal</div><div class="cs-meta-val">$150K–$500K/piece</div></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="cs-body">
+    <div class="cs-body-grid">
+      <div class="cs-prose">
+        <p>Every turnaround strategist has an origin. Pastor Raymond O. Anderson's begins not in a boardroom, not in a nonprofit office, but in a household defined by adversity — and in the extraordinary acts of self-determination he performed within it.</p>
+
+        <h3>The <em>Child Entrepreneur</em>: Ages 9 to 13</h3>
+
+        <p>Between 1979 and 1983, from the ages of 9 to 13, Raymond O. Anderson created an entire collection of original works in acrylic, oil, and pencil art. He did not have an agent, a gallery, or a mentor. He designed the work, presented it, found the buyers, and closed the sales himself — commanding $250 to $500 per piece at a time when that represented the equivalent of $150,000 to $500,000 on today's secondary market.</p>
+
+        <p>This was not a hobby project. It was an enterprise — conceived, marketed, and executed by a child who understood, before anyone taught him, that value is created, not inherited. He sold the entire collection.</p>
+
+        <p>What makes this achievement especially remarkable is its context. These years were marked by severe ostracization and ongoing mental and physical abuse by family members. The collection was not made in a supportive environment. It was made in spite of everything working against it. The resilience demonstrated in those years — the refusal to let circumstances determine outcomes — is the same quality that would later walk into Bridgeport's most dangerous neighborhood and walk out with $5.5 million in reconstruction funding.</p>
+
+        <blockquote>
+          <p>The strategy was always there. The environment just tried to make sure no one ever found out.</p>
+          <cite>— Pastor Raymond O. Anderson</cite>
+        </blockquote>
+
+        <h3>The <em>Broadcast</em>: From 5,000 to 800,000</h3>
+
+        <p>Years later, Pastor Anderson and his wife Denise took that same entrepreneurial instinct into the media arena. What began as a locally televised broadcast out of Bridgeport, Connecticut — reaching 5,000 weekly viewers — grew into something the station's own owners had not anticipated.</p>
+
+        <p>The programming was unlike what surrounded it. It blended teaching, motivational content, self-improvement, spiritual inspiration, and business strategy into a mastermind format that no other broadcast in the market was delivering. The audience did not grow because of advertising or promotion — it grew because of the content itself and the hunger it satisfied in people who had no other outlet for that kind of integrated, faith-anchored, practical instruction.</p>
+
+        <p>Viewer demand became so strong that people outside the broadcast range began calling the station directly — not to complain, but to ask to be included. They couldn't receive the signal in their area. They wanted in. The station's owners, responding to the volume of those requests, were compelled to push the signal ratio seven times stronger than its original strength. That is not a marketing outcome. That is a movement outcome.</p>
+
+        <p>The broadcast ultimately reached more than 800,000 households across New York, Massachusetts, and Connecticut. For a locally launched program with no network backing and no promotional budget, that reach represents one of the most organic audience-building stories in the region's broadcast history.</p>
+
+        <h3>What These Stories <em>Tell You</em> About the Work</h3>
+
+        <p>The consulting frameworks Pastor Anderson brings to organizations today — the Hidden Asset Audit, the Gift-to-Business Blueprint, the 90-Day Turnaround Sprint — were not developed in graduate school. They were forged over five decades of building things from nothing, often under conditions designed to prevent exactly that. The child who sold his entire art collection without an agent is the same man who rebuilt insolvent institutions into multimillion-dollar platforms. The broadcaster who grew a regional audience 160-fold through content quality alone is the same strategist who will help you identify what your organization is actually worth and build the market for it.</p>
+      </div>
+
+      <div class="cs-sidebar">
+        <div class="result-card">
+          <div class="result-card-label">Broadcast reach at peak</div>
+          <div class="result-card-num">800K+</div>
+          <div class="result-card-desc">Households across NY, MA &amp; CT reached by a program that began at 5,000 weekly local viewers in Bridgeport, CT</div>
+        </div>
+        <div class="result-card">
+          <div class="result-card-label">Signal amplification</div>
+          <div class="result-card-num">7×</div>
+          <div class="result-card-desc">Station owners pushed the broadcast signal 7 times stronger in response to viewer demand calls from people outside the reception area</div>
+        </div>
+        <div class="result-card">
+          <div class="result-card-label">Art collection — secondary market appraisal</div>
+          <div class="result-card-num">$150K–$500K</div>
+          <div class="result-card-desc">Per piece — current secondary market appraisal based on 40+ years of provenance, documented adversity narrative, three media (acrylic, oil, pencil), and the artist's nationally recognized public standing. Sold originally at $250–$500/piece (1979–1983).</div>
+        </div>
+        <div class="result-card" style="background:transparent; border-color: rgba(201,168,76,0.15);">
+          <div class="result-card-label" style="margin-bottom:1rem;">Key lessons</div>
+          <ul class="lesson-list">
+            <li>Audience growth driven by content quality alone compounds faster than any advertising strategy</li>
+            <li>Demand that bypasses the system — people calling a station directly — is the clearest signal of genuine impact</li>
+            <li>Entrepreneurial instinct is not taught by environment; it survives despite environment</li>
+            <li>The resilience forged under early adversity is the same resilience that walks into impossible organizational situations and finds a way through</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+<!-- BOTTOM CTA -->
+<section class="cta-strip">
+  <h2>Your Organization Has a <em>Turnaround</em> Waiting</h2>
+  <p>Every one of these results began with a single conversation and an honest assessment of what was actually possible. That conversation is available to you.</p>
+  <a href="signup.html#contact" class="cta-btn">Explore Services</a>
+  <a href="https://beautyforashes.pro" class="cta-btn cta-btn-ghost">Get Free Executive Planner</a>
+</section>
+
+<footer>
+  <p><strong>FaithVision Leadership</strong> · Pastor Raymond O. Anderson</p>
+  <p><a href="index.html">beautyforashes.io</a> &nbsp;·&nbsp; <a href="signup.html#contact">Contact</a> &nbsp;·&nbsp; <a href="https://beautyforashes.creator-spring.com" target="_blank" rel="noopener">Store</a></p>
+  <p style="margin-top:1rem;">© 2026 FaithVision Leadership. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
