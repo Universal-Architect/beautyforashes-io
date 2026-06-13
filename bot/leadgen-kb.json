@@ -1,0 +1,243 @@
+{
+  "_meta": {
+    "version": "1.0.0",
+    "lastUpdated": "2026-06-13",
+    "description": "FaithVision Leadership Lead Gen Bot — Remote Knowledge Base. This file is fetched at runtime and merged on top of the embedded KB inside faithvision-leadgen.js. Edit this file to update bot knowledge, scoring weights, objections, and service details WITHOUT redeploying the bot script. Increment version on each update.",
+    "updateLog": [
+      { "version": "1.0.0", "date": "2026-06-13", "note": "Initial build — full credential set, 4-question flow, 5 service tiers, 4 scoring bands." }
+    ]
+  },
+
+  "credentials": [
+    "$120M+ in bridge, mezzanine, and gap financing facilitated over 15 years",
+    "3× nationally awarded Borders Book of the Month author",
+    "2010 Pulitzer Prize contender — I Have Seen the Living God",
+    "Washington Park Association: $0 → $5.5M reconstruction funds (Bridgeport, CT 1999)",
+    "New England Housing Ministries: insolvency → $7.5M cash on hand in 24 months",
+    "PrePaid Legal: 500 → 10,000 monthly subscribers in 42 months (20× growth)",
+    "800,000+ households reached by self-built Tri-State broadcast — signal amplified 7× by station demand",
+    "Original art collection created ages 9–13 (1979–1983): appraised $150,000–$500,000/piece today",
+    "40+ years executive leadership across nonprofit, healthcare, real estate, broadcast, and business"
+  ],
+
+  "services": [
+    {
+      "id": "gift-intensive",
+      "name": "Gift Discovery Intensive",
+      "price": "$2,500",
+      "duration": "90 min · 1:1 session",
+      "ideal": "individual",
+      "description": "A 90-minute deep-dive that surfaces, names, and maps unique gifts into a scalable business direction. Delivers a written Gift-to-Business Blueprint within 48 hours.",
+      "bookingUrl": "signup.html#contact"
+    },
+    {
+      "id": "turnaround-sprint",
+      "name": "90-Day Turnaround Sprint",
+      "price": "$35,000–$75,000",
+      "duration": "90 days · scoped to org size",
+      "ideal": "distressed-org",
+      "description": "The core FaithVision engagement. Structured turnaround process with Hidden Asset Audit, stakeholder mapping, monthly strategy sessions, and a fully funded roadmap at day 90. For organizations with $500K–$10M annual budget/revenue.",
+      "bookingUrl": "signup.html#contact"
+    },
+    {
+      "id": "retainer",
+      "name": "Fractional Strategist Retainer",
+      "price": "$10,000–$18,000/mo",
+      "duration": "3-month minimum",
+      "ideal": "growth-org",
+      "description": "Ongoing senior strategic counsel without a full-time executive hire. Two 60-minute sessions per month, unlimited email access, monthly performance dashboard, and funding strategy support.",
+      "bookingUrl": "signup.html#contact"
+    },
+    {
+      "id": "enterprise",
+      "name": "Enterprise Transformation",
+      "price": "$150,000+",
+      "duration": "6–18 months · custom scope",
+      "ideal": "large-org",
+      "description": "For organizations managing $10M+ in assets or development capital. Comprehensive diagnostic, weekly advisory sessions, board presentation support, and direct funder/lender representation where appropriate.",
+      "bookingUrl": "signup.html#contact"
+    },
+    {
+      "id": "mastermind",
+      "name": "Gifts Mastermind Group",
+      "price": "$1,500/mo",
+      "duration": "6-month cohort · 8–12 members",
+      "ideal": "community",
+      "description": "Monthly 90-minute group sessions facilitated by Pastor Anderson. Peer accountability, all FaithVision framework worksheets, and priority access to 1:1 openings. New cohorts open quarterly.",
+      "bookingUrl": "signup.html#contact"
+    }
+  ],
+
+  "caseStudies": [
+    {
+      "id": "washington-park",
+      "name": "Washington Park Association",
+      "result": "$5.5M raised from $0 insolvency",
+      "type": "nonprofit",
+      "location": "Bridgeport, CT",
+      "year": 1999,
+      "detail": "America's most crime-ridden neighborhood. Organization had no operating funds, no funding relationships. Secured $5.5M in federal and state reconstruction funds for 13 residential homes.",
+      "keyLesson": "Distress is a funding qualifier when properly framed."
+    },
+    {
+      "id": "nehm",
+      "name": "New England Housing Ministries",
+      "result": "$7.5M cash in 24 months → $120M in loans over 15 years",
+      "type": "faith-org",
+      "location": "New England",
+      "year": "Early 2000s",
+      "detail": "Functionally insolvent faith-based housing ministry. Rebuilt to $7.5M cash on hand in 24 months through revenue diversification and lender relationship strategy. Cash position unlocked $120M in bridge, mezzanine, and gap loans.",
+      "keyLesson": "Cash is a platform. The real work begins once you have it."
+    },
+    {
+      "id": "prepaid-legal",
+      "name": "PrePaid Legal Services",
+      "result": "20× subscriber growth in 42 months (500 → 10,000)",
+      "type": "business",
+      "location": "Regional",
+      "year": "Mid-2000s",
+      "detail": "Stagnant subscription base multiplied 20× through gift-based team realignment, community partnership strategy, and compounding referral/retention systems.",
+      "keyLesson": "Stagnation is a people-alignment problem more often than a market problem."
+    },
+    {
+      "id": "broadcast",
+      "name": "Tri-State Broadcast",
+      "result": "5,000 weekly viewers → 800,000+ households, signal amplified 7×",
+      "type": "media",
+      "location": "NY, MA, CT",
+      "year": "Late 1990s–2000s",
+      "detail": "Locally televised faith-and-business program in Bridgeport, CT. Grew through content quality alone to 800K+ households. Station owners pushed signal 7× stronger in response to viewer demand.",
+      "keyLesson": "Demand that bypasses the system is the clearest signal of genuine impact."
+    },
+    {
+      "id": "art-origins",
+      "name": "Art Collection — Early Origins",
+      "result": "$250–$500/piece original sale (1979–1983) → $150K–$500K/piece secondary market appraisal today",
+      "type": "origins",
+      "location": "1979–1983",
+      "year": "1979–1983",
+      "detail": "Between ages 9 and 13, Raymond O. Anderson created and self-sold an entire original collection in acrylic, oil, and pencil — commanding $250–$500/piece with no agent, no gallery, no mentor — under conditions of severe family adversity. Current secondary market appraisal: $150K–$500K/piece driven by 40+ years of provenance, adversity narrative, three media, and a complete collection.",
+      "keyLesson": "Value is created, not inherited — and entrepreneurial instinct survives despite environment."
+    }
+  ],
+
+  "objections": {
+    "expensive": "The investment scales to your situation. The Gift Discovery Intensive starts at $2,500 and delivers a written Blueprint within 48 hours. The Mastermind runs $1,500/month. Would either of those be a better fit to start?",
+    "afford": "The investment scales to your situation. The Gift Discovery Intensive starts at $2,500 and delivers a written Blueprint within 48 hours. The Mastermind runs $1,500/month. Would either of those be a better fit to start?",
+    "too much": "The engagement structure is specifically designed so organizations can start at the level that's accessible right now. The Gift Discovery Intensive at $2,500 has produced complete written Blueprints that clients have used to unlock far more than the investment.",
+    "not sure": "That's exactly why the discovery call exists — 20 minutes, no cost, no obligation. Pastor Anderson will tell you honestly whether FaithVision is the right fit.",
+    "think about": "Of course. The free Executive Planner is a good first step — it contains the same Hidden Asset Audit and 90-Day Sprint frameworks used in paid engagements. You can evaluate the thinking before committing to anything.",
+    "tried consulting": "Most clients who've been through other consulting say the difference is the documented $120M institutional track record — not projections, not theory. The discovery call is the right place to explore whether this is different.",
+    "too busy": "That's usually a signal, not an obstacle. The discovery call is 20 minutes — designed precisely for leaders who can't afford to waste time on the wrong consultant.",
+    "already have": "That's great context. The discovery call takes 20 minutes and Pastor Anderson can tell you immediately whether there's meaningful overlap or a gap your current support isn't covering.",
+    "doesn't apply": "The frameworks work across nonprofit, faith-based, business, and individual contexts — the documented results span all four. The discovery call will surface quickly whether your situation is a fit.",
+    "not ready": "Understood. The free Executive Planner contains the full Hidden Asset Audit and Gift-to-Business Blueprint — you can work through the frameworks on your own timeline and come back when it makes sense."
+  },
+
+  "chatPatterns": [
+    {
+      "patterns": ["price", "cost", "invest", "how much", "afford", "rate", "fee", "pricing"],
+      "response": "Engagements range from <strong>$1,500/month</strong> (Mastermind Group) to <strong>$150,000+</strong> (Enterprise Transformation). The 90-Day Turnaround Sprint — the most requested — runs $35,000–$75,000 scoped to organization size. The Gift Intensive is $2,500. All begin with a free 20-minute discovery call. Full detail at <a href='pricing.html' style='color:#C9A84C;'>pricing →</a>"
+    },
+    {
+      "patterns": ["how long", "timeline", "when can", "how soon", "start date", "begin"],
+      "response": "Discovery calls are available within 3–5 business days. Engagements begin within 1–2 weeks of confirming scope. The Gift Intensive delivers a written Blueprint within 48 hours of your session. The 90-Day Sprint produces a fully funded, actionable roadmap at day 90."
+    },
+    {
+      "patterns": ["result", "proof", "evidence", "track record", "case stud", "worked for", "example"],
+      "response": "Documented results: Washington Park Association — $5.5M raised from $0 insolvency. New England Housing Ministries — $7.5M rebuilt in 24 months, then $120M in loans over 15 years. PrePaid Legal — 20× growth in 42 months. All fully documented: <a href='case-studies.html' style='color:#C9A84C;'>case studies →</a>"
+    },
+    {
+      "patterns": ["faith", "christian", "god", "church", "religion", "believer", "atheist", "secular"],
+      "response": "Faith is the foundation of Pastor Anderson's practice — but it's not a requirement to work with FaithVision Leadership. The strategic frameworks produce results regardless of the client's faith background. The track record speaks for itself, and the autobiography has been read by believers and atheists alike."
+    },
+    {
+      "patterns": ["book", "autobiography", "pulitzer", "living god", "i have seen", "borders"],
+      "response": "<em>I Have Seen the Living God</em> — 3× Borders Book of the Month, 2010 Pulitzer Prize contender. Available at the store: <a href='https://beautyforashes.creator-spring.com' target='_blank' style='color:#C9A84C;'>beautyforashes.creator-spring.com →</a>"
+    },
+    {
+      "patterns": ["planner", "free", "download", "executive planner", "get the"],
+      "response": "The free Executive Planner contains the Hidden Asset Audit, 90-Day Solvency Sprint, Gift-to-Business Blueprint, and Funder Targeting Matrix — the same frameworks used in paid engagements. No cost. <a href='https://beautyforashes.pro' target='_blank' style='color:#C9A84C;'>Get it at beautyforashes.pro →</a>"
+    },
+    {
+      "patterns": ["art", "painting", "collection", "1979", "1983", "age 9", "age 13", "acrylic", "oil"],
+      "response": "Between 1979 and 1983, ages 9 to 13, Pastor Anderson created an entire original collection in acrylic, oil, and pencil — and sold every piece himself at $250–$500 each, with no agent or gallery. Today that collection carries a secondary market appraisal of $150,000–$500,000 per piece, driven by 40+ years of provenance, the documented adversity narrative, and the rarity of the complete collection."
+    },
+    {
+      "patterns": ["broadcast", "television", "tv", "800,000", "800k", "tri-state", "signal", "viewers"],
+      "response": "What began as a locally televised program reaching 5,000 weekly viewers in Bridgeport grew to 800,000+ households across NY, MA, and CT. Viewer demand became so strong that people outside the reception area called the station directly asking to be included. The owners were compelled to push the signal 7× stronger. That's not a marketing outcome — that's a movement outcome."
+    },
+    {
+      "patterns": ["washington park", "bridgeport", "5.5", "reconstruction"],
+      "response": "Washington Park Association (Bridgeport, CT, 1999): organization had no operating funds, no funding relationships, and no clear path forward. Through the Hidden Asset Audit and a structured federal/state funding architecture, $5.5M was secured for 13 residential home reconstructions in one of America's most crime-ridden neighborhoods."
+    },
+    {
+      "patterns": ["new england housing", "nehm", "7.5", "7.5 million", "120 million", "120m"],
+      "response": "New England Housing Ministries: completely insolvent when Pastor Anderson was brought in. Rebuilt to $7.5M cash on hand in 24 months through revenue diversification and lender credibility strategy. That cash position unlocked $120M in bridge, mezzanine, and gap loans over the following 15 years."
+    },
+    {
+      "patterns": ["prepaid legal", "10,000", "10000", "subscribers", "500 to", "prepaid"],
+      "response": "PrePaid Legal Services: stagnant at 500 monthly subscribers. Through gift-based team realignment — restructuring roles around natural gifting rather than job descriptions — and community partnership strategy, the subscriber base grew to 10,000 in 42 months. A 20× increase. The product didn't change. The alignment did."
+    },
+    {
+      "patterns": ["speaking", "keynote", "workshop", "conference", "sermon", "preach", "event"],
+      "response": "Speaking engagements range from $5,000 (virtual/podcast) to $25,000–$75,000 (keynote) to $10,000–$25,000 (sermon/ministry). A half-day workshop runs $15,000; full day $35,000. Full speaking menu: <a href='pricing.html' style='color:#C9A84C;'>pricing →</a>"
+    }
+  ],
+
+  "qualifyingQuestions": [
+    {
+      "id": "situation",
+      "question": "What best describes where you are right now?",
+      "options": [
+        { "value": "crisis",     "label": "My organization is in financial distress or facing closure",  "score": 90 },
+        { "value": "stalled",    "label": "We're stable but stuck — growth has stalled",                "score": 70 },
+        { "value": "individual", "label": "I want to monetize my gifts and build something of my own",  "score": 55 },
+        { "value": "growth",     "label": "We're growing and need ongoing senior strategic counsel",    "score": 75 },
+        { "value": "speaking",   "label": "Looking for a keynote speaker or workshop",                 "score": 50 },
+        { "value": "curious",    "label": "Just exploring what FaithVision Leadership offers",         "score": 25 }
+      ]
+    },
+    {
+      "id": "org_type",
+      "question": "What type of organization?",
+      "options": [
+        { "value": "nonprofit",  "label": "Nonprofit or community organization", "score": 18 },
+        { "value": "ministry",   "label": "Church or faith-based ministry",       "score": 18 },
+        { "value": "business",   "label": "Business or startup",                 "score": 15 },
+        { "value": "corporate",  "label": "Corporate / enterprise",              "score": 20 },
+        { "value": "healthcare", "label": "Healthcare organization",              "score": 18 },
+        { "value": "individual", "label": "Individual / no organization yet",    "score": 8  }
+      ]
+    },
+    {
+      "id": "budget",
+      "question": "What investment range are you working with?",
+      "options": [
+        { "value": "under5k",  "label": "Under $5,000",                        "score": 10 },
+        { "value": "5k_25k",   "label": "$5,000 – $25,000",                    "score": 22 },
+        { "value": "25k_75k",  "label": "$25,000 – $75,000",                   "score": 35 },
+        { "value": "75k_plus", "label": "$75,000+",                            "score": 45 },
+        { "value": "flexible", "label": "Flexible — depends on the ROI case",  "score": 28 },
+        { "value": "unsure",   "label": "Not sure yet",                        "score": 12 }
+      ]
+    },
+    {
+      "id": "urgency",
+      "question": "How urgent is your timeline?",
+      "options": [
+        { "value": "now",       "label": "Critical — we need help now",           "score": 30 },
+        { "value": "months",    "label": "In the next 1–3 months",                "score": 20 },
+        { "value": "quarter",   "label": "Planning for the next quarter",         "score": 14 },
+        { "value": "exploring", "label": "No set timeline — still exploring",     "score": 5  }
+      ]
+    }
+  ],
+
+  "scoringTiers": {
+    "hot":     { "min": 140, "serviceId": "turnaround-sprint", "cta": "book-call", "label": "Hot",     "color": "#e74c3c" },
+    "warm":    { "min": 95,  "serviceId": "gift-intensive",    "cta": "book-call", "label": "Warm",    "color": "#e67e22" },
+    "nurture": { "min": 55,  "serviceId": "mastermind",        "cta": "planner",   "label": "Nurture", "color": "#f1c40f" },
+    "cold":    { "min": 0,   "serviceId": null,                "cta": "planner",   "label": "Cold",    "color": "#95a5a6" }
+  }
+}
