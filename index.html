@@ -3,409 +3,629 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Beauty for Ashes | FaithVision Leadership</title>
-<meta name="description" content="FaithVision Leadership provides confidential strategy, restoration, and advisory counsel for leaders, ministries, entrepreneurs, and builders.">
-<meta property="og:title" content="Beauty for Ashes — FaithVision Leadership">
-<meta property="og:description" content="Confidential strategic counsel for leaders, founders, ministries, families, and builders ready to restore order, clarify the assignment, and move with disciplined conviction.">
-<meta property="og:url" content="https://beautyforashes.io/">
-<meta property="og:type" content="website">
+<title>FaithVision Leadership — Chief Creationist, Universal Architect &amp; Priest Before the Lord</title>
+<meta name="description" content="Chief Creationist, Universal Architect &amp; Priest Before the Lord. The full story of Pastor Raymond O. Anderson &mdash; nine documented dimensions of extraordinary adaptive intelligence and faith-driven results.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-  :root{
-    --gold:#C9A84C;--gold2:#E8C97A;--gold3:#8A6E32;
-    --ink:#0D0C0A;--ink2:#1A1915;--ink3:#252420;
-    --fg:#F5F0E8;--fg2:#DDD5C4;--muted:#9A9080;
-    --serif:'Cormorant Garamond',Georgia,serif;--sans:'Jost',sans-serif;
-    --max:1100px;
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --gold: #C9A84C; --gold-light: #E8C97A; --gold-dim: #8A6E32;
+  --ink: #0D0C0A; --ink-2: #1A1915; --ink-3: #252420;
+  --parchment: #F5F0E8; --parchment-dim: #DDD5C4; --text-muted: #9A9080;
+  --serif: 'Cormorant Garamond', Georgia, serif;
+  --sans: 'Jost', sans-serif;
+}
+html { scroll-behavior: smooth; }
+
+  /* ── HOSTINGER OVERFLOW FIX ── */
+  .section-wrap,
+  .section-inner,
+  .about-hero,
+  .stats-bar,
+  .about-cta,
+  footer,
+  [class*="section"],
+  [class*="wrap"],
+  [class*="inner"] {
+    overflow: visible !important;
+    clip: unset !important;
+    clip-path: none !important;
   }
-  html{scroll-behavior:smooth}
-  body{background:var(--ink);color:var(--fg);font-family:var(--sans);font-weight:300;line-height:1.7;overflow-x:hidden}
+body { background: var(--ink); color: var(--parchment); font-family: var(--sans); font-weight: 300; line-height: 1.7; overflow-x: hidden; }
 
-  /* NAV */
-  nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(13,12,10,.95);backdrop-filter:blur(12px);border-bottom:.5px solid rgba(201,168,76,.2);padding:1.2rem 2.5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem}
-  .nav-brand{font-family:var(--serif);font-size:1.1rem;color:var(--gold);text-decoration:none;font-weight:400;letter-spacing:.04em;white-space:nowrap}
-  .nav-links{display:flex;gap:.2rem;list-style:none;flex-wrap:wrap;justify-content:flex-end}
-  .nav-links a{color:var(--fg2);text-decoration:none;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;padding:.4rem .75rem;border:.5px solid transparent;transition:color .2s,border-color .2s}
-  .nav-links a:hover{color:var(--gold);border-color:rgba(201,168,76,.3)}
-  .nav-cta{background:var(--gold)!important;color:var(--ink)!important;border-color:var(--gold)!important;font-weight:500!important}
-  .nav-cta:hover{background:var(--gold2)!important}
-  @media(max-width:800px){.nav-links{display:none}}
+/* NAV */
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 1.2rem 2.5rem; display: flex; justify-content: space-between; align-items: center; background: rgba(13,12,10,0.95); backdrop-filter: blur(12px); border-bottom: 0.5px solid rgba(201,168,76,0.2); }
+.nav-logo img { height: 44px; width: auto; }
+.nav-links { display: flex; gap: 2rem; list-style: none; align-items: center; }
+.nav-links a { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); text-decoration: none; transition: color 0.2s; }
+.nav-links a:hover { color: var(--gold); }
+.nav-cta { color: var(--ink) !important; background: var(--gold); padding: 0.55rem 1.2rem !important; }
+.nav-cta:hover { background: var(--gold-light) !important; color: var(--ink) !important; }
 
-  /* HERO */
-  .hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:9rem 2.5rem 5rem;position:relative;overflow:hidden}
-  .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 70% 40%,rgba(201,168,76,.07) 0%,transparent 70%),radial-gradient(ellipse 40% 60% at 20% 80%,rgba(201,168,76,.04) 0%,transparent 60%);pointer-events:none}
-  .hero-inner{max-width:800px;margin:0 auto;width:100%}
-  .eyebrow{font-size:.7rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:1.4rem;display:flex;align-items:center;gap:.75rem}
-  .eyebrow::before{content:'';display:block;width:2rem;height:.5px;background:var(--gold)}
-  .hero h1{font-family:var(--serif);font-size:clamp(3.5rem,8vw,7rem);font-weight:300;line-height:1.0;color:var(--fg);margin-bottom:1.5rem}
-  .hero h1 em{font-style:italic;color:var(--gold)}
-  .hero-copy{font-size:1.05rem;color:var(--fg2);max-width:620px;line-height:1.85;margin-bottom:2.5rem}
-  .hero-actions{display:flex;flex-wrap:wrap;gap:1rem}
+/* HERO */
+.about-hero { padding: 10rem 2.5rem 6rem; position: relative; overflow: hidden; border-bottom: 0.5px solid rgba(201,168,76,0.15); }
+.about-hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 50% 60% at 80% 30%, rgba(201,168,76,0.06) 0%, transparent 70%); pointer-events: none; }
+.about-hero-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 420px; gap: 6rem; align-items: center; position: relative; z-index: 1; }
+.eyebrow { font-size: 0.68rem; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.75rem; }
+.eyebrow::before { content: ''; display: block; width: 2rem; height: 0.5px; background: var(--gold); flex-shrink: 0; }
+.about-hero h1 { font-family: var(--serif); font-size: clamp(2.8rem, 5vw, 4.2rem); font-weight: 300; line-height: 1.1; color: var(--parchment); margin-bottom: 1.2rem; }
+.about-hero h1 em { font-style: italic; color: var(--gold); }
+.about-hero-sub { font-size: 1rem; color: var(--text-muted); line-height: 1.8; max-width: 500px; margin-bottom: 2rem; }
+.about-credentials { display: flex; flex-direction: column; gap: 0.5rem; }
+.about-cred { display: flex; align-items: flex-start; gap: 0.75rem; font-size: 0.82rem; color: var(--parchment-dim); line-height: 1.5; }
+.about-cred::before { content: '&#10022;'; color: var(--gold); font-size: 0.55rem; flex-shrink: 0; margin-top: 4px; }
+.about-hero-photo { position: relative; }
+.about-hero-img { width: 100%; height: 540px; object-fit: cover; object-position: center 10%; display: block; border: 0.5px solid rgba(201,168,76,0.3); }
+.about-hero-photo::before { content: ''; position: absolute; inset: 12px; border: 0.5px solid rgba(201,168,76,0.2); pointer-events: none; z-index: 1; }
+.about-hero-caption { font-size: 0.68rem; color: var(--text-muted); letter-spacing: 0.05em; margin-top: 0.75rem; text-align: center; }
 
-  /* BUTTONS */
-  .btn-primary{display:inline-block;background:var(--gold);color:var(--ink);font-family:var(--sans);font-size:.78rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;padding:.95rem 2.2rem;text-decoration:none;transition:background .2s}
-  .btn-primary:hover{background:var(--gold2)}
-  .btn-ghost{display:inline-block;background:transparent;color:var(--gold);border:.5px solid var(--gold3);font-family:var(--sans);font-size:.78rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;padding:.95rem 2.2rem;text-decoration:none;transition:background .2s}
-  .btn-ghost:hover{background:rgba(201,168,76,.08)}
+/* STATS */
+.stats-bar { background: var(--ink-2); border-bottom: 0.5px solid rgba(201,168,76,0.15); padding: 3rem 2.5rem; }
+.stats-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; }
+.stat-item { text-align: center; padding: 0 1rem; border-right: 0.5px solid rgba(201,168,76,0.15); }
+.stat-item:last-child { border-right: none; }
+.stat-num { font-family: var(--serif); font-size: 2.2rem; font-weight: 300; color: var(--gold); display: block; line-height: 1; margin-bottom: 0.4rem; }
+.stat-label { font-size: 0.68rem; color: var(--text-muted); letter-spacing: 0.04em; line-height: 1.5; }
 
-  /* CREDENTIAL BAR */
-  .cred-bar{background:var(--ink2);border-top:.5px solid rgba(201,168,76,.15);border-bottom:.5px solid rgba(201,168,76,.15);padding:1.2rem 2.5rem}
-  .cred-inner{max-width:var(--max);margin:0 auto;display:flex;flex-wrap:wrap;justify-content:center;gap:1rem 3rem}
-  .cred-item{font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);display:flex;align-items:center;gap:.5rem}
-  .cred-item::before{content:'✦';color:var(--gold);font-size:.55rem}
+/* SECTIONS */
+.section-wrap { padding: 6rem 2.5rem; overflow: visible !important; }
+.section-wrap.alt { background: var(--ink-2); border-top: 0.5px solid rgba(201,168,76,0.15); border-bottom: 0.5px solid rgba(201,168,76,0.15); overflow: visible !important; }
+.section-inner { max-width: 1100px; margin: 0 auto; }
+.section-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: start; }
+.section-grid-2-img { display: grid; grid-template-columns: 480px 1fr; gap: 5rem; align-items: center; }
 
-  /* SECTIONS */
-  .section{padding:6rem 2.5rem;max-width:var(--max);margin:0 auto}
-  .section-alt{background:var(--ink2);border-top:.5px solid rgba(201,168,76,.12);border-bottom:.5px solid rgba(201,168,76,.12);padding:6rem 2.5rem}
-  .section-inner{max-width:var(--max);margin:0 auto}
-  .section-eyebrow{font-size:.7rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;display:flex;align-items:center;gap:.75rem}
-  .section-eyebrow::before{content:'';display:block;width:2rem;height:.5px;background:var(--gold)}
-  .section-heading{font-family:var(--serif);font-size:clamp(2rem,3.5vw,3rem);font-weight:300;line-height:1.15;color:var(--fg);margin-bottom:.75rem}
-  .section-heading em{font-style:italic;color:var(--gold)}
-  .section-sub{font-size:.95rem;color:var(--muted);max-width:580px;line-height:1.8;margin-bottom:3rem}
+/* TYPOGRAPHY */
+.section-eyebrow { font-size: 0.68rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.2rem; display: flex; align-items: center; gap: 0.75rem; }
+.section-eyebrow::before { content: ''; display: block; width: 2rem; height: 0.5px; background: var(--gold); flex-shrink: 0; }
+.section-heading { font-family: var(--serif); font-size: clamp(2rem, 3vw, 2.8rem); font-weight: 300; line-height: 1.2; color: var(--parchment); margin-bottom: 1.2rem; }
+.section-heading em { font-style: italic; color: var(--gold); }
+.prose p { font-size: 0.92rem; color: var(--parchment-dim); line-height: 1.9; margin-bottom: 1.2rem; }
+.prose p:first-child { font-family: var(--serif); font-size: 1.2rem; font-style: italic; color: var(--parchment); font-weight: 400; }
+.prose p strong { color: var(--gold); font-weight: 400; }
+.pull-quote { border-left: 2px solid var(--gold); padding: 1.5rem 1.5rem 1.5rem 2rem; margin: 2rem 0; background: rgba(201,168,76,0.04); }
+.pull-quote blockquote { font-family: var(--serif); font-size: 1.1rem; font-style: italic; font-weight: 300; color: var(--parchment); line-height: 1.7; margin-bottom: 0.5rem; }
+.pull-quote cite { font-size: 0.68rem; color: var(--gold); letter-spacing: 0.08em; text-transform: uppercase; font-style: normal; }
 
-  /* SPLIT */
-  .split{display:grid;grid-template-columns:1fr 1.1fr;gap:5rem;align-items:start}
-  .statement{position:sticky;top:8rem;border-left:2px solid var(--gold);padding:2rem 0 2rem 2rem}
-  .statement h2{font-family:var(--serif);font-size:clamp(1.7rem,3vw,2.4rem);font-weight:300;line-height:1.2;color:var(--fg);margin-bottom:1rem}
-  .statement h2 em{font-style:italic;color:var(--gold)}
-  .statement p{font-size:.9rem;color:var(--muted);line-height:1.8}
+/* TIMELINE */
+.timeline { display: flex; flex-direction: column; gap: 0; }
+.timeline-item { display: grid; grid-template-columns: 90px 1fr; gap: 1.5rem; padding: 1.8rem 0; border-bottom: 0.5px solid rgba(201,168,76,0.1); align-items: start; }
+.timeline-item:last-child { border-bottom: none; }
+.timeline-year { font-family: var(--serif); font-size: 0.95rem; font-weight: 300; color: var(--gold); line-height: 1.4; padding-top: 3px; }
+.timeline-content h4 { font-family: var(--serif); font-size: 1.05rem; font-weight: 400; color: var(--parchment); margin-bottom: 0.3rem; line-height: 1.3; }
+.timeline-content p { font-size: 0.8rem; color: var(--text-muted); line-height: 1.6; }
+.timeline-result { font-size: 0.7rem; color: var(--gold); letter-spacing: 0.06em; margin-top: 0.3rem; font-style: italic; font-family: var(--serif); }
 
-  /* SERVICE LIST */
-  .service-list{display:grid;gap:1.5px;background:rgba(201,168,76,.12);border:.5px solid rgba(201,168,76,.15)}
-  .service-item{background:var(--ink);padding:2rem 1.8rem;transition:background .2s}
-  .service-item:hover{background:var(--ink2)}
-  .service-item h3{font-family:var(--serif);font-size:1.15rem;font-weight:400;color:var(--gold);margin-bottom:.5rem}
-  .service-item p{font-size:.85rem;color:var(--muted);line-height:1.75}
+/* CHAPTER CARDS */
+.chapter-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5px; background: rgba(201,168,76,0.12); border: 0.5px solid rgba(201,168,76,0.15); }
+.chapter-card { background: var(--ink); padding: 2.5rem 2rem; transition: background 0.2s; }
+.chapter-card:hover { background: var(--ink-2); }
+.chapter-card.featured { background: var(--ink-2); border-top: 2px solid var(--gold); }
+.chapter-num { font-family: var(--serif); font-size: 2.5rem; font-weight: 300; color: rgba(201,168,76,0.2); display: block; margin-bottom: 0.75rem; line-height: 1; }
+.chapter-industry { font-size: 0.6rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+.chapter-card h3 { font-family: var(--serif); font-size: 1.1rem; font-weight: 400; color: var(--parchment); margin-bottom: 0.5rem; line-height: 1.3; }
+.chapter-card p { font-size: 0.8rem; color: var(--text-muted); line-height: 1.7; }
+.chapter-result { font-size: 0.75rem; color: var(--gold); font-style: italic; font-family: var(--serif); margin-top: 0.75rem; }
 
-  /* 3-COL CARDS */
-  .card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5px;background:rgba(201,168,76,.12);border:.5px solid rgba(201,168,76,.15)}
-  .card{background:var(--ink);padding:2.2rem 2rem;transition:background .2s}
-  .card:hover{background:var(--ink2)}
-  .card-label{font-size:.66rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;display:block}
-  .card h3{font-family:var(--serif);font-size:1.25rem;font-weight:400;color:var(--fg);margin-bottom:.6rem;line-height:1.25}
-  .card p{font-size:.83rem;color:var(--muted);line-height:1.75}
+/* WINS LIST */
+.wins-list { list-style: none; }
+.wins-list li { display: flex; align-items: flex-start; gap: 1rem; padding: 1.2rem 0; border-bottom: 0.5px solid rgba(201,168,76,0.12); }
+.wins-list li:last-child { border-bottom: none; }
+.win-label { font-family: var(--serif); font-size: 1.2rem; font-weight: 300; color: var(--gold); min-width: 110px; line-height: 1.3; flex-shrink: 0; }
+.win-desc { font-size: 0.82rem; color: var(--text-muted); line-height: 1.6; padding-top: 2px; }
 
-  /* PRICING */
-  .pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5px;background:rgba(201,168,76,.12);border:.5px solid rgba(201,168,76,.15);margin-bottom:2rem}
-  .pricing-card{background:var(--ink);padding:2.5rem 2rem;display:flex;flex-direction:column}
-  .pricing-card.featured{background:var(--ink2);border-left:2px solid var(--gold)}
-  .pricing-label{font-size:.66rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:.6rem;display:block}
-  .pricing-card h3{font-family:var(--serif);font-size:1.4rem;font-weight:300;color:var(--fg);margin-bottom:.5rem;line-height:1.2}
-  .pricing-price{font-family:var(--serif);font-size:2rem;font-weight:300;color:var(--gold);margin:1rem 0 .3rem;line-height:1}
-  .pricing-period{font-size:.72rem;color:var(--muted);margin-bottom:1.5rem;letter-spacing:.04em}
-  .feature-list{list-style:none;flex:1}
-  .feature-list li{font-size:.82rem;color:var(--fg2);padding:.5rem 0;border-bottom:.5px solid rgba(201,168,76,.1);display:flex;gap:.75rem;line-height:1.5}
-  .feature-list li:last-child{border-bottom:none}
-  .feature-list li::before{content:'✦';color:var(--gold);font-size:.55rem;flex-shrink:0;margin-top:5px}
-  .pricing-note{font-size:.82rem;color:var(--muted);line-height:1.7;border-top:.5px solid rgba(201,168,76,.15);padding-top:1.5rem;max-width:680px}
+/* PHOTO */
+.section-img { width: 100%; height: 560px; object-fit: cover; object-position: center 15%; display: block; border: 0.5px solid rgba(201,168,76,0.3); }
+.gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5px; background: rgba(201,168,76,0.12); }
+.gallery-img { width: 100%; height: 280px; object-fit: cover; object-position: center top; display: block; filter: grayscale(15%); transition: filter 0.3s; }
+.gallery-img:hover { filter: grayscale(0%); }
+.gallery-wide { grid-column: 1 / -1; height: 340px; object-position: center center; }
 
-  /* INTAKE */
-  .intake-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5px;background:rgba(201,168,76,.12);border:.5px solid rgba(201,168,76,.15);margin-bottom:1.5rem}
-  .intake-card{background:var(--ink);padding:2.2rem 2rem}
-  .intake-card h3{font-family:var(--serif);font-size:1.3rem;font-weight:400;color:var(--fg);margin-bottom:.6rem}
-  .intake-card p{font-size:.85rem;color:var(--muted);line-height:1.75;margin-bottom:1.5rem}
+/* CTA */
+.about-cta { padding: 7rem 2.5rem; text-align: center; position: relative; overflow: hidden; }
+.about-cta::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 60% 80% at 50% 50%, rgba(201,168,76,0.05) 0%, transparent 70%); pointer-events: none; }
+.about-cta h2 { font-family: var(--serif); font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 300; color: var(--parchment); margin-bottom: 1rem; line-height: 1.2; }
+.about-cta h2 em { font-style: italic; color: var(--gold); }
+.about-cta p { font-size: 0.95rem; color: var(--text-muted); max-width: 520px; margin: 0 auto 2.5rem; line-height: 1.8; }
+.cta-row { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+.btn-gold { display: inline-block; background: var(--gold); color: var(--ink); font-family: var(--sans); font-size: 0.78rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; padding: 1.1rem 2.5rem; text-decoration: none; transition: background 0.2s; }
+.btn-gold:hover { background: var(--gold-light); }
+.btn-outline { display: inline-block; background: transparent; color: var(--gold); font-family: var(--sans); font-size: 0.78rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; padding: 1.1rem 2.5rem; text-decoration: none; border: 0.5px solid var(--gold-dim); transition: background 0.2s; }
+.btn-outline:hover { background: rgba(201,168,76,0.08); }
 
-  /* PLANNER BAND */
-  .planner-band{background:var(--ink2);border:.5px solid rgba(201,168,76,.3);padding:2.8rem 2.5rem;display:grid;grid-template-columns:1fr auto;gap:2rem;align-items:center;position:relative}
-  .planner-band::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
-  .planner-band h2{font-family:var(--serif);font-size:clamp(1.6rem,2.5vw,2.2rem);font-weight:300;color:var(--fg);margin-bottom:.5rem;line-height:1.2}
-  .planner-band p{font-size:.88rem;color:var(--muted);line-height:1.75}
+/* INTAKE STRIP */
+.intake-strip { background: var(--ink-3); border-top: 0.5px solid rgba(201,168,76,0.2); border-bottom: 0.5px solid rgba(201,168,76,0.2); padding: 2.5rem; text-align: center; }
+.intake-strip-inner { max-width: 700px; margin: 0 auto; }
+.intake-strip p { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 1.2rem; line-height: 1.7; }
+.intake-row { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+.intake-btn { display: inline-block; font-family: var(--sans); font-size: 0.7rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.75rem 1.5rem; text-decoration: none; border: 0.5px solid var(--gold-dim); color: var(--gold); transition: background 0.2s; }
+.intake-btn:hover { background: rgba(201,168,76,0.08); }
 
-  /* CONTACT */
-  .contact-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5px;background:rgba(201,168,76,.12);border:.5px solid rgba(201,168,76,.15);margin-bottom:2rem}
-  .contact-card{background:var(--ink);padding:2.2rem 2rem}
-  .contact-card h3{font-family:var(--serif);font-size:1.3rem;font-weight:400;color:var(--fg);margin-bottom:.5rem}
-  .contact-card p{font-size:.85rem;color:var(--muted);line-height:1.75;margin-bottom:1rem}
-  .contact-link{color:var(--gold);font-size:.88rem;font-weight:500;text-decoration:none;word-break:break-word}
-  .contact-link:hover{color:var(--gold2)}
+/* FOOTER */
+footer { background: var(--ink-3); border-top: 0.5px solid rgba(201,168,76,0.15); padding: 3rem 2.5rem; }
+.footer-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 4rem; margin-bottom: 2.5rem; }
+.footer-brand p { font-size: 0.8rem; color: var(--text-muted); line-height: 1.7; max-width: 280px; margin-top: 0.75rem; }
+.footer-col h4 { font-size: 0.65rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; }
+.footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
+.footer-col ul a { font-size: 0.8rem; color: var(--text-muted); text-decoration: none; transition: color 0.2s; }
+.footer-col ul a:hover { color: var(--gold); }
+.footer-bottom { max-width: 1100px; margin: 0 auto; padding-top: 2rem; border-top: 0.5px solid rgba(201,168,76,0.1); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+.footer-bottom p { font-size: 0.72rem; color: var(--text-muted); }
+.footer-social { display: flex; gap: 1.5rem; }
+.footer-social a { font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); text-decoration: none; transition: color 0.2s; }
+.footer-social a:hover { color: var(--gold); }
 
-  /* FOOTER */
-  footer{background:var(--ink2);border-top:.5px solid rgba(201,168,76,.12);padding:2rem 2.5rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
-  .footer-copy{font-size:.75rem;color:var(--muted)}
-  .footer-links{display:flex;gap:1.5rem;flex-wrap:wrap}
-  .footer-links a{font-size:.75rem;color:var(--muted);text-decoration:none;transition:color .2s}
-  .footer-links a:hover{color:var(--gold)}
-
-  /* REVEAL */
-  .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
-  .reveal.visible{opacity:1;transform:none}
-
-  /* RESPONSIVE */
-  @media(max-width:900px){
-    .split{grid-template-columns:1fr;gap:2.5rem}
-    .statement{position:static}
-    .card-grid,.pricing-grid{grid-template-columns:1fr}
-    .intake-grid,.contact-grid{grid-template-columns:1fr}
-    .planner-band{grid-template-columns:1fr}
-  }
-  @media(max-width:600px){
-    nav{padding:1rem 1.5rem}
-    .hero{padding:7rem 1.5rem 3.5rem}
-    .section{padding:4rem 1.5rem}
-    .section-alt{padding:4rem 1.5rem}
-  }
+@media (max-width: 1000px) {
+  .about-hero-inner { grid-template-columns: 1fr; gap: 3rem; }
+  .stats-inner { grid-template-columns: repeat(3, 1fr); }
+  .section-grid-2 { grid-template-columns: 1fr; gap: 3rem; }
+  .section-grid-2-img { grid-template-columns: 1fr; gap: 3rem; }
+  .chapter-grid { grid-template-columns: 1fr; }
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+  .gallery-wide { grid-column: 1 / -1; }
+  .footer-inner { grid-template-columns: 1fr; gap: 2rem; }
+}
+@media (max-width: 600px) {
+  nav { padding: 1rem 1.5rem; }
+  .nav-links { display: none; }
+  .about-hero, .stats-bar, .section-wrap, .about-cta, footer { padding-left: 1.5rem; padding-right: 1.5rem; }
+  .stats-inner { grid-template-columns: repeat(2, 1fr); }
+}
 </style>
 </head>
 <body>
 
 <!-- NAV -->
 <nav>
-  <a class="nav-brand" href="index.html">FaithVision Leadership</a>
+  <a href="index.html" class="nav-logo">
+    <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=768,fit=crop/2T1DUWtCmgSpg8F4/1019143606_hostinger_ai_1c2d1979-eXE6S71nHWhKGqHL.png" alt="FaithVision Leadership">
+  </a>
   <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#work">Advisory</a></li>
-    <li><a href="#services">Services</a></li>
-    <li><a href="#pricing">Pricing</a></li>
-    <li><a href="#intake">Intake</a></li>
-    <li><a href="https://beautyforashes.creator-spring.com" target="_blank" rel="noopener">Store</a></li>
-    <li><a href="planner.html">Free Planner</a></li>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="index.html">About</a></li>
+    <li><a href="pricing.html">Pricing</a></li>
     <li><a href="case-studies.html">Case Studies</a></li>
-    <li><a href="signup.html#contact" class="nav-cta">Book a Call</a></li>
+    <li><a href="https://beautyforashes.creator-spring.com" target="_blank" rel="noopener">Store</a></li>
+    <li><a href="https://beautyforashes.pro/" target="_blank" rel="noopener" class="nav-cta">Get Free Planner</a></li>
   </ul>
 </nav>
 
 <!-- HERO -->
-<section class="hero">
-  <div class="hero-inner">
-    <p class="eyebrow">FaithVision Leadership Consulting</p>
-    <h1>Beauty<br>for <em>Ashes</em></h1>
-    <p class="hero-copy">
-      Confidential strategic counsel for leaders, founders, ministries, families, and builders ready to restore order, clarify the assignment, and move with disciplined conviction.
-    </p>
-    <div class="hero-actions">
-      <a class="btn-primary" href="signup.html#contact">Request Advisory Call</a>
-      <a class="btn-ghost" href="planner.html">Get Free Planner</a>
+<section class="about-hero">
+  <div class="about-hero-inner">
+    <div>
+      <p class="eyebrow">Chief Creationist &middot; Universal Architect &middot; Priest Before the Lord</p>
+      <h1>Chief Creationist.<br>Universal <em>Architect.</em><br>Priest Before the Lord.</h1>
+      <p class="about-hero-sub">Pastor Raymond O. Anderson does not describe himself as a consultant, a speaker, or a strategist &mdash; though he is all of these at the highest level. He describes himself as a <strong style="color:#C9A84C;">Chief Creationist, Universal Architect, and Priest Before the Lord</strong>. Every result in his extraordinary life flows from that foundational identity. He does not solve problems. He creates order from chaos &mdash; in organizations, in communities, in courtrooms, and in human lives.</p>
+      <div class="about-credentials">
+        <div class="about-cred">3&times; Nationally Awarded Author &middot; 2010 Pulitzer Prize Contender</div>
+        <div class="about-cred">$120M+ bridge, mezzanine &amp; gap financing facilitated</div>
+        <div class="about-cred">Pro se legal advocate &mdash; forced $200M corporate restructuring</div>
+        <div class="about-cred">Performed orthopedic closed reduction in 45 minutes; best physicians: 3&ndash;4 hours</div>
+        <div class="about-cred">Financed Connecticut Supreme Court election fraud case single-handedly</div>
+        <div class="about-cred">800,000+ households reached by self-built Tri-State broadcast</div>
+        <div class="about-cred">Original art collection created age 9&ndash;13 &mdash; $150K&ndash;$500K per piece today</div>
+        <div class="about-cred">Engaged with the Kings of Africa &mdash; international faith leadership</div>
+      </div>
+    </div>
+    <div class="about-hero-photo">
+      <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=768,h=1062,fit=crop/2T1DUWtCmgSpg8F4/kings-meeting-pjO6Is7xK680vSPT.JPG" alt="Pastor Raymond O. Anderson with the Kings of Africa" class="about-hero-img">
+      <p class="about-hero-caption">Pastor Raymond O. Anderson engaging with the Kings of Africa</p>
     </div>
   </div>
 </section>
 
-<!-- CREDENTIAL BAR -->
-<div class="cred-bar">
-  <div class="cred-inner">
-    <span class="cred-item">$120M+ Facilitated</span>
-    <span class="cred-item">3× National Book Award</span>
-    <span class="cred-item">2010 Pulitzer Prize Contender</span>
-    <span class="cred-item">800,000+ Households Reached</span>
-    <span class="cred-item">40+ Years Executive Leadership</span>
+<!-- STATS BAR -->
+<div class="stats-bar">
+  <div class="stats-inner">
+    <div class="stat-item"><span class="stat-num">$120M+</span><span class="stat-label">Financing facilitated over 15 years</span></div>
+    <div class="stat-item"><span class="stat-num">40+</span><span class="stat-label">Years across 9 professional dimensions</span></div>
+    <div class="stat-item"><span class="stat-num">3</span><span class="stat-label">Pro se legal victories vs. institutions</span></div>
+    <div class="stat-item"><span class="stat-num">45 min</span><span class="stat-label">Orthopedic procedure; standard time 3&ndash;4 hours</span></div>
+    <div class="stat-item"><span class="stat-num">22</span><span class="stat-label">Election law violations proven in CT Supreme Court</span></div>
   </div>
 </div>
 
-<!-- ABOUT -->
-<section id="about" class="section-alt">
-  <div class="section-inner reveal">
-    <div class="split">
-      <div class="statement">
-        <h2>Built for leaders who need more than <em>inspiration.</em></h2>
-        <p>
-          Beauty for Ashes is the public home of FaithVision Leadership — a confidential advisory and speaking platform for leaders, families, ministries, nonprofits, and businesses facing real decisions.
-        </p>
-      </div>
-      <div class="service-list">
-        <div class="service-item">
-          <h3>What We See</h3>
-          <p>Many leaders are not short on calling. They are short on structure, governance, capital readiness, trusted counsel, and disciplined execution.</p>
-        </div>
-        <div class="service-item">
-          <h3>How We Help</h3>
-          <p>We diagnose constraints, clarify the assignment, organize priorities, and shape a practical path that respects both faith and operational reality.</p>
-        </div>
-        <div class="service-item">
-          <h3>Who We Serve</h3>
-          <p>Founders, executives, pastors, ministry leaders, families, nonprofits, and builders who need strategic counsel with spiritual weight and practical discipline.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ADVISORY WORK -->
-<section id="work" class="section">
-  <p class="section-eyebrow reveal">Advisory Work</p>
-  <h2 class="section-heading reveal">Confidential counsel for decisions that carry <em>weight.</em></h2>
-  <p class="section-sub reveal">This is the official FaithVision Leadership front door for consulting, speaking, and strategic advisory work. The planner and digital product experience live separately at beautyforashes.pro.</p>
-  <div class="card-grid reveal">
-    <div class="card">
-      <span class="card-label">Strategy</span>
-      <h3>Clarity for leaders under pressure.</h3>
-      <p>Define priorities, diagnose constraints, align resources, and turn broad vision into an executable path.</p>
-    </div>
-    <div class="card">
-      <span class="card-label">Speaking</span>
-      <h3>Words shaped for conviction and movement.</h3>
-      <p>Keynotes, teaching, leadership sessions, and faith-centered communication for audiences that need direction and hope.</p>
-    </div>
-    <div class="card">
-      <span class="card-label">Transformation</span>
-      <h3>Restore what pressure has scattered.</h3>
-      <p>Rebuild from the inside out: identity, order, financial clarity, disciplined action, and renewed momentum.</p>
-    </div>
-  </div>
-</section>
-
-<!-- SERVICES -->
-<section id="services" class="section-alt">
-  <div class="section-inner reveal">
-    <div class="split">
-      <div class="statement">
-        <h2>The full picture <em>matters.</em></h2>
-        <p>FaithVision works where spiritual conviction meets practical leadership: planning, governance, capital readiness, communication, decision-making, and disciplined execution.</p>
-      </div>
-      <div class="service-list">
-        <div class="service-item">
-          <h3>Corporate and Enterprise Strategy</h3>
-          <p>Strategic planning, organizational clarity, governance review, financial diagnosis, and decision support for leaders with complex responsibilities.</p>
-        </div>
-        <div class="service-item">
-          <h3>Individual and Nonprofit Advisory</h3>
-          <p>Personal leadership assessment, ministry direction, asset awareness, nonprofit readiness, and focused counsel for the next assignment.</p>
-        </div>
-        <div class="service-item">
-          <h3>Inspirational Speaking and Teaching</h3>
-          <p>Faith-centered talks, workshops, and leadership sessions built around restoration, purpose, discipline, and action.</p>
-        </div>
-        <div class="service-item">
-          <h3>Media and Message Development</h3>
-          <p>Support shaping talks, video themes, audio teaching, book concepts, and recurring content into a clear body of work.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PRICING -->
-<section id="pricing" class="section">
-  <p class="section-eyebrow reveal">Pricing</p>
-  <h2 class="section-heading reveal">Advisory tiers for different levels of <em>responsibility.</em></h2>
-  <p class="section-sub reveal">Consultation ranges for FaithVision Leadership services. These are not online checkout plans. Final scope is confirmed after intake and review.</p>
-  <div class="pricing-grid reveal">
-    <div class="pricing-card">
-      <span class="pricing-label">Individual</span>
-      <h3>Personal Advisory</h3>
-      <div class="pricing-price">$2,500 – $5,000</div>
-      <div class="pricing-period">Focused personal counsel</div>
-      <ul class="feature-list">
-        <li>Personal leadership assessment</li>
-        <li>Financial and calling diagnosis</li>
-        <li>Priority map and next-step counsel</li>
-        <li>Ideal for individuals and families</li>
-      </ul>
-    </div>
-    <div class="pricing-card featured">
-      <span class="pricing-label">Professional · Most Requested</span>
-      <h3>Strategic Advisory</h3>
-      <div class="pricing-price">$5,000 – $10,000</div>
-      <div class="pricing-period">Professional and ministry scope</div>
-      <ul class="feature-list">
-        <li>Strategy, message, and execution planning</li>
-        <li>Nonprofit or ministry advisory</li>
-        <li>Asset, income, and opportunity review</li>
-        <li>Best for builders preparing to move</li>
-      </ul>
-    </div>
-    <div class="pricing-card">
-      <span class="pricing-label">Corporate</span>
-      <h3>Enterprise Counsel</h3>
-      <div class="pricing-price">$10,000+</div>
-      <div class="pricing-period">Custom organization scope</div>
-      <ul class="feature-list">
-        <li>Corporate and enterprise strategy</li>
-        <li>Governance and stakeholder alignment</li>
-        <li>Funding and capital readiness review</li>
-        <li>Custom scope for larger engagements</li>
-      </ul>
-    </div>
-  </div>
-  <p class="pricing-note">
-    All engagements begin with a complimentary 30-minute Client Harmonization Meeting.
-    <a href="signup.html#contact" style="color:var(--gold);text-decoration:none;margin-left:.4rem">Book yours →</a>
-  </p>
-</section>
-
-<!-- INTAKE -->
-<section id="intake" class="section-alt">
+<!-- THE FULL BIO — MASTER NARRATIVE -->
+<section class="section-wrap">
   <div class="section-inner">
-    <p class="section-eyebrow reveal">Intake</p>
-    <h2 class="section-heading reveal">Start with the right <em>assessment.</em></h2>
-    <p class="section-sub reveal">FaithVision uses separate intake paths for individual/nonprofit clients and corporate/enterprise clients. Download, complete, and return the PDF by email.</p>
-    <div class="intake-grid reveal">
-      <div class="intake-card">
-        <h3>Individual &amp; Nonprofit Intake</h3>
-        <p>For personal advisory, ministry direction, nonprofit readiness, family strategy, and leadership assessment.</p>
-        <a class="btn-ghost" href="FAITHVISION-INDIVIDUAL-INTAKE.pdf" target="_blank" rel="noopener">Open Individual Intake →</a>
+    <div class="section-grid-2">
+      <div>
+        <p class="section-eyebrow">The origin</p>
+        <h2 class="section-heading">A Child Who Built<br><em>His First Market at Nine</em></h2>
+        <div class="prose">
+          <p>Every extraordinary life has an origin story. Pastor Raymond O. Anderson's begins not with privilege, not with mentorship, and not with opportunity &mdash; but with adversity, raw talent, and an instinct for value that no environment could suppress.</p>
+          <p>Between 1979 and 1983, from the ages of 9 to 13, Raymond O. Anderson created an entire original collection of works in acrylic, oil, and pencil. He designed each piece, found the buyers himself, negotiated each sale, and collected payment &mdash; commanding $250 to $500 per painting without an agent, a gallery, or a guide. This was not childhood play. This was market creation under adversity.</p>
+          <p>Those same pieces carry a secondary market appraisal of <strong>$150,000 to $500,000 each today</strong> &mdash; driven by four decades of provenance, three media types, the rarity of a complete collection, and the extraordinary documented life story behind every canvas.</p>
+          <p>The lesson that emerged at age nine was the same one that would define every subsequent decade: <strong>the ability to see value where others see nothing, build markets where none exist, and persist against conditions designed to produce failure.</strong></p>
+        </div>
       </div>
-      <div class="intake-card">
-        <h3>Corporate &amp; Enterprise Intake</h3>
-        <p>For businesses, organizations, enterprise strategy, funding readiness, governance, and stakeholder review.</p>
-        <a class="btn-ghost" href="FAITHVISION-CORPORATE-INTAKE.pdf" target="_blank" rel="noopener">Open Corporate Intake →</a>
+      <div>
+        <p class="section-eyebrow">The full timeline</p>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-year">1979&ndash;83</div>
+            <div class="timeline-content">
+              <h4>Child Entrepreneur &amp; Artist</h4>
+              <p>Self-created and self-sold original art collection, ages 9&ndash;13, under severe family adversity.</p>
+              <div class="timeline-result">$150K&ndash;$500K per piece on today's secondary market</div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">1992</div>
+            <div class="timeline-content">
+              <h4>Medical Intervention &mdash; The 45-Minute Procedure</h4>
+              <p>Certified orthopedic technician performs closed reduction and external fixation on grossly displaced tibia/fibula fracture. Best physicians on staff: 3&ndash;4 hours. Anderson: 45 minutes.</p>
+              <div class="timeline-result">Patient saved from lifetime disability</div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">1985&ndash;2013</div>
+            <div class="timeline-content">
+              <h4>Director of Orthopedics</h4>
+              <p>28-year executive leadership career in orthopedic healthcare. Managed complex services, staff, and institutional operations across multiple facilities.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">1999</div>
+            <div class="timeline-content">
+              <h4>Washington Park Association</h4>
+              <p>Raised $5.5M in reconstruction funds from complete insolvency for 13 homes in Bridgeport, CT.</p>
+              <div class="timeline-result">$5.5M from zero</div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2000s</div>
+            <div class="timeline-content">
+              <h4>New England Housing Ministries</h4>
+              <p>Rebuilt from insolvency to $7.5M cash in 24 months. Leveraged into $120M in financing over 15 years.</p>
+              <div class="timeline-result">$7.5M &rarr; $120M</div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2000s</div>
+            <div class="timeline-content">
+              <h4>PrePaid Legal Services</h4>
+              <p>Gift-based team realignment scaled subscriber base from 500 to 10,000 monthly clients in 42 months.</p>
+              <div class="timeline-result">20&times; growth</div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2007</div>
+            <div class="timeline-content">
+              <h4>Caruso v. City of Bridgeport &mdash; CT Supreme Court</h4>
+              <p>Single-handedly financed Connecticut's first Supreme Court election fraud case through personal fundraising from 300+ donors.</p>
+              <div class="timeline-result">22 election law violations proven</div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2010</div>
+            <div class="timeline-content">
+              <h4>Pulitzer Prize Contender</h4>
+              <p><em>I Have Seen the Living God</em> &mdash; 3&times; Borders Book of the Month, nationally awarded autobiography.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2012</div>
+            <div class="timeline-content">
+              <h4>Connecticut Superior Court &mdash; Real Estate Victory</h4>
+              <p>Pro se representation. Identified withholding of commercial sale funds. Judge ruled in Anderson's favor.</p>
+              <div class="timeline-result">Won</div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2016</div>
+            <div class="timeline-content">
+              <h4>Westchester NY &mdash; Wrongful Termination</h4>
+              <p>Pro se case under Title VII and Title XIV. Case so strong that institution filed for bankruptcy and restructured.</p>
+              <div class="timeline-result">Forced $200M restructuring</div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2018</div>
+            <div class="timeline-content">
+              <h4>FBT-CV-17-6063186s &mdash; Bank Fraud, RICO, TILA</h4>
+              <p>Pro se against bank whose employee fraudulently used Anderson's identity to purchase California properties. First judge told opposing counsel 7 consecutive times the case was going to trial.</p>
+              <div class="timeline-result">Identity theft &amp; institutional fraud exposed</div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">Ongoing</div>
+            <div class="timeline-content">
+              <h4>Tri-State Broadcast &amp; International Leadership</h4>
+              <p>800,000+ households across NY, MA &amp; CT. Engaged with Kings of Africa. 15+ countries reached.</p>
+              <div class="timeline-result">Signal amplified 7&times; by demand</div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- PLANNER -->
-<section id="planner" class="section reveal">
-  <div class="planner-band">
-    <div>
-      <p class="eyebrow" style="margin-bottom:.75rem">Separate Platform</p>
-      <h2>Kingdom Strategy Executive Planner</h2>
-      <p>The full planner, digital product pages, and resources live at beautyforashes.pro. This site is the consulting and leadership gateway.</p>
-    </div>
-    <a class="btn-primary" href="https://beautyforashes.pro/" target="_blank" rel="noopener">Open .pro →</a>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact" class="section-alt">
+<!-- THE MEDICAL CHAPTER -->
+<section class="section-wrap alt">
   <div class="section-inner">
-    <p class="section-eyebrow reveal">Correspondence</p>
-    <h2 class="section-heading reveal">Begin with the proper <em>channel.</em></h2>
-    <p class="section-sub reveal">Use the principal client response address for consultations and high-trust correspondence. Or book directly below.</p>
-    <div class="contact-grid reveal">
-      <div class="contact-card">
-        <h3>Principal Client Response</h3>
-        <p>Consulting, speaking, client work, and direct executive correspondence.</p>
-        <a class="contact-link" href="mailto:andersonraymond7@icloud.com?subject=FaithVision%20Leadership%20Inquiry">andersonraymond7@icloud.com</a>
+    <div class="section-grid-2">
+      <div>
+        <p class="section-eyebrow">The medical chapter &middot; 1992</p>
+        <h2 class="section-heading">When the Best Physicians<br><em>Said It Was Fine</em></h2>
+        <div class="prose">
+          <p>At twenty-two years old, certified orthopedic technician Raymond O. Anderson was called to an orthopedic floor to investigate why a post-operative patient was writhing in pain despite maximum medication.</p>
+          <p>What he found was a gross misalignment and displacement of the patient's tibia and fibula &mdash; a fracture that had never been properly reduced. He recommended the attending physician be contacted immediately for a closed reduction procedure. It was the weekend. The physician was away.</p>
+          <p>The following Monday, Anderson was summoned to the operating room to assist. The patient had been brought back. The attending physician &mdash; known across the institution for causing surgical injuries to multiple patients, reported repeatedly to the chief of orthopedics, and protected by a culture of institutional silence &mdash; told Anderson he saw nothing wrong with the fracture's position.</p>
+          <p>Anderson identified three points of clinical concern: <strong>the fracture was grossly displaced. There was a visible 5-inch leg length discrepancy. If left untreated, this young man would be permanently disabled for life.</strong></p>
+          <p>The physician dismissed every concern. Then said four words that changed everything: <em>"Then you fix it."</em></p>
+          <p>Anderson did. He requested AP, lateral, and oblique X-ray views. Removed the external fixation. Performed manual closed reduction of the displaced tibia and fibula. Identified two new pin sites. Drilled new proximal and distal stabilization points. Reconstructed and repositioned the entire external fixator apparatus. Requested three confirming views. Tightened every bolt. The fracture was perfectly reduced.</p>
+          <p>The procedure &mdash; which the best physicians on staff completed in 3 to 4 hours on a standard day &mdash; took Anderson 45 minutes.</p>
+          <div class="pull-quote">
+            <blockquote>"This reduction was done so well that it was hard to tell whether the patient had ever sustained an injury."</blockquote>
+            <cite>&mdash; Chief of Orthopedics, reviewing Anderson's work</cite>
+          </div>
+          <p>The institution's orthopedic physicians debated his termination. The largest consensus was to fire him for practicing without a license. One senior physician spoke up: <em>"His technique is as good as the best of us."</em></p>
+          <p>They did not fire him. Instead they brought him into rounds &mdash; where for three consecutive hours, on every area of orthopedics, adult geriatrics, and pediatrics, <strong>not one question about general orthopedics was left unanswered.</strong></p>
+          <p>This story is not included here to suggest Pastor Anderson practices medicine. It is included because it reveals something no credential can manufacture: <strong>the ability to see what experts miss, act under institutional pressure, and produce results that silence the room.</strong></p>
+        </div>
       </div>
-      <div class="contact-card">
-        <h3>General Intake</h3>
-        <p>General messages, intake routing, lower-tier inquiries, and broader correspondence.</p>
-        <a class="contact-link" href="mailto:pastorpaol@gmail.com?subject=General%20Inquiry">pastorpaol@gmail.com</a>
+      <div>
+        <p class="section-eyebrow">The institutional courage dimension</p>
+        <h2 class="section-heading" style="font-size:1.6rem;">What This Story<br><em>Actually Reveals</em></h2>
+        <div style="margin-top:1.5rem;">
+          <ul class="wins-list">
+            <li>
+              <span class="win-label">Diagnosis</span>
+              <span class="win-desc">Identified what the operating surgeon and entire medical team had missed &mdash; a gross fracture displacement that would have caused permanent disability</span>
+            </li>
+            <li>
+              <span class="win-label">Courage</span>
+              <span class="win-desc">Challenged an attending physician's clinical judgment in an operating room, in front of a full surgical team, based on evidence and patient outcome &mdash; not protocol</span>
+            </li>
+            <li>
+              <span class="win-label">Execution</span>
+              <span class="win-desc">Performed a multi-step closed reduction procedure &mdash; removal of fixation, manual reduction, new pin site identification, drilling, reconstruction &mdash; in 45 minutes vs. the 3&ndash;4 hour standard</span>
+            </li>
+            <li>
+              <span class="win-label">Accountability</span>
+              <span class="win-desc">Faced the entire orthopedic physician staff. Defended every decision. Questioned the institution's protection of a physician who had harmed multiple patients</span>
+            </li>
+            <li>
+              <span class="win-label">Mastery</span>
+              <span class="win-desc">Answered every orthopedic question posed by the physician group for three consecutive hours &mdash; adult, geriatric, and pediatric &mdash; without exception</span>
+            </li>
+            <li>
+              <span class="win-label">The lesson</span>
+              <span class="win-desc">Institutional silence costs patients their lives. Competence without courage is incomplete. And the most dangerous person in any room is the one who can see what everyone else is pretending not to notice.</span>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-    <div style="text-align:center;margin-top:2.5rem">
-      <a class="btn-primary" href="signup.html#contact">Book a Client Harmonization Meeting</a>
-      <p style="font-size:.78rem;color:var(--muted);margin-top:1rem">
-        30 minutes · Complimentary · With Pastor Raymond O. Anderson ·
-        <a href="tel:+260770647199" style="color:var(--gold);text-decoration:none">+260 770 64 7199</a>
-      </p>
     </div>
   </div>
 </section>
+
+<!-- PRO SE VS INSTITUTIONS -->
+<section class="section-wrap">
+  <div class="section-inner">
+    <p class="section-eyebrow">Pro se vs. institutions</p>
+    <h2 class="section-heading" style="max-width:700px;">Three Times He Stood Alone<br>Against Institutional Power. <em>Three Times He Won.</em></h2>
+    <p style="font-size:0.92rem;color:var(--text-muted);max-width:680px;line-height:1.8;margin-bottom:3.5rem;">RICO. Mail Fraud. TILA. Dodd-Frank. Title VII. Title XIV. Wrongful termination. Identity theft. Election fraud. Most people never face one of these in a lifetime &mdash; with an attorney. Pastor Raymond O. Anderson faced all of them. Alone. Without a law degree. And he made institutions move.</p>
+    <div class="chapter-grid">
+      <div class="chapter-card featured">
+        <span class="chapter-num">01</span>
+        <div class="chapter-industry">2007 &middot; Connecticut Supreme Court &middot; Election Integrity</div>
+        <h3>Caruso v. City of Bridgeport &mdash; Financing Democracy</h3>
+        <p>When mayoral candidate Chris Caruso and his wife Denise &mdash; who had broken the all-time record for votes in her city clerk run &mdash; needed funding to take their election fraud case to the Connecticut Supreme Court after 10,000 ballots washed ashore at Seaside Park, every donor on their list said they were out of money.</p>
+        <p style="margin-top:0.75rem;font-size:0.8rem;color:var(--text-muted);line-height:1.7;">Anderson took the list himself. Called all 300+ donors personally. Raised more than enough capital to take Connecticut's first major election fraud case to the Supreme Court. The court found 22 election law violations. The results were upheld anyway &mdash; a decision shaped by political calculation, not justice.</p>
+        <div class="chapter-result">22 election law violations proven in the Connecticut Supreme Court</div>
+      </div>
+      <div class="chapter-card">
+        <span class="chapter-num">02</span>
+        <div class="chapter-industry">2012 &amp; 2016 &middot; CT Superior Court &amp; Westchester NY</div>
+        <h3>Real Estate Victory &amp; The $200M Restructuring</h3>
+        <p>In 2012, Anderson identified the wrongful withholding of commercial sale proceeds by opposing counsel, presented his evidence to the court pro se, and won. In 2016 in Westchester, New York, he filed pro se under Title VII and Title XIV against a major healthcare corporation for wrongful termination.</p>
+        <p style="margin-top:0.75rem;font-size:0.8rem;color:var(--text-muted);line-height:1.7;">His case was so airtight that the institution did not proceed to trial. It filed for bankruptcy and restructured rather than face $200 million in potential damages &mdash; without Anderson having a single attorney in the room.</p>
+        <div class="chapter-result">Corporate restructuring forced &mdash; $200M in damages avoided through bankruptcy filing</div>
+      </div>
+      <div class="chapter-card">
+        <span class="chapter-num">03</span>
+        <div class="chapter-industry">2018 &middot; Connecticut Superior Court &middot; Federal Statutes</div>
+        <h3>FBT-CV-17-6063186s &mdash; RICO, Mail Fraud &amp; Identity Theft</h3>
+        <p>A bank employee used Anderson's name and credit rating to fraudulently purchase properties in California &mdash; a state Anderson has never visited. He filed pro se under RICO, Mail Fraud, TILA, the Dodd-Frank Act, and Tort. The first judge told opposing counsel seven consecutive times: "Do you realize this case is going to court?"</p>
+        <p style="margin-top:0.75rem;font-size:0.8rem;color:var(--text-muted);line-height:1.7;">The case was reassigned to a second judge who dismissed it with prejudice in an empty courtroom after all witnesses had left. Six months later, that judge was removed from the bench.</p>
+        <div class="chapter-result">RICO &middot; Mail Fraud &middot; TILA &middot; Dodd-Frank &mdash; filed pro se against institutional banking fraud</div>
+      </div>
+    </div>
+    <div style="background:var(--ink-2);border:0.5px solid rgba(201,168,76,0.2);border-left:3px solid var(--gold);padding:2rem 2.5rem;margin-top:1.5px;">
+      <p style="font-family:var(--serif);font-size:1.05rem;font-style:italic;color:var(--parchment);line-height:1.7;">What the legal record reveals has nothing to do with law. It reveals a mind that masters the rules of any system it enters &mdash; financial, medical, legal, political, spiritual &mdash; and uses that mastery to protect people who cannot protect themselves. This is not coincidence. It is character.</p>
+    </div>
+  </div>
+</section>
+
+<!-- COMMUNITY ORGANIZER -->
+<section class="section-wrap alt">
+  <div class="section-inner">
+    <div class="section-grid-2">
+      <div>
+        <p class="section-eyebrow">The community organizer dimension</p>
+        <h2 class="section-heading">The Man Who Called<br><em>300 Strangers</em> and Won</h2>
+        <div class="prose">
+          <p>There is a particular kind of leadership that does not announce itself, does not seek recognition, and does not wait for permission. It simply sees a wrong, identifies what it will take to correct it, and begins making phone calls.</p>
+          <p>In 2007, Bridgeport Connecticut was at the center of one of the most brazen election fraud cases in the state's history. Mayoral candidate Christopher Caruso and his wife Denise &mdash; who had shattered the all-time record for votes in her city clerk candidacy &mdash; watched 10,000 ballots wash ashore at Seaside Park the day after the election.</p>
+          <p>Caruso wanted to take the case to the Connecticut Supreme Court. He lacked the funds. He had called every donor on his list. Every one of them said they were out of money.</p>
+          <p>Anderson asked for the list. Caruso was reluctant &mdash; he had already called them all. Anderson made the calls anyway. All 300 of them. Personally. One by one.</p>
+          <p>He raised more than enough to take <strong>Connecticut's first major election fraud case to the Supreme Court.</strong> The court found that 22 election laws had been broken. Political calculation ultimately prevailed over justice &mdash; but the case was made, the record was established, and a community had been organized by one man with a phone and a refusal to accept the word "no."</p>
+          <div class="pull-quote">
+            <blockquote>"He took a list of donors who had already said no &mdash; and turned them into the funding source for a Supreme Court case."</blockquote>
+            <cite>&mdash; The FaithVision Leadership record</cite>
+          </div>
+          <p>This is the same instinct that rebuilt Washington Park Association, scaled PrePaid Legal 20 times over, and financed election justice through sheer personal conviction. <strong>The method is always the same: identify what is possible, ignore what people said was impossible, and make the calls.</strong></p>
+        </div>
+      </div>
+      <div>
+        <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=768,h=1062,fit=crop/2T1DUWtCmgSpg8F4/kings-meeting-pjO6Is7xK680vSPT.JPG" alt="Pastor Anderson engaging with Kings of Africa" class="section-img">
+        <p style="font-size:0.68rem;color:var(--text-muted);text-align:center;margin-top:0.75rem;">Pastor Raymond O. Anderson engaging with the Kings of Africa</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARKET COMPARISON -->
+<section class="section-wrap">
+  <div class="section-inner">
+    <p class="section-eyebrow">Market position</p>
+    <h2 class="section-heading" style="max-width:800px;">Why No One in the Market<br><em>Occupies This Position</em></h2>
+    <p style="font-size:0.92rem;color:var(--text-muted);max-width:680px;line-height:1.8;margin-bottom:3.5rem;">Tony Robbins has psychology. Les Brown has personal story. Jay Shetty has spirituality. Myron Golden has biblical business strategy. TD Jakes has faith leadership. Each is remarkable in one dimension. Pastor Anderson operates in nine simultaneously &mdash; all verified, all documented, all producing measurable results.</p>
+    <div class="chapter-grid">
+      <div class="chapter-card">
+        <span class="chapter-num">&#10022;</span>
+        <div class="chapter-industry">What Tony Robbins brings</div>
+        <h3>Peak Performance Psychology</h3>
+        <p>50 million people reached. $1M+ per keynote. Unmatched energy and methodology. Zero documented institutional turnaround results. No legal acumen. No medical expertise. No community organizing record.</p>
+      </div>
+      <div class="chapter-card">
+        <span class="chapter-num">&#10022;</span>
+        <div class="chapter-industry">What TD Jakes brings</div>
+        <h3>Faith Leadership &amp; Presence</h3>
+        <p>$150K/day. Global platform. Profound spiritual authority. No documented $120M+ institutional results. No pro se legal record. No orthopedic expertise. No election justice work.</p>
+      </div>
+      <div class="chapter-card featured">
+        <span class="chapter-num">&#10022;</span>
+        <div class="chapter-industry">Chief Creationist &middot; Universal Architect &middot; Priest Before the Lord</div>
+        <h3>All Nine Dimensions &mdash; One Foundational Identity</h3>
+        <p>Child entrepreneurship. Medical mastery. 28 years healthcare leadership. Nonprofit turnaround ($120M+). Corporate growth (20&times;). Community organizing (CT Supreme Court). Pro se legal victories. International faith leadership. Published Pulitzer contender.</p>
+        <div class="chapter-result">The only person in the professional development market who has documented results across all nine dimensions</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DEDICATIONS -->
+<section class="section-wrap alt">
+  <div class="section-inner">
+    <p class="section-eyebrow">Those who shaped the journey</p>
+    <h2 class="section-heading">Never Forget <em>the Foundation</em></h2>
+    <p style="font-size:0.9rem;color:var(--text-muted);max-width:560px;margin-bottom:3rem;line-height:1.8;">They are some of your foundations. Predict the future by honoring those who invested in your success.</p>
+    <div class="chapter-grid">
+      <div class="chapter-card">
+        <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=768,h=862,fit=crop/2T1DUWtCmgSpg8F4/photo--king-queen-intro-bible-study-hour-copy-oRWmogjNTjCh653k.jpg" alt="Denise Anderson" style="width:100%;height:280px;object-fit:cover;object-position:center 15%;display:block;margin-bottom:1.5rem;border:0.5px solid rgba(201,168,76,0.2);">
+        <div class="chapter-industry">My Beautiful Queen</div>
+        <h3>Denise Anderson</h3>
+        <p>The steadfast partner whose faith and strength made every victory possible. Behind every turnaround stood Denise &mdash; who herself broke the all-time record for votes in her run for Bridgeport City Clerk.</p>
+      </div>
+      <div class="chapter-card">
+        <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=375,h=500,fit=crop,gravity=0.5x0.4/2T1DUWtCmgSpg8F4/mr-k-mrs.-goldstone-4gBsdeGhFiflI9tu.jpg" alt="Dr. and Mrs. Goldstone" style="width:100%;height:260px;object-fit:cover;object-position:center center;display:block;margin-bottom:1.5rem;border:0.5px solid rgba(201,168,76,0.2);">
+        <div class="chapter-industry">Educator &amp; Mom #2</div>
+        <h3>Dr. &amp; Mrs. Goldstone</h3>
+        <p>Educators who saw potential when others did not, and invested in a future that would impact thousands of lives across communities, courtrooms, and continents.</p>
+      </div>
+      <div class="chapter-card">
+        <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=375,h=534,fit=crop/2T1DUWtCmgSpg8F4/thelma-marino-b0GFtNDJNfPeBxqO.PNG" alt="Thelma Marino" style="width:100%;height:240px;object-fit:cover;display:block;margin-bottom:1.5rem;border:0.5px solid rgba(201,168,76,0.2);">
+        <div class="chapter-industry">The Angelic Thelma</div>
+        <h3>Thelma Marino</h3>
+        <p>An angel in human form whose grace, generosity, and unwavering belief left an imprint that time cannot erase and no achievement can repay.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="section-wrap" style="padding-bottom:3rem;">
+  <div class="section-inner">
+    <p class="section-eyebrow">Leadership in the field</p>
+    <h2 class="section-heading">Faith-Driven Impact <em>in Action</em></h2>
+    <p style="font-size:0.88rem;color:var(--text-muted);margin-bottom:2.5rem;line-height:1.7;">Real moments across four decades of turnarounds, community rebuilding, international faith leadership, and institutional courage.</p>
+    <div class="gallery-grid">
+      <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=768,h=1062,fit=crop/2T1DUWtCmgSpg8F4/kings-meeting-pjO6Is7xK680vSPT.JPG" alt="Kings of Africa" class="gallery-img">
+      <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=768,h=862,fit=crop/2T1DUWtCmgSpg8F4/photo--king-queen-intro-bible-study-hour-copy-oRWmogjNTjCh653k.jpg" alt="Pastor and Denise Anderson" class="gallery-img">
+      <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=375,h=500,fit=crop,gravity=0.5x0.4/2T1DUWtCmgSpg8F4/mr-k-mrs.-goldstone-4gBsdeGhFiflI9tu.jpg" alt="Dr. and Mrs. Goldstone" class="gallery-img" style="object-position:center center;">
+      <img src="https://images.unsplash.com/photo-1702467852657-26c7a1d9fceb?auto=format&fit=crop&w=606&h=464" alt="Community leadership" class="gallery-img">
+      <img src="https://images.unsplash.com/photo-1597502690538-10374e47205d?auto=format&fit=crop&w=606&h=464" alt="Construction and development" class="gallery-img">
+      <img src="https://images.unsplash.com/photo-1585399058947-f68f9db58e5f?auto=format&fit=crop&w=606&h=464" alt="Consulting" class="gallery-img">
+      <img src="https://images.unsplash.com/photo-1595736965532-831085afd0e5?auto=format&fit=crop&w=1224&h=480" alt="Leadership conference" class="gallery-img gallery-wide">
+    </div>
+  </div>
+</section>
+
+
+<!-- CHIEF CREATIONIST PHILOSOPHY -->
+<section class="section-wrap alt">
+  <div class="section-inner" style="text-align:center;max-width:800px;margin:0 auto;">
+    <p class="section-eyebrow" style="justify-content:center;">The foundational identity</p>
+    <h2 class="section-heading" style="font-size:clamp(2.2rem,4vw,3.5rem);margin-bottom:1.5rem;">Chief Creationist.<br>Universal <em>Architect.</em><br>Priest Before the Lord.</h2>
+    <p style="font-size:1.05rem;color:var(--parchment-dim);line-height:1.9;margin-bottom:1.5rem;font-family:var(--serif);font-style:italic;">This is not a title. It is a calling &mdash; and it explains everything.</p>
+    <p style="font-size:0.92rem;color:var(--text-muted);line-height:1.9;margin-bottom:1.2rem;">A Chief Creationist does not wait for conditions to improve. He creates the conditions. He sees raw material where others see rubble &mdash; whether that material is a bankrupt nonprofit, a displaced fracture, a fraudulent election, a stalled business, or a human being who has never been shown the full scope of their God-given gifts.</p>
+    <p style="font-size:0.92rem;color:var(--text-muted);line-height:1.9;margin-bottom:1.2rem;">A Universal Architect does not specialize. He designs across dimensions &mdash; financial, medical, legal, spiritual, communal, organizational &mdash; because creation does not respect the boundaries that fear draws around human potential.</p>
+    <p style="font-size:0.92rem;color:var(--text-muted);line-height:1.9;margin-bottom:2.5rem;">A Priest Before the Lord does not perform for audiences. He intercedes for people &mdash; standing between where they are and where God created them to be, holding the gap open long enough for transformation to walk through it.</p>
+    <div style="border:0.5px solid rgba(201,168,76,0.3);border-top:2px solid var(--gold);padding:2.5rem;background:var(--ink);max-width:680px;margin:0 auto;">
+      <p style="font-family:'Cormorant Garamond',Georgia,serif;font-size:1.4rem;font-style:italic;font-weight:300;color:var(--parchment);line-height:1.7;margin-bottom:1rem;">"Beauty for ashes. The oil of joy for mourning. The garment of praise for the spirit of heaviness."</p>
+      <p style="font-size:0.72rem;color:var(--gold);letter-spacing:0.1em;text-transform:uppercase;">Isaiah 61:3 &mdash; The scripture behind the name</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="about-cta">
+  <h2>Ready to Work<br>with <em>Pastor Anderson?</em></h2>
+  <p>Every engagement begins with an honest 20-minute discovery call. No sales pressure. No commitment. Just a direct conversation about where you are and whether FaithVision Leadership is the right fit to get you there.</p>
+  <div class="cta-row">
+    <a href="https://calendly.com/pastorpaol/new-meeting-client-harmonization" target="_blank" rel="noopener" class="btn-gold">Book a Discovery Call</a>
+    <a href="pricing.html" class="btn-outline">View Services &amp; Pricing</a>
+  </div>
+  <p style="margin-top:1.5rem;font-size:0.78rem;color:var(--text-muted);">Or email directly: <a href="mailto:pastorpaol@gmail.com" style="color:var(--gold);text-decoration:none;">pastorpaol@gmail.com</a></p>
+</section>
+
+<!-- INTAKE STRIP -->
+<div class="intake-strip">
+  <div class="intake-strip-inner">
+    <p style="font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:0.75rem;">Begin your engagement</p>
+    <p>Before your discovery call, download the intake form that matches your need. Return it completed at your first session.</p>
+    <div class="intake-row">
+      <a href="FAITHVISION-INDIVIDUAL-INTAKE.pdf" target="_blank" class="intake-btn">Individual Intake Form &darr;</a>
+      <a href="FAITHVISION-CORPORATE-INTAKE.pdf" target="_blank" class="intake-btn">Corporate Intake Form &darr;</a>
+      <a href="https://beautyforashes.pro/" target="_blank" rel="noopener" class="intake-btn">Free Executive Planner &rarr;</a>
+      <a href="https://beautyforashes.creator-spring.com" target="_blank" rel="noopener" class="intake-btn">Book &amp; Store &rarr;</a>
+    </div>
+  </div>
+</div>
 
 <!-- FOOTER -->
 <footer>
-  <p class="footer-copy">© 2026 FaithVision Leadership. Beauty for Ashes.</p>
-  <div class="footer-links">
-    <a href="pricing.html">Services</a>
-    <a href="case-studies.html">Case Studies</a>
-    <a href="planner.html">Free Planner</a>
-    <a href="https://beautyforashes.creator-spring.com" target="_blank" rel="noopener">Store</a>
-    <a href="https://www.youtube.com/@THEFAMILYBIBLESTUDYHOUR" target="_blank" rel="noopener">YouTube</a>
-    <a href="mailto:andersonraymond7@icloud.com">Email</a>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=768,fit=crop/2T1DUWtCmgSpg8F4/1019143606_hostinger_ai_1c2d1979-eXE6S71nHWhKGqHL.png" alt="FaithVision Leadership" style="height:40px;width:auto;">
+      <p>Nine dimensions. One extraordinary life. The rarest expertise in any room &mdash; priced accordingly.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Navigate</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html">About</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="case-studies.html">Case Studies</a></li>
+        <li><a href="https://beautyforashes.creator-spring.com" target="_blank" rel="noopener">Store</a></li>
+        <li><a href="https://beautyforashes.pro/" target="_blank" rel="noopener">Free Planner</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="mailto:pastorpaol@gmail.com">pastorpaol@gmail.com</a></li>
+        <li><a href="https://www.youtube.com/@THEFAMILYBIBLESTUDYHOUR" target="_blank" rel="noopener">YouTube</a></li>
+        <li><a href="https://calendly.com/pastorpaol/new-meeting-client-harmonization" target="_blank" rel="noopener">Book a Discovery Call</a></li>
+        <li><a href="signup.html">Intake &amp; Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 FaithVision Leadership &middot; Pastor Raymond O. Anderson. All rights reserved.</p>
+    <div class="footer-social">
+      <a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.youtube.com/@THEFAMILYBIBLESTUDYHOUR" target="_blank" rel="noopener">YouTube</a>
+    </div>
   </div>
 </footer>
 
-<!-- SCROLL REVEAL -->
-<script>
-const revealEls = document.querySelectorAll('.reveal');
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); observer.unobserve(e.target); }});
-},{threshold:0.08});
-revealEls.forEach(el => observer.observe(el));
-</script>
-
+<script src="bot/faithvision-leadgen.js" defer></script>
 </body>
 </html>

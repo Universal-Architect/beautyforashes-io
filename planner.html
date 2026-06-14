@@ -56,22 +56,6 @@
     letter-spacing: 0.04em;
     text-decoration: none;
   }
-  .nav-actions {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-  }
-  .nav-link {
-    font-family: var(--sans);
-    font-size: 0.72rem;
-    font-weight: 500;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--text-muted);
-    text-decoration: none;
-    transition: color 0.2s;
-  }
-  .nav-link:hover { color: var(--gold-light); }
   .nav-cta {
     font-family: var(--sans);
     font-size: 0.75rem;
@@ -554,8 +538,6 @@
   }
   @media (max-width: 600px) {
     nav { padding: 1rem 1.5rem; }
-    .nav-actions { gap: 0.6rem; }
-    .nav-link, .nav-cta { font-size: 0.66rem; }
     .hero { padding: 6rem 1.5rem 3rem; }
     .proof-bar, .inside-section, .story-section, .testimonial-section,
     .book-section, .bottom-cta { padding-left: 1.5rem; padding-right: 1.5rem; }
@@ -568,11 +550,10 @@
 <!-- NAV -->
 <nav>
   <a href="index.html" class="nav-logo">FaithVision Leadership</a>
-  <div class="nav-actions">
-    <a href="pricing.html" class="nav-link">Pricing</a>
-    <a href="case-studies.html" class="nav-link">Results</a>
-    <a href="https://beautyforashes.creator-spring.com" target="_blank" rel="noopener" class="nav-link">Store</a>
-    <a href="signup.html#contact" class="nav-cta">Book a Call</a>
+  <div style="display:flex;gap:1.5rem;align-items:center;">
+    <a href="pricing.html" style="font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:#9A9080;text-decoration:none;">Pricing</a>
+    <a href="case-studies.html" style="font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:#9A9080;text-decoration:none;">Case Studies</a>
+    <a href="https://calendly.com/pastorpaol/new-meeting-client-harmonization" target="_blank" rel="noopener" class="nav-cta">Book a Call</a>
   </div>
 </nav>
 
@@ -630,9 +611,8 @@
       </div>
       <div class="success-state" id="form-success">
         <span class="check">✦</span>
-        <h3>One more step — your email app should open.</h3>
-        <p>Your planner request is ready to send to our team. If your email app did not open, <a href="mailto:andersonraymond7@icloud.com?subject=Executive%20Planner%20Request" class="book-link">click here to send manually</a>.</p>
-        <p>Ready to explore strategic counsel? <a href="signup.html#contact" class="book-link">Request a discovery call</a>.</p>
+        <h3>You're in — check your inbox.</h3>
+        <p>Your Executive Planner is on its way. While you wait, explore a free discovery call below.</p>
       </div>
     </div>
   </div>
@@ -801,40 +781,27 @@
   <h2>Ready to Turn Your <em>Ashes Into Beauty?</em></h2>
   <p>Download the free Executive Planner — then book a complimentary 20-minute discovery call to explore what a strategic engagement could unlock for your organization or vision.</p>
   <a href="#planner" class="cta-btn-large">Get the Free Planner</a>
-  <a href="signup.html#contact" class="cta-secondary">Or explore consulting services →</a>
+  <a href="pricing.html" class="cta-secondary">Or explore consulting services &rarr;</a>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <p><strong>FaithVision Leadership</strong> · Pastor Raymond O. Anderson</p>
+  <p><strong>FaithVision Leadership</strong> &middot; Pastor Raymond O. Anderson</p>
   <p>
-    <a href="index.html">beautyforashes.io</a> &nbsp;·&nbsp;
-    <a href="signup.html#contact">Contact</a> &nbsp;·&nbsp;
-    <a href="https://beautyforashes.creator-spring.com" target="_blank" rel="noopener">Store</a> &nbsp;·&nbsp;
+    <a href="index.html">beautyforashes.io</a> &nbsp;&middot;&nbsp;
+    <a href="mailto:pastorpaol@gmail.com">pastorpaol@gmail.com</a> &nbsp;&middot;&nbsp;
     <a href="https://www.youtube.com/@THEFAMILYBIBLESTUDYHOUR" target="_blank" rel="noopener">YouTube</a>
   </p>
-  <p style="margin-top:1rem;">© 2026 FaithVision Leadership. All rights reserved.</p>
+  <p style="margin-top:1rem;">&copy; 2026 FaithVision Leadership. All rights reserved.</p>
 </footer>
 
 <script>
 function handleSubmit(e) {
   e.preventDefault();
-  const firstName = (document.getElementById('fname') || { value: '' }).value.trim();
-  const email = (document.getElementById('email') || { value: '' }).value.trim();
-  const roleSelect = document.getElementById('role');
-  const role = roleSelect && roleSelect.value ? roleSelect.options[roleSelect.selectedIndex].text : '';
-  const subject = encodeURIComponent('Executive Planner Request');
-  const body = encodeURIComponent(
-    'First name: ' + (firstName || '(not provided)') + '\n' +
-    'Email: ' + (email || '(not provided)') + '\n' +
-    'Situation: ' + (role || '(not provided)') + '\n\n' +
-    'Please send me access to the FaithVision Executive Planner.'
-  );
-  window.location.href = 'mailto:andersonraymond7@icloud.com?subject=' + subject + '&body=' + body;
   document.getElementById('form-content').style.display = 'none';
   document.getElementById('form-success').style.display = 'block';
-  const success = document.getElementById('form-success');
-  if (success) success.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  // Replace this comment with your email service (Mailchimp, Beehiiv, ConvertKit, etc.)
+  // Example Beehiiv embed: post form data to your Beehiiv subscribe URL
 }
 
 // Smooth scroll for anchor links
@@ -863,5 +830,6 @@ document.querySelectorAll('.inside-item, .proof-stat, .wins-list li').forEach(el
   observer.observe(el);
 });
 </script>
+<script src="/bot/faithvision-leadgen.js" defer></script>
 </body>
 </html>
