@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FaithVision Lead Generation — Owner Review Dashboard</title>
+<style>
+  :root {
+    --bg: #0f1117;
+    --surface: #1a1d26;
+    --surface2: #22253a;
+    --border: #2d3150;
+    --gold: #c9a227;
+    --gold-light: #e8c547;
+    --text: #e8eaf0;
+    --text-muted: #8890b0;
+    --green: #4caf6e;
+    --yellow: #e8c547;
+    --orange: #f0824e;
+    --red: #e05656;
+    --blue: #4e8ef0;
+    --radius: 8px;
+    --font: 'Segoe UI', system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font);
+    font-size: 14px;
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+
+  /* ── Header ── */
+  .header {
+    background: linear-gradient(135deg, #1a1d26 0%, #12142a 100%);
+    border-bottom: 2px solid var(--gold);
+    padding: 20px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .header-logo { display: flex; align-items: center; gap: 14px; }
+  .logo-icon {
+    width: 42px; height: 42px;
+    background: var(--gold);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 20px; font-weight: 900; color: #0f1117;
+  }
+  .header-title { font-size: 18px; font-weight: 700; color: var(--gold); }
+  .header-sub { font-size: 11px; color: var(--text-muted); margin-top: 2px; }
+  .policy-badge {
+    background: #2a1a1a; border: 1px solid var(--red);
+    color: var(--red); padding: 6px 14px; border-radius: 20px;
+    font-size: 11px; font-weight: 700; letter-spacing: 0.5px;
+  }
+
+  /* ── Layout ── */
+  .main { max-width: 1400px; margin: 0 auto; padding: 24px 32px; }
+  .section-title {
+    font-size: 13px; font-weight: 700; color: var(--gold);
+    letter-spacing: 1px; text-transform: uppercase;
+    margin-bottom: 12px; margin-top: 28px;
+  }
+
+  /* ── Upload zone ── */
+  .upload-zone {
+    border: 2px dashed var(--border);
+    border-radius: var(--radius);
+    padding: 32px;
+    text-align: center;
+    background: var(--surface);
+    cursor: pointer;
+    transition: border-color 0.2s, background 0.2s;
+    margin-bottom: 24px;
+  }
+  .upload-zone:hover, .upload-zone.drag-over {
+    border-color: var(--gold);
+    background: var(--surface2);
+  }
+  .upload-zone input { display: none; }
+  .upload-icon { font-size: 36px; margin-bottom: 10px; }
+  .upload-text { color: var(--text-muted); font-size: 13px; }
+  .upload-text strong { color: var(--gold); }
+
+  /* ── Stats bar ── */
+  .stats-bar {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+  .stat-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 14px 16px;
+    text-align: center;
+  }
+  .stat-value { font-size: 28px; font-weight: 800; color: var(--gold); }
+  .stat-label { font-size: 11px; color: var(--text-muted); margin-top: 4px; text-transform: uppercase; letter-spacing: 0.5px; }
+
+  /* ── Filters ── */
+  .filters {
+    display: flex; gap: 12px; flex-wrap: wrap;
+    margin-bottom: 16px; align-items: center;
+  }
+  .filter-label { color: var(--text-muted); font-size: 12px; }
+  select, input[type="text"] {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    color: var(--text);
+    border-radius: 6px;
+    padding: 6px 10px;
+    font-size: 13px;
+    outline: none;
+  }
+  select:focus, input:focus { border-color: var(--gold); }
+
+  /* ── Table ── */
+  .table-wrap { overflow-x: auto; border-radius: var(--radius); }
+  table {
+    width: 100%; border-collapse: collapse;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+  }
+  thead tr { background: var(--surface2); }
+  th {
+    padding: 12px 14px;
+    text-align: left;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 1px solid var(--border);
+    cursor: pointer;
+    user-select: none;
+    white-space: nowrap;
+  }
+  th:hover { color: var(--gold); }
+  td {
+    padding: 11px 14px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: middle;
+    max-width: 220px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  tr:last-child td { border-bottom: none; }
+  tr:hover td { background: var(--surface2); }
+  .clickable-row { cursor: pointer; }
+
+  /* ── Badges ── */
+  .tier-badge, .type-badge, .status-badge {
+    display: inline-block;
+    padding: 3px 9px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .tier-executive { background: #2a1f00; color: var(--gold-light); border: 1px solid var(--gold); }
+  .tier-priority   { background: #1a0a0a; color: var(--orange); border: 1px solid var(--orange); }
+  .tier-qualified  { background: #0a1a0a; color: var(--green); border: 1px solid var(--green); }
+  .tier-watch      { background: #1a1500; color: var(--yellow); border: 1px solid var(--yellow); }
+  .tier-low        { background: var(--surface2); color: var(--text-muted); border: 1px solid var(--border); }
+
+  .type-individual { color: var(--blue); }
+  .type-nonprofit  { color: var(--green); }
+  .type-for_profit { color: var(--orange); }
+  .type-ministry   { color: var(--gold); }
+  .type-unknown    { color: var(--text-muted); }
+
+  .status-pending  { color: var(--yellow); }
+  .status-approved { color: var(--green); }
+  .status-rejected { color: var(--red); }
+
+  /* ── Score bar ── */
+  .score-bar-wrap { display: flex; align-items: center; gap: 8px; min-width: 100px; }
+  .score-bar-bg { flex: 1; background: var(--border); border-radius: 4px; height: 6px; overflow: hidden; }
+  .score-bar-fill { height: 6px; border-radius: 4px; transition: width 0.3s; }
+  .score-num { font-weight: 700; font-size: 13px; min-width: 34px; text-align: right; }
+
+  /* ── Modal ── */
+  .modal-overlay {
+    display: none;
+    position: fixed; inset: 0;
+    background: rgba(0,0,0,0.75);
+    z-index: 1000;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 40px 20px;
+    overflow-y: auto;
+  }
+  .modal-overlay.open { display: flex; }
+  .modal {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    width: 100%;
+    max-width: 760px;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 28px;
+    position: relative;
+  }
+  .modal-close {
+    position: absolute; top: 16px; right: 16px;
+    background: none; border: none; color: var(--text-muted);
+    font-size: 22px; cursor: pointer; line-height: 1;
+  }
+  .modal-close:hover { color: var(--text); }
+  .modal-title { font-size: 17px; font-weight: 700; color: var(--gold); margin-bottom: 18px; }
+  .detail-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 18px; }
+  .detail-item { background: var(--surface2); border-radius: 6px; padding: 10px 12px; }
+  .detail-key { font-size: 10px; text-transform: uppercase; letter-spacing: 0.5px; color: var(--text-muted); margin-bottom: 4px; }
+  .detail-val { font-size: 13px; color: var(--text); word-break: break-word; white-space: normal; }
+  .draft-card {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 14px;
+  }
+  .draft-type { font-size: 11px; font-weight: 700; color: var(--gold); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px; }
+  .draft-subject { font-size: 14px; font-weight: 600; margin-bottom: 8px; }
+  .draft-meta { font-size: 11px; color: var(--text-muted); margin-bottom: 10px; }
+  .draft-body { font-size: 12px; color: var(--text-muted); background: var(--bg); border-radius: 6px; padding: 12px; white-space: pre-wrap; font-family: monospace; max-height: 200px; overflow-y: auto; }
+  .approval-warning {
+    background: #1a0a0a;
+    border: 1px solid var(--red);
+    border-radius: 6px;
+    padding: 10px 14px;
+    color: var(--red);
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+
+  /* ── Empty state ── */
+  .empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--text-muted);
+  }
+  .empty-state-icon { font-size: 48px; margin-bottom: 12px; }
+  .empty-state p { font-size: 14px; }
+
+  /* ── Footer ── */
+  .footer {
+    text-align: center;
+    padding: 24px;
+    color: var(--text-muted);
+    font-size: 11px;
+    border-top: 1px solid var(--border);
+    margin-top: 40px;
+  }
+  .footer strong { color: var(--gold); }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-logo">
+    <div class="logo-icon">F</div>
+    <div>
+      <div class="header-title">FaithVision Lead Generation</div>
+      <div class="header-sub">Owner Review Dashboard — Local Draft System</div>
+    </div>
+  </div>
+  <div class="policy-badge">🔒 DENY BY DEFAULT — NO LIVE OUTREACH</div>
+</div>
+
+<div class="main">
+
+  <!-- Upload -->
+  <div class="section-title">Load Lead Data</div>
+  <div class="upload-zone" id="uploadZone" onclick="document.getElementById('fileInput').click()">
+    <input type="file" id="fileInput" accept=".json">
+    <div class="upload-icon">📂</div>
+    <div class="upload-text">
+      <strong>Click to load JSON export</strong> or drag and drop<br>
+      Run <code>python -m leadgen.cli export output.json</code> then load it here
+    </div>
+  </div>
+
+  <!-- Stats -->
+  <div class="stats-bar" id="statsBar" style="display:none">
+    <div class="stat-card"><div class="stat-value" id="statTotal">0</div><div class="stat-label">Total Leads</div></div>
+    <div class="stat-card"><div class="stat-value" id="statExec" style="color:#e8c547">0</div><div class="stat-label">Executive</div></div>
+    <div class="stat-card"><div class="stat-value" id="statPriority" style="color:#f0824e">0</div><div class="stat-label">Priority</div></div>
+    <div class="stat-card"><div class="stat-value" id="statQualified" style="color:#4caf6e">0</div><div class="stat-label">Qualified</div></div>
+    <div class="stat-card"><div class="stat-value" id="statWatch" style="color:#e8c547">0</div><div class="stat-label">Watch</div></div>
+    <div class="stat-card"><div class="stat-value" id="statPending" style="color:#f0824e">0</div><div class="stat-label">Pending Review</div></div>
+  </div>
+
+  <!-- Filters -->
+  <div class="filters" id="filterBar" style="display:none">
+    <span class="filter-label">Filter:</span>
+    <input type="text" id="searchInput" placeholder="Search name, org, sector…" oninput="renderTable()">
+    <select id="tierFilter" onchange="renderTable()">
+      <option value="">All Tiers</option>
+      <option>executive</option><option>priority</option>
+      <option>qualified</option><option>watch</option><option>low</option>
+    </select>
+    <select id="typeFilter" onchange="renderTable()">
+      <option value="">All Types</option>
+      <option>individual</option><option>nonprofit</option>
+      <option>for_profit</option><option>ministry</option>
+    </select>
+    <select id="statusFilter" onchange="renderTable()">
+      <option value="">All Statuses</option>
+      <option value="pending_owner_review">Pending Review</option>
+      <option value="approved">Approved</option>
+      <option value="rejected">Rejected</option>
+    </select>
+    <span id="resultCount" style="color:var(--text-muted);margin-left:auto;font-size:12px"></span>
+  </div>
+
+  <!-- Table -->
+  <div class="section-title" id="tableTitle" style="display:none">Lead Registry</div>
+  <div class="table-wrap" id="tableWrap" style="display:none">
+    <table>
+      <thead>
+        <tr>
+          <th onclick="sortBy('tier')">Tier ↕</th>
+          <th onclick="sortBy('total_score')">Score ↕</th>
+          <th onclick="sortBy('lead_type')">Type ↕</th>
+          <th onclick="sortBy('name')">Name / Organization</th>
+          <th onclick="sortBy('sector')">Sector</th>
+          <th onclick="sortBy('recommended_service')">Recommended Service</th>
+          <th onclick="sortBy('urgency_score')">Urgency ↕</th>
+          <th onclick="sortBy('approval_status')">Review Status</th>
+        </tr>
+      </thead>
+      <tbody id="tableBody"></tbody>
+    </table>
+  </div>
+
+  <div class="empty-state" id="emptyState">
+    <div class="empty-state-icon">🕊</div>
+    <p>No lead data loaded.<br>Export from CLI and load the JSON file above.</p>
+  </div>
+
+</div>
+
+<!-- Detail Modal -->
+<div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)">
+  <div class="modal" id="modalContent">
+    <button class="modal-close" onclick="closeModalDirect()">✕</button>
+    <div class="modal-title" id="modalTitle"></div>
+    <div class="approval-warning">
+      ⚠ ALL EMAIL DRAFTS REQUIRE OWNER APPROVAL BEFORE ANY SEND OR OUTREACH.
+      This is a review-only display. Nothing has been sent.
+    </div>
+    <div id="modalBody"></div>
+  </div>
+</div>
+
+<div class="footer">
+  <strong>FaithVision Lead Generation System</strong> — Local Draft Only — Deny-by-Default Policy Active<br>
+  No external scripts. No trackers. No live API connections. No data leaves this browser.
+</div>
+
+<script>
+// ── State ──────────────────────────────────────────────────────────────────
+let allLeads = [];
+let packets  = {};
+let sortKey  = 'total_score';
+let sortDir  = -1;  // -1 = desc
+
+// ── File loading ──────────────────────────────────────────────────────────
+const uploadZone = document.getElementById('uploadZone');
+const fileInput  = document.getElementById('fileInput');
+
+uploadZone.addEventListener('dragover', e => { e.preventDefault(); uploadZone.classList.add('drag-over'); });
+uploadZone.addEventListener('dragleave', () => uploadZone.classList.remove('drag-over'));
+uploadZone.addEventListener('drop', e => {
+  e.preventDefault();
+  uploadZone.classList.remove('drag-over');
+  const file = e.dataTransfer.files[0];
+  if (file) loadFile(file);
+});
+fileInput.addEventListener('change', () => { if (fileInput.files[0]) loadFile(fileInput.files[0]); });
+
+function loadFile(file) {
+  const reader = new FileReader();
+  reader.onload = e => {
+    try {
+      const data = JSON.parse(e.target.result);
+      // Support both array of leads and {leads: [...], review_packets: [...]}
+      if (Array.isArray(data)) {
+        allLeads = data;
+        packets  = {};
+      } else {
+        allLeads = data.leads || [];
+        const pArr = data.review_packets || [];
+        packets = {};
+        pArr.forEach(p => { packets[p.lead_id] = p; });
+      }
+      onDataLoaded();
+    } catch (err) {
+      alert('Error parsing JSON: ' + err.message);
+    }
+  };
+  reader.readAsText(file);
+}
+
+function onDataLoaded() {
+  uploadZone.style.display = 'none';
+  document.getElementById('statsBar').style.display = 'grid';
+  document.getElementById('filterBar').style.display = 'flex';
+  document.getElementById('tableTitle').style.display = 'block';
+  document.getElementById('tableWrap').style.display = 'block';
+  document.getElementById('emptyState').style.display = 'none';
+  updateStats();
+  renderTable();
+}
+
+// ── Stats ─────────────────────────────────────────────────────────────────
+function updateStats() {
+  document.getElementById('statTotal').textContent = allLeads.length;
+  document.getElementById('statExec').textContent = allLeads.filter(l => l.tier === 'executive').length;
+  document.getElementById('statPriority').textContent = allLeads.filter(l => l.tier === 'priority').length;
+  document.getElementById('statQualified').textContent = allLeads.filter(l => l.tier === 'qualified').length;
+  document.getElementById('statWatch').textContent = allLeads.filter(l => l.tier === 'watch').length;
+  document.getElementById('statPending').textContent = allLeads.filter(l => l.approval_status === 'pending_owner_review').length;
+}
+
+// ── Filtering & Sorting ───────────────────────────────────────────────────
+function sortBy(key) {
+  if (sortKey === key) sortDir *= -1;
+  else { sortKey = key; sortDir = -1; }
+  renderTable();
+}
+
+function getFilteredLeads() {
+  const search = document.getElementById('searchInput').value.toLowerCase();
+  const tier   = document.getElementById('tierFilter').value;
+  const type   = document.getElementById('typeFilter').value;
+  const status = document.getElementById('statusFilter').value;
+  return allLeads.filter(l => {
+    const text = ((l.name||'') + ' ' + (l.organization||'') + ' ' + (l.sector||'') + ' ' + (l.recommended_service||'')).toLowerCase();
+    if (search && !text.includes(search)) return false;
+    if (tier   && l.tier !== tier) return false;
+    if (type   && l.lead_type !== type) return false;
+    if (status && l.approval_status !== status) return false;
+    return true;
+  });
+}
+
+// ── Render ────────────────────────────────────────────────────────────────
+const TIER_ORDER = { executive: 5, priority: 4, qualified: 3, watch: 2, low: 1 };
+const KNOWN_TIERS = new Set(['executive', 'priority', 'qualified', 'watch', 'low']);
+const KNOWN_TYPES = new Set(['individual', 'nonprofit', 'for_profit', 'ministry']);
+const KNOWN_STATUS_PREFIXES = new Set(['pending', 'approved', 'rejected']);
+
+function asText(value, fallback = '—') {
+  if (value === null || value === undefined || value === '') return fallback;
+  return String(value);
+}
+
+function firstText(...values) {
+  for (const value of values) {
+    const candidate = asText(value, '');
+    if (candidate) return candidate;
+  }
+  return '—';
+}
+
+function asNumber(value, fallback = 0) {
+  const number = Number(value);
+  return Number.isFinite(number) ? number : fallback;
+}
+
+function clampPercent(value) {
+  return Math.max(0, Math.min(100, asNumber(value)));
+}
+
+function scoreColor(score) {
+  if (score >= 85) return '#e8c547';
+  if (score >= 70) return '#f0824e';
+  if (score >= 50) return '#4caf6e';
+  return '#8890b0';
+}
+
+function safeTierClass(value) {
+  const key = asText(value, 'low').toLowerCase();
+  return KNOWN_TIERS.has(key) ? key : 'low';
+}
+
+function safeTypeClass(value) {
+  const key = asText(value, '').toLowerCase();
+  return KNOWN_TYPES.has(key) ? key : 'unknown';
+}
+
+function safeStatusClass(value) {
+  const prefix = asText(value, '').toLowerCase().split('_')[0];
+  return KNOWN_STATUS_PREFIXES.has(prefix) ? prefix : 'unknown';
+}
+
+function formatLeadType(value) {
+  const text = asText(value, '');
+  return text ? text.replace(/_/g, ' ') : '—';
+}
+
+function appendTextCell(row, value, options = {}) {
+  const cell = document.createElement('td');
+  const raw = asText(value, '');
+  const display = raw || '—';
+  cell.textContent = options.maxLength && raw ? display.substring(0, options.maxLength) : display;
+  if (options.title !== false) cell.title = options.title !== undefined ? asText(options.title, '') : raw;
+  row.appendChild(cell);
+  return cell;
+}
+
+function appendSectionTitle(parent, text, options = {}) {
+  const title = document.createElement('div');
+  title.className = 'section-title';
+  title.textContent = text;
+  if (options.marginTop !== undefined) title.style.marginTop = options.marginTop;
+  parent.appendChild(title);
+  return title;
+}
+
+function appendTextBox(parent, value, options = {}) {
+  const box = document.createElement('div');
+  Object.assign(box.style, {
+    background: 'var(--surface2)',
+    borderRadius: '6px',
+    padding: '12px',
+    marginBottom: '14px',
+    fontSize: options.fontSize || '13px'
+  });
+  if (options.color) box.style.color = options.color;
+  box.textContent = asText(value);
+  parent.appendChild(box);
+  return box;
+}
+
+function appendDetailItem(parent, key, value, options = {}) {
+  const item = document.createElement('div');
+  item.className = 'detail-item';
+
+  const keyEl = document.createElement('div');
+  keyEl.className = 'detail-key';
+  keyEl.textContent = key;
+
+  const valEl = document.createElement('div');
+  valEl.className = 'detail-val';
+  valEl.textContent = asText(value);
+  if (options.monospace) {
+    valEl.style.fontSize = '11px';
+    valEl.style.fontFamily = 'monospace';
+  }
+
+  item.appendChild(keyEl);
+  item.appendChild(valEl);
+  parent.appendChild(item);
+  return item;
+}
+
+function appendSignalGroup(parent, title, values, styles) {
+  if (!Array.isArray(values) || !values.length) return;
+  appendSectionTitle(parent, title);
+  const wrap = document.createElement('div');
+  wrap.style.marginBottom = '14px';
+  values.forEach(value => {
+    const chip = document.createElement('span');
+    Object.assign(chip.style, {
+      background: styles.background,
+      color: styles.color,
+      border: styles.border,
+      borderRadius: '12px',
+      padding: '3px 10px',
+      fontSize: '11px',
+      margin: '2px',
+      display: 'inline-block'
+    });
+    chip.textContent = asText(value, '');
+    wrap.appendChild(chip);
+  });
+  parent.appendChild(wrap);
+}
+
+function renderTable() {
+  const leads = getFilteredLeads();
+  leads.sort((a, b) => {
+    let av = a[sortKey], bv = b[sortKey];
+    if (sortKey === 'tier') { av = TIER_ORDER[av]||0; bv = TIER_ORDER[bv]||0; }
+    if (typeof av === 'string') av = av.toLowerCase();
+    if (typeof bv === 'string') bv = bv.toLowerCase();
+    return av < bv ? sortDir : av > bv ? -sortDir : 0;
+  });
+  document.getElementById('resultCount').textContent = `${leads.length} of ${allLeads.length}`;
+
+  const tbody = document.getElementById('tableBody');
+  tbody.replaceChildren();
+  leads.forEach(lead => {
+    const tr = document.createElement('tr');
+    tr.className = 'clickable-row';
+    tr.onclick = () => openModal(lead);
+
+    const tierCell = document.createElement('td');
+    const tierBadge = document.createElement('span');
+    tierBadge.classList.add('tier-badge', `tier-${safeTierClass(lead.tier)}`);
+    tierBadge.textContent = asText(lead.tier, 'low').toUpperCase();
+    tierCell.appendChild(tierBadge);
+    tr.appendChild(tierCell);
+
+    const scoreValue = asNumber(lead.total_score);
+    const scoreCell = document.createElement('td');
+    const scoreWrap = document.createElement('div');
+    scoreWrap.className = 'score-bar-wrap';
+    const scoreBg = document.createElement('div');
+    scoreBg.className = 'score-bar-bg';
+    const scoreFill = document.createElement('div');
+    scoreFill.className = 'score-bar-fill';
+    scoreFill.style.width = `${clampPercent(scoreValue)}%`;
+    scoreFill.style.background = scoreColor(scoreValue);
+    const scoreNum = document.createElement('div');
+    scoreNum.className = 'score-num';
+    scoreNum.style.color = scoreColor(scoreValue);
+    scoreNum.textContent = scoreValue.toFixed(1);
+    scoreBg.appendChild(scoreFill);
+    scoreWrap.appendChild(scoreBg);
+    scoreWrap.appendChild(scoreNum);
+    scoreCell.appendChild(scoreWrap);
+    tr.appendChild(scoreCell);
+
+    const typeCell = document.createElement('td');
+    const typeBadge = document.createElement('span');
+    typeBadge.classList.add('type-badge', `type-${safeTypeClass(lead.lead_type)}`);
+    typeBadge.textContent = formatLeadType(lead.lead_type);
+    typeCell.appendChild(typeBadge);
+    tr.appendChild(typeCell);
+
+    const displayName = firstText(lead.name, lead.organization);
+    appendTextCell(tr, displayName, { title: displayName === '—' ? '' : displayName });
+    appendTextCell(tr, lead.sector, { maxLength: 30, title: asText(lead.sector, '') });
+    appendTextCell(tr, lead.recommended_service, { maxLength: 35, title: asText(lead.recommended_service, '') });
+    appendTextCell(tr, asNumber(lead.urgency_score).toFixed(0), { title: false });
+
+    const statusCell = document.createElement('td');
+    const statusBadge = document.createElement('span');
+    statusBadge.classList.add('status-badge', `status-${safeStatusClass(lead.approval_status)}`);
+    statusBadge.textContent = formatStatus(lead.approval_status);
+    statusCell.appendChild(statusBadge);
+    tr.appendChild(statusCell);
+
+    tbody.appendChild(tr);
+  });
+  if (!leads.length) {
+    const tr = document.createElement('tr');
+    const td = document.createElement('td');
+    td.colSpan = 8;
+    td.style.textAlign = 'center';
+    td.style.padding = '32px';
+    td.style.color = 'var(--text-muted)';
+    td.textContent = 'No leads match filters.';
+    tr.appendChild(td);
+    tbody.appendChild(tr);
+  }
+}
+
+function formatStatus(s) {
+  const text = asText(s, '');
+  if (!text) return '—';
+  return text.replace(/_/g,' ').replace(/\b\w/g,c=>c.toUpperCase());
+}
+
+// ── Modal ─────────────────────────────────────────────────────────────────
+function openModal(lead) {
+  const leadId = asText(lead.lead_id, '');
+  document.getElementById('modalTitle').textContent =
+    `${firstText(lead.name, lead.organization, lead.lead_id)} — ${asText(lead.tier, '').toUpperCase()} | ${asNumber(lead.total_score).toFixed(1)}/100`;
+
+  const packet = packets[leadId];
+  const modalBody = document.getElementById('modalBody');
+  modalBody.replaceChildren();
+
+  const detailGrid = document.createElement('div');
+  detailGrid.className = 'detail-grid';
+  appendDetailItem(detailGrid, 'Lead ID', lead.lead_id, { monospace: true });
+  appendDetailItem(detailGrid, 'Type', formatLeadType(lead.lead_type));
+  appendDetailItem(detailGrid, 'Sector', lead.sector);
+  appendDetailItem(detailGrid, 'Location', lead.location);
+  appendDetailItem(detailGrid, 'Score', `${asNumber(lead.total_score).toFixed(2)} / 100`);
+  appendDetailItem(detailGrid, 'Urgency', asNumber(lead.urgency_score).toFixed(1));
+  appendDetailItem(detailGrid, 'Recommended Service', lead.recommended_service);
+  appendDetailItem(detailGrid, 'Review Status', formatStatus(lead.approval_status));
+  modalBody.appendChild(detailGrid);
+
+  appendSectionTitle(modalBody, 'Stated Problem', { marginTop: '0' });
+  appendTextBox(modalBody, lead.stated_problem);
+
+  appendSectionTitle(modalBody, 'Inferred Problem');
+  appendTextBox(modalBody, lead.inferred_problem, { fontSize: '12px', color: 'var(--text-muted)' });
+
+  appendSignalGroup(modalBody, 'Distress Signals', lead.distress_signals, {
+    background: '#1a0a0a',
+    color: 'var(--red)',
+    border: '1px solid #3a1a1a'
+  });
+  appendSignalGroup(modalBody, 'Opportunity Signals', lead.opportunity_signals, {
+    background: '#0a1a0a',
+    color: 'var(--green)',
+    border: '1px solid #1a3a1a'
+  });
+  appendSignalGroup(modalBody, 'Assets Detected', lead.assets_detected, {
+    background: '#1a1500',
+    color: 'var(--yellow)',
+    border: '1px solid #3a2d00'
+  });
+
+  appendSectionTitle(modalBody, 'Recommended Next Step');
+  appendTextBox(modalBody, lead.recommended_next_step);
+
+  // Email drafts from packet
+  const drafts = packet && Array.isArray(packet.email_drafts) ? packet.email_drafts : [];
+  if (drafts.length) {
+    appendSectionTitle(modalBody, `Email Drafts (${drafts.length}) — OWNER APPROVAL REQUIRED`);
+    drafts.forEach(d => {
+      const card = document.createElement('div');
+      card.className = 'draft-card';
+
+      const type = document.createElement('div');
+      type.className = 'draft-type';
+      type.textContent = asText(d.template_type, '').replace(/_/g, ' ');
+
+      const subject = document.createElement('div');
+      subject.className = 'draft-subject';
+      subject.textContent = asText(d.subject, '(no subject)');
+
+      const meta = document.createElement('div');
+      meta.className = 'draft-meta';
+      meta.textContent = `Suggested sender: ${asText(d.suggested_sender)}  |  Status: ${formatStatus(d.approval_status)}`;
+
+      const body = document.createElement('div');
+      body.className = 'draft-body';
+      body.textContent = asText(d.body, '');
+
+      card.appendChild(type);
+      card.appendChild(subject);
+      card.appendChild(meta);
+      card.appendChild(body);
+      modalBody.appendChild(card);
+    });
+  } else {
+    const emptyDrafts = document.createElement('div');
+    Object.assign(emptyDrafts.style, {
+      color: 'var(--text-muted)',
+      fontSize: '13px',
+      padding: '12px',
+      background: 'var(--surface2)',
+      borderRadius: '6px'
+    });
+    const command = document.createElement('code');
+    command.textContent = `python -m leadgen.cli packet ${leadId}`;
+    emptyDrafts.appendChild(document.createTextNode('No email drafts loaded. Run: '));
+    emptyDrafts.appendChild(command);
+    emptyDrafts.appendChild(document.createTextNode(' then re-export.'));
+    modalBody.appendChild(emptyDrafts);
+  }
+
+  document.getElementById('modalOverlay').classList.add('open');
+}
+
+function closeModal(e) {
+  if (e.target === document.getElementById('modalOverlay')) closeModalDirect();
+}
+function closeModalDirect() {
+  document.getElementById('modalOverlay').classList.remove('open');
+}
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModalDirect(); });
+</script>
+
+</body>
+</html>
