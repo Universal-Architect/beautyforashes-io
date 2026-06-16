@@ -1,0 +1,20 @@
+.DS_Store
+
+# Python caches and local tooling
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.venv/
+venv/
+
+# Local lead stores, audit logs, and generated exports
+leadgen/data/
+leadgen/audit/
+leadgen/packet_*.json
+leadgen/*export*.json
+
+# Editor/runtime scratch files
+*.swp
+.*.swp
+*~
