@@ -153,7 +153,7 @@
     },
     {
       "patterns": ["book", "autobiography", "pulitzer", "living god", "i have seen", "borders"],
-      "response": "<em>I Have Seen the Living God</em> — 3× Borders Book of the Month, 2010 Pulitzer Prize contender. Available at the store: <a href='https://beautyforashes.creator-spring.com' target='_blank' style='color:#C9A84C;'>beautyforashes.creator-spring.com →</a>"
+      "response": "<em>I Have Seen the Living God</em> — 3× Borders Book of the Month, 2010 Pulitzer Prize contender. Direct book download: <a href='https://beautyforashes-6.creator-spring.com/listing/i-have-seen-the-living-god' target='_blank' style='color:#C9A84C;'>Buy the Book →</a>"
     },
     {
       "patterns": ["planner", "free", "download", "executive planner", "get the"],

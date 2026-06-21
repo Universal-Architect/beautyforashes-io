@@ -32,7 +32,7 @@
     // Destination URLs
     bookingUrl:  'signup.html#contact',
     plannerUrl:  'https://beautyforashes.pro',
-    storeUrl:    'https://beautyforashes.creator-spring.com',
+    storeUrl:    'https://beautyforashes-6.creator-spring.com',
     caseStudies: 'case-studies.html',
     pricing:     'pricing.html',
 
@@ -184,7 +184,7 @@
       },
       {
         patterns: ['book', 'autobiography', 'pulitzer', 'living god', 'i have seen'],
-        response: '<em>I Have Seen the Living God</em> — 3× Borders Book of the Month, 2010 Pulitzer Prize contender. Available at the store: <a href="' + 'https://beautyforashes.creator-spring.com' + '" target="_blank" style="color:#C9A84C;">beautyforashes.creator-spring.com →</a>',
+        response: '<em>I Have Seen the Living God</em> — 3× Borders Book of the Month, 2010 Pulitzer Prize contender. Direct book download: <a href="' + 'https://beautyforashes-6.creator-spring.com/listing/i-have-seen-the-living-god' + '" target="_blank" style="color:#C9A84C;">Buy the Book →</a>',
       },
       {
         patterns: ['planner', 'free', 'download', 'executive planner'],
